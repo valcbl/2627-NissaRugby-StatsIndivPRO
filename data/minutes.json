@@ -1,0 +1,246 @@
+{
+ "minutes": {
+  "Hanru Sirgel": {
+   "J1": 69,
+   "J6": 19,
+   "J7": 80
+  },
+  "Hayden Thompson-Stringer": {
+   "J1": 52,
+   "J2": 31,
+   "J4": 50,
+   "J5": 30,
+   "J6": 62,
+   "J7": 64
+  },
+  "Leo Chauvin": {
+   "J1": 52,
+   "J2": 49,
+   "J4": 50,
+   "J5": 62,
+   "J6": 19,
+   "J7": 63
+  },
+  "Farai Mudariki": {
+   "J1": 55,
+   "J2": 40,
+   "J5": 50
+  },
+  "Inoke Nalaga Kurukuruvakatini": {
+   "J1": 57,
+   "J3": 71,
+   "J7": 80
+  },
+  "Jean-Pascal Barraque": {
+   "J1": 57,
+   "J2": 46,
+   "J4": 20,
+   "J5": 19,
+   "J6": 81,
+   "J7": 31
+  },
+  "Lucas Bachelier": {
+   "J1": 57,
+   "J2": 49,
+   "J4": 34
+  },
+  "Christiaan Van Der Merwe": {
+   "J1": 62,
+   "J2": 61,
+   "J4": 59,
+   "J5": 80,
+   "J6": 81,
+   "J7": 61
+  },
+  "Theo Idjellidaine": {
+   "J1": 62,
+   "J2": 19,
+   "J3": 53,
+   "J4": 30,
+   "J5": 64,
+   "J6": 65,
+   "J7": 61
+  },
+  "Adrian Motoc": {
+   "J1": 80,
+   "J2": 80,
+   "J4": 84,
+   "J5": 62,
+   "J6": 40
+  },
+  "Francis Saili": {
+   "J1": 80,
+   "J2": 80,
+   "J6": 81,
+   "J7": 80
+  },
+  "Hugo Sarrasin": {
+   "J1": 80,
+   "J2": 80,
+   "J5": 62
+  },
+  "Clement Egiziano": {
+   "J1": 80,
+   "J2": 80,
+   "J4": 84,
+   "J5": 80,
+   "J6": 81,
+   "J7": 80
+  },
+  "Julien Farnoux": {
+   "J1": 80,
+   "J2": 80,
+   "J4": 64,
+   "J5": 61,
+   "J6": 81,
+   "J7": 69
+  },
+  "Tyler Morgan": {
+   "J1": 80,
+   "J2": 80,
+   "J4": 84,
+   "J5": 80
+  },
+  "Etienne Falgoux": {
+   "J1": 28,
+   "J2": 49,
+   "J4": 34,
+   "J5": 50
+  },
+  "Clément Martinez": {
+   "J1": 28,
+   "J2": 31,
+   "J3": 60,
+   "J4": 34,
+   "J6": 62
+  },
+  "Nicolas Ciancio": {
+   "J1": 25,
+   "J2": 40,
+   "J3": 48,
+   "J4": 50,
+   "J6": 49,
+   "J7": 50
+  },
+  "Vincent Rattez": {
+   "J1": 23,
+   "J2": 80,
+   "J4": 84
+  },
+  "Flavio Asquini": {
+   "J1": 23,
+   "J2": 34,
+   "J3": 39,
+   "J4": 84,
+   "J5": 80,
+   "J7": 49
+  },
+  "Arthur Vignolles": {
+   "J1": 23,
+   "J2": 61,
+   "J3": 56,
+   "J4": 50,
+   "J5": 38,
+   "J6": 81,
+   "J7": 64
+  },
+  "Joel Kpoku": {
+   "J1": 18,
+   "J2": 19,
+   "J3": 53,
+   "J6": 41,
+   "J7": 19
+  },
+  "Jules Gimbert": {
+   "J1": 18,
+   "J3": 28,
+   "J5": 16,
+   "J6": 16,
+   "J7": 19
+  },
+  "Guillaume Rouet": {
+   "J2": 61,
+   "J4": 54
+  },
+  "Bastien Berenguel": {
+   "J2": 31,
+   "J3": 81,
+   "J4": 41,
+   "J5": 18,
+   "J6": 69
+  },
+  "Iakopo Petelo-Mapu": {
+   "J2": 19,
+   "J3": 25,
+   "J4": 34,
+   "J5": 6
+  },
+  "Baptiste Lafond": {
+   "J3": 74
+  },
+  "Atila Septar": {
+   "J3": 11,
+   "J6": 16,
+   "J7": 54
+  },
+  "Massimo Ortolan": {
+   "J3": 49
+  },
+  "Pablo Patilla": {
+   "J3": 24
+  },
+  "Jules Martinez": {
+   "J3": 48,
+   "J6": 19,
+   "J7": 16
+  },
+  "Evan Olmstead": {
+   "J3": 81,
+   "J4": 25,
+   "J5": 18,
+   "J7": 80
+  },
+  "Enzo Labadie": {
+   "J3": 81,
+   "J4": 84,
+   "J5": 40,
+   "J6": 74,
+   "J7": 80
+  },
+  "Boris Goutard": {
+   "J3": 81,
+   "J5": 80,
+   "J6": 81
+  },
+  "Bautista Ezcurra": {
+   "J3": 70,
+   "J4": 84,
+   "J5": 80,
+   "J6": 65,
+   "J7": 26
+  },
+  "Zinedine Aouad": {
+   "J3": 33,
+   "J4": 34,
+   "J5": 30,
+   "J6": 30,
+   "J7": 30
+  },
+  "Fabio Gonzalez": {
+   "J3": 33
+  },
+  "Kylian Laurans": {
+   "J3": 28
+  },
+  "Pat Leafa": {
+   "J3": 21,
+   "J5": 18
+  },
+  "Baptiste Moreno": {
+   "J7": 17
+  },
+  "Andy Bosseray": {
+   "J7": 16
+  }
+ }
+}

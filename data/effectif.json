@@ -1,0 +1,291 @@
+{
+ "joueurs": [
+  {
+   "nom": "BAPTISTE MORENO",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "TA"
+  },
+  {
+   "nom": "CLÉMENT MARTINEZ",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "TA"
+  },
+  {
+   "nom": "ETIENNE FALGOUX",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "FABIO GONZALEZ",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "FARAI MUDARIKI",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "HAYDEN THOMPSON-STRINGER",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "JULES MARTINEZ",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "LEO CHAUVIN",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "TA"
+  },
+  {
+   "nom": "NICOLAS CIANCIO",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "PAT LEAFA",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "TA"
+  },
+  {
+   "nom": "ZINEDINE AOUAD",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "PI"
+  },
+  {
+   "nom": "ADRIAN MOTOC",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "2L"
+  },
+  {
+   "nom": "CHRISTIAAN VAN DER MERWE",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "2L"
+  },
+  {
+   "nom": "EVAN OLMSTEAD",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "2L"
+  },
+  {
+   "nom": "JOEL KPOKU",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "2L"
+  },
+  {
+   "nom": "KYLIAN LAURANS",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "ANDY BOSSERAY",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "ARTHUR VIGNOLLES",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "BASTIEN BERENGUEL",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "ENZO LABADIE",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "HANRU SIRGEL",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "HUGO SARRASIN",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "IAKOPO PETELO-MAPU",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "LUCAS BACHELIER",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "3L"
+  },
+  {
+   "nom": "FLAVIO ASQUINI",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "GUILLAUME ROUET",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "JEAN-PASCAL BARRAQUE",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "JULES GIMBERT",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "MASSIMO ORTOLAN",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "THEO IDJELLIDAINE",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CH"
+  },
+  {
+   "nom": "ATILA SEPTAR",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CE"
+  },
+  {
+   "nom": "BAPTISTE LAFOND",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CE"
+  },
+  {
+   "nom": "BAUTISTA EZCURRA",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CE"
+  },
+  {
+   "nom": "FRANCIS SAILI",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CE"
+  },
+  {
+   "nom": "PABLO PATILLA",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  },
+  {
+   "nom": "TYLER MORGAN",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "CE"
+  },
+  {
+   "nom": "BORIS GOUTARD",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  },
+  {
+   "nom": "CLEMENT EGIZIANO",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  },
+  {
+   "nom": "INOKE NALAGA KURUKURUVAKATINI",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  },
+  {
+   "nom": "JULIEN FARNOUX",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  },
+  {
+   "nom": "VINCENT RATTEZ",
+   "prenom": "",
+   "annee": null,
+   "poste": null,
+   "grp": "B3"
+  }
+ ]
+}
