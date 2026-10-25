@@ -1,0 +1,8885 @@
+{
+ "journee": "J6",
+ "adversaire": "Nevers",
+ "date": "09/10/2026",
+ "source": "2026_10_09T19_30_Stade_Nicois_USO_Nevers_xml_sportscode.xml",
+ "ajoute": "2026-10-20T14:00:05.000Z",
+ "data": {
+  "players": [
+   {
+    "name": "Bastien Berenguel",
+    "actions": 61,
+    "taches": 41,
+    "aerien_neg": 3,
+    "ro": 8,
+    "ro_pos": 7,
+    "ro_1er": 4,
+    "ro_r4": 1,
+    "ret_rapide": 6,
+    "ast_pos": 6,
+    "m_n": 8,
+    "m_tot": 24,
+    "m_ap": 10,
+    "c_avance": 6,
+    "zC1": 2,
+    "duel_pos": 5,
+    "rk": 6,
+    "rk_03": 4,
+    "aerien_pos": 2,
+    "zC0": 2,
+    "duel_neg": 3,
+    "rk_6p": 1,
+    "ro_r2": 2,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 3,
+    "rd_neg": 3,
+    "gratt": 1,
+    "plaq_haut": 6,
+    "zP1": 1,
+    "plaq_ok": 7,
+    "plaq_subi": 5,
+    "plaq_jambe": 1,
+    "zP0": 5,
+    "ret_tardif": 6,
+    "to_touche": 1,
+    "zT1": 1,
+    "recup": 1,
+    "zC3": 4,
+    "ro_neg": 1,
+    "rk_46": 1,
+    "zP3": 1,
+    "ro_r3": 1,
+    "pdb_jeu": 1,
+    "zB3": 1,
+    "pdb": 1,
+    "plaq_casse": 1,
+    "defbattu": 1,
+    "passe_pos": 1,
+    "ret_debout": 1,
+    "contre": 2,
+    "pt_ruck": 1,
+    "pen_def": 1,
+    "zF0": 1,
+    "faute": 1,
+    "mf_n": 8,
+    "mf_pos7": 11,
+    "mf_g": 6,
+    "ts_n": 7,
+    "ts_g": 6,
+    "md_n": 3,
+    "tc_n": 1,
+    "tc_vol": 1,
+    "min": 69,
+    "pts": 0
+   },
+   {
+    "name": "Theo Idjellidaine",
+    "actions": 79,
+    "taches": 74,
+    "passe_pos": 45,
+    "pdb_ea": 1,
+    "zB3": 1,
+    "pdb": 1,
+    "ro": 3,
+    "ro_pos": 2,
+    "ro_1er": 2,
+    "jt_out": 2,
+    "m_n": 5,
+    "m_tot": 2,
+    "m_ap": 1,
+    "plaq_casse": 3,
+    "c_avance": 4,
+    "zC2": 2,
+    "duel_pos": 3,
+    "defbattu": 4,
+    "passe_dec": 1,
+    "jt_in": 1,
+    "jap_pos": 3,
+    "ro_neg": 1,
+    "ro_r2": 1,
+    "zC0": 1,
+    "duel_neg": 2,
+    "ret_debout": 8,
+    "ast_pos": 5,
+    "plaq_jambe": 2,
+    "ret_rapide": 3,
+    "zP1": 5,
+    "plaq_ok": 6,
+    "plaq_dom": 1,
+    "zC3": 2,
+    "jt_deg": 1,
+    "plaq_haut": 4,
+    "plaq_subi": 4,
+    "passe_neg": 1,
+    "jap_neg": 1,
+    "jt_press": 1,
+    "zP0": 1,
+    "min": 65,
+    "pts": 0
+   },
+   {
+    "name": "Jean-Pascal Barraque",
+    "actions": 78,
+    "taches": 56,
+    "passe_pos": 7,
+    "pk_tot": 7,
+    "jap_pos": 19,
+    "passe_dec": 1,
+    "passe_neg": 4,
+    "transfo": 2,
+    "plaq_haut": 4,
+    "ret_debout": 4,
+    "zP1": 3,
+    "plaq_ok": 5,
+    "plaq_subi": 4,
+    "jt_in": 4,
+    "jt_court": 1,
+    "franch": 2,
+    "jt_out": 2,
+    "ret_rapide": 2,
+    "ast_pos": 2,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "jt_press": 3,
+    "ro": 5,
+    "ro_pos": 5,
+    "ro_1er": 5,
+    "transfo_neg": 2,
+    "aerien_pos": 2,
+    "rk": 3,
+    "rk_46": 1,
+    "jt_deg": 1,
+    "m_n": 4,
+    "m_tot": 24,
+    "m_ap": 5,
+    "zC2": 4,
+    "duel_neg": 1,
+    "off_pos": 2,
+    "c_avance": 3,
+    "duel_pos": 3,
+    "pdb_jeu": 2,
+    "zB2": 1,
+    "pdb": 2,
+    "zB1": 1,
+    "plaq_jambe": 1,
+    "ret_tardif": 1,
+    "zP0": 2,
+    "plaq_casse": 1,
+    "defbattu": 1,
+    "rk_03": 2,
+    "pen": 1,
+    "jt_passe": 1,
+    "min": 81,
+    "pts": 7
+   },
+   {
+    "name": "Francis Saili",
+    "actions": 66,
+    "jt_in": 1,
+    "taches": 50,
+    "jap_pos": 2,
+    "franch": 2,
+    "defbattu": 4,
+    "m_n": 13,
+    "m_tot": 62,
+    "m_ap": 21,
+    "c_avance": 13,
+    "zC3": 7,
+    "duel_pos": 13,
+    "rk": 11,
+    "rk_03": 8,
+    "rk_av": 3,
+    "rk_perdu": 3,
+    "plaq_jambe": 6,
+    "ret_rapide": 5,
+    "zP2": 4,
+    "plaq_ok": 7,
+    "plaq_subi": 4,
+    "ret_debout": 9,
+    "zP1": 4,
+    "plaq_rate": 5,
+    "plaq_haut": 6,
+    "zP0": 1,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 3,
+    "rd_neg": 3,
+    "gratt": 1,
+    "ast_pos": 4,
+    "ret_tardif": 2,
+    "ro": 5,
+    "ro_pos": 4,
+    "ro_1er": 3,
+    "passe_pos": 2,
+    "ro_r3": 1,
+    "jt_out": 1,
+    "zC2": 6,
+    "off_pos": 1,
+    "plaq_casse": 2,
+    "pdb_ruck": 2,
+    "zB3": 1,
+    "pdb": 2,
+    "contre": 2,
+    "ro_neg": 1,
+    "ro_r2": 1,
+    "zP3": 3,
+    "zB2": 1,
+    "plaq_dom": 1,
+    "min": 81,
+    "pts": 0
+   },
+   {
+    "name": "Bautista Ezcurra",
+    "actions": 63,
+    "plaq_haut": 8,
+    "ret_debout": 9,
+    "zP2": 6,
+    "taches": 51,
+    "plaq_ok": 9,
+    "plaq_subi": 8,
+    "rd": 2,
+    "rd_pos": 2,
+    "contre": 1,
+    "contre_pos": 1,
+    "m_n": 8,
+    "m_tot": 26,
+    "m_ap": 13,
+    "c_avance": 4,
+    "zC3": 3,
+    "duel_neg": 5,
+    "pdb_maul": 1,
+    "zB3": 2,
+    "pdb": 2,
+    "passe_pos": 7,
+    "ro": 5,
+    "ro_neg": 2,
+    "ro_1er": 3,
+    "zC2": 5,
+    "duel_pos": 3,
+    "rk": 4,
+    "rk_46": 2,
+    "ret_tardif": 2,
+    "zP1": 4,
+    "ret_rapide": 9,
+    "ast_pos": 10,
+    "ct": 1,
+    "ct_rec": 1,
+    "zT1": 2,
+    "gratt": 1,
+    "gratt_pos": 1,
+    "to_ruck": 1,
+    "recup": 1,
+    "plaq_jambe": 2,
+    "plaq_rate": 1,
+    "ro_pos": 3,
+    "ro_r2": 2,
+    "rk_03": 1,
+    "jt_in": 1,
+    "jap_pos": 1,
+    "plaq_casse": 1,
+    "defbattu": 1,
+    "franch": 1,
+    "off_neg": 1,
+    "off_pos": 2,
+    "rk_av": 1,
+    "rk_perdu": 1,
+    "pt_ruck": 1,
+    "pen_off": 1,
+    "zF3": 1,
+    "faute": 1,
+    "pdb_ruck": 1,
+    "plaq_dom": 1,
+    "min": 65,
+    "pts": 0
+   },
+   {
+    "name": "Enzo Labadie",
+    "actions": 77,
+    "taches": 53,
+    "rd": 8,
+    "rd_pos": 1,
+    "contre": 3,
+    "contre_pos": 1,
+    "ro": 17,
+    "ro_neg": 2,
+    "ro_r2": 6,
+    "ro_pos": 15,
+    "ro_1er": 5,
+    "passe_pos": 3,
+    "ro_r4": 1,
+    "ret_rapide": 7,
+    "ast_pos": 11,
+    "plaq_haut": 8,
+    "ret_tardif": 7,
+    "zP1": 2,
+    "plaq_ok": 8,
+    "ret_debout": 7,
+    "ct": 5,
+    "ct_nr": 5,
+    "rd_neg": 7,
+    "gratt": 5,
+    "zP3": 2,
+    "plaq_rate": 1,
+    "essai": 1,
+    "ro_r3": 5,
+    "ast_neg": 1,
+    "m_n": 3,
+    "m_tot": 17,
+    "m_ap": 5,
+    "c_avance": 2,
+    "zC2": 2,
+    "duel_pos": 2,
+    "rk": 3,
+    "rk_03": 2,
+    "zP2": 5,
+    "plaq_subi": 4,
+    "zC3": 1,
+    "duel_neg": 1,
+    "plaq_dom": 1,
+    "pt_ruck": 1,
+    "pen_def": 1,
+    "zF2": 1,
+    "faute": 1,
+    "plaq_jambe": 1,
+    "pdb_touche": 1,
+    "zB1": 1,
+    "pdb": 1,
+    "rk_46": 1,
+    "mf_n": 7,
+    "mf_pos6": 10,
+    "mf_g": 6,
+    "ts_n": 4,
+    "ts_g": 2,
+    "md_n": 3,
+    "min": 74,
+    "pts": 5
+   },
+   {
+    "name": "Arthur Vignolles",
+    "actions": 91,
+    "to_ruck": 1,
+    "zT2": 1,
+    "taches": 63,
+    "recup": 1,
+    "passe_pos": 4,
+    "ro": 17,
+    "ro_pos": 17,
+    "ro_1er": 6,
+    "ro_r2": 8,
+    "plaq_jambe": 15,
+    "ret_rapide": 10,
+    "zP2": 3,
+    "plaq_ok": 17,
+    "plaq_subi": 15,
+    "plaq_haut": 3,
+    "ret_debout": 2,
+    "zP1": 9,
+    "plaq_dom": 1,
+    "m_n": 12,
+    "m_tot": 32,
+    "m_ap": 20,
+    "c_avance": 11,
+    "zC0": 2,
+    "duel_pos": 11,
+    "rk": 10,
+    "rk_03": 8,
+    "rk_46": 2,
+    "ret_tardif": 12,
+    "ast_pos": 6,
+    "pt_hj": 1,
+    "pen_def": 1,
+    "zF0": 1,
+    "faute": 1,
+    "zP0": 5,
+    "defbattu": 3,
+    "zC1": 1,
+    "passe_neg": 1,
+    "ro_r3": 3,
+    "zC3": 6,
+    "zP3": 1,
+    "plaq_rate": 1,
+    "plaq_casse": 2,
+    "zC2": 3,
+    "duel_neg": 1,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "mf_n": 9,
+    "mf_pos8": 12,
+    "mf_g": 7,
+    "md_n": 3,
+    "min": 81,
+    "pts": 0
+   },
+   {
+    "name": "Christiaan Van Der Merwe",
+    "actions": 84,
+    "taches": 51,
+    "ro": 22,
+    "ro_neg": 1,
+    "ro_r3": 2,
+    "ro_pos": 21,
+    "ro_r2": 11,
+    "m_n": 7,
+    "m_tot": 26,
+    "m_ap": 9,
+    "zC3": 2,
+    "duel_neg": 3,
+    "rk": 7,
+    "rk_03": 3,
+    "ro_1er": 7,
+    "ret_debout": 3,
+    "ast_pos": 12,
+    "ret_tardif": 10,
+    "ro_r4": 2,
+    "plaq_jambe": 4,
+    "zP2": 1,
+    "plaq_rate": 2,
+    "c_avance": 4,
+    "zC1": 1,
+    "duel_pos": 4,
+    "rk_av": 2,
+    "rk_perdu": 1,
+    "pdb_ruck": 1,
+    "zB1": 1,
+    "pdb": 2,
+    "pt_ruck": 1,
+    "pen_off": 2,
+    "zF1": 1,
+    "faute": 2,
+    "pdb_ea": 1,
+    "zB0": 1,
+    "plaq_haut": 4,
+    "ret_rapide": 7,
+    "zP1": 4,
+    "plaq_ok": 6,
+    "plaq_subi": 6,
+    "zP0": 2,
+    "pt_ecran": 1,
+    "zF3": 1,
+    "zC2": 4,
+    "rk_46": 2,
+    "rk_pen": 1,
+    "zP3": 1,
+    "mf_n": 9,
+    "mf_pos4": 12,
+    "mf_g": 7,
+    "ts_n": 2,
+    "ts_g": 2,
+    "md_n": 3,
+    "tc_n": 4,
+    "tl_n": 1,
+    "tl_vol": 1,
+    "min": 81,
+    "pts": 0
+   },
+   {
+    "name": "Clément Martinez",
+    "actions": 85,
+    "taches": 56,
+    "passe_pos": 6,
+    "ro": 25,
+    "ro_pos": 24,
+    "ro_1er": 7,
+    "ro_r3": 6,
+    "ro_r2": 11,
+    "ret_debout": 6,
+    "ast_pos": 8,
+    "plaq_haut": 5,
+    "ret_tardif": 4,
+    "zP1": 2,
+    "plaq_ok": 6,
+    "plaq_subi": 6,
+    "ro_r4": 1,
+    "ro_neg": 1,
+    "plaq_jambe": 1,
+    "ret_rapide": 4,
+    "zP0": 1,
+    "to_touche": 2,
+    "zT1": 1,
+    "recup": 2,
+    "essai": 1,
+    "zP2": 2,
+    "ct": 3,
+    "ct_nr": 3,
+    "rd": 3,
+    "rd_neg": 3,
+    "gratt": 3,
+    "zT2": 1,
+    "m_n": 4,
+    "m_tot": 6,
+    "m_ap": 4,
+    "c_avance": 2,
+    "zC2": 1,
+    "duel_pos": 2,
+    "off_pos": 1,
+    "zP3": 1,
+    "zC3": 3,
+    "rk": 3,
+    "rk_03": 2,
+    "pdb_touche": 1,
+    "zB3": 1,
+    "pdb": 1,
+    "duel_neg": 2,
+    "rk_46": 1,
+    "mf_n": 5,
+    "mf_pos2": 7,
+    "mf_g": 4,
+    "tl_n": 15,
+    "tl_g": 12,
+    "md_n": 2,
+    "tl_vol": 2,
+    "min": 62,
+    "pts": 5
+   },
+   {
+    "name": "Boris Goutard",
+    "actions": 43,
+    "taches": 28,
+    "ro": 10,
+    "ro_pos": 8,
+    "ro_r3": 2,
+    "plaq_haut": 6,
+    "ret_rapide": 4,
+    "zP1": 4,
+    "plaq_ok": 5,
+    "plaq_subi": 5,
+    "plaq_jambe": 1,
+    "ret_debout": 3,
+    "zP0": 1,
+    "jt_deg": 1,
+    "jap_pos": 1,
+    "m_n": 3,
+    "m_tot": 16,
+    "m_ap": 6,
+    "c_avance": 2,
+    "zC3": 1,
+    "duel_pos": 2,
+    "rk": 1,
+    "rk_6p": 1,
+    "ro_r2": 5,
+    "ro_neg": 2,
+    "ro_1er": 3,
+    "passe_pos": 2,
+    "pdb_ea": 2,
+    "zB2": 1,
+    "pdb": 2,
+    "zP2": 2,
+    "plaq_rate": 2,
+    "plaq_casse": 1,
+    "zC1": 2,
+    "defbattu": 1,
+    "duel_neg": 1,
+    "zB1": 1,
+    "plaq_dang": 1,
+    "pt_plaq": 1,
+    "pen_off": 1,
+    "zF2": 1,
+    "faute": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "contre": 1,
+    "ret_tardif": 1,
+    "ast_pos": 1,
+    "min": 81,
+    "pts": 0
+   },
+   {
+    "name": "Hayden Thompson-Stringer",
+    "actions": 48,
+    "m_n": 9,
+    "m_tot": 26,
+    "m_ap": 10,
+    "c_avance": 6,
+    "zC3": 2,
+    "taches": 33,
+    "duel_pos": 6,
+    "rk": 9,
+    "rk_03": 5,
+    "zC0": 2,
+    "rk_6p": 2,
+    "plaq_jambe": 6,
+    "ret_rapide": 6,
+    "zP1": 4,
+    "plaq_ok": 6,
+    "plaq_subi": 4,
+    "ret_debout": 3,
+    "plaq_rate": 2,
+    "ro": 6,
+    "ro_pos": 6,
+    "ro_r2": 1,
+    "ast_pos": 5,
+    "ro_r3": 2,
+    "zP0": 2,
+    "plaq_haut": 2,
+    "zP3": 1,
+    "zC1": 2,
+    "rk_av": 1,
+    "duel_neg": 3,
+    "to_ea": 2,
+    "zT1": 1,
+    "recup": 2,
+    "zP2": 1,
+    "ret_tardif": 4,
+    "plaq_dom": 1,
+    "rk_46": 1,
+    "zC2": 3,
+    "off_neg": 1,
+    "passe_pos": 2,
+    "ro_1er": 3,
+    "zT2": 1,
+    "mf_n": 6,
+    "mf_pos1": 9,
+    "mf_g": 5,
+    "md_n": 3,
+    "min": 62,
+    "pts": 0
+   },
+   {
+    "name": "Adrian Motoc",
+    "actions": 44,
+    "taches": 29,
+    "ro": 14,
+    "ro_pos": 14,
+    "ro_1er": 4,
+    "passe_pos": 2,
+    "ro_r2": 6,
+    "ro_r3": 3,
+    "plaq_jambe": 7,
+    "ret_rapide": 7,
+    "zP1": 5,
+    "plaq_ok": 9,
+    "plaq_subi": 7,
+    "ret_tardif": 4,
+    "ast_pos": 3,
+    "plaq_haut": 2,
+    "zP0": 3,
+    "ro_r4": 1,
+    "zP2": 1,
+    "ret_debout": 1,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "mf_n": 4,
+    "mf_pos5": 5,
+    "mf_g": 3,
+    "md_n": 1,
+    "ts_n": 3,
+    "ts_g": 2,
+    "min": 40,
+    "pts": 0
+   },
+   {
+    "name": "Nicolas Ciancio",
+    "actions": 43,
+    "taches": 26,
+    "ro": 13,
+    "ro_pos": 13,
+    "ro_r2": 4,
+    "m_n": 3,
+    "m_tot": 3,
+    "m_ap": 2,
+    "c_avance": 2,
+    "zC3": 1,
+    "duel_pos": 2,
+    "rk": 3,
+    "rk_46": 2,
+    "ro_r3": 1,
+    "jt_in": 1,
+    "ro_1er": 6,
+    "plaq_haut": 2,
+    "ret_debout": 2,
+    "zP1": 3,
+    "plaq_ok": 4,
+    "plaq_subi": 4,
+    "rd": 1,
+    "rd_neg": 1,
+    "contre": 1,
+    "plaq_jambe": 2,
+    "ret_rapide": 5,
+    "ret_tardif": 2,
+    "ast_pos": 5,
+    "zP0": 1,
+    "ro_r4": 2,
+    "zC0": 1,
+    "duel_neg": 1,
+    "zC2": 1,
+    "rk_03": 1,
+    "mf_n": 4,
+    "mf_pos3": 5,
+    "mf_g": 3,
+    "md_n": 1,
+    "min": 49,
+    "pts": 0
+   },
+   {
+    "name": "Julien Farnoux",
+    "actions": 51,
+    "taches": 28,
+    "ro": 7,
+    "ro_pos": 6,
+    "ro_r3": 2,
+    "jt_in": 4,
+    "jap_pos": 4,
+    "franch": 1,
+    "m_n": 3,
+    "c_avance": 2,
+    "duel_neg": 2,
+    "essai": 1,
+    "ret_debout": 2,
+    "ast_pos": 3,
+    "ret_tardif": 2,
+    "plaq_haut": 2,
+    "zP0": 1,
+    "plaq_ok": 2,
+    "plaq_subi": 1,
+    "jt_deg": 1,
+    "m_tot": 2,
+    "m_ap": 3,
+    "zC3": 1,
+    "duel_pos": 1,
+    "rk": 1,
+    "rk_av": 1,
+    "rk_perdu": 1,
+    "pdb_ruck": 1,
+    "zB3": 2,
+    "pdb": 2,
+    "ro_r2": 2,
+    "ro_1er": 3,
+    "zC1": 1,
+    "off_pos": 1,
+    "pt_ecran": 1,
+    "pen_off": 1,
+    "zF3": 1,
+    "faute": 1,
+    "pdb_jeu": 1,
+    "ro_neg": 1,
+    "zP2": 2,
+    "plaq_rate": 1,
+    "passe_pos": 1,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "ret_rapide": 2,
+    "aerien_pos": 2,
+    "plaq_jambe": 1,
+    "min": 81,
+    "pts": 5
+   },
+   {
+    "name": "Clement Egiziano",
+    "actions": 44,
+    "taches": 28,
+    "franch": 1,
+    "essai": 2,
+    "m_n": 7,
+    "m_tot": 44,
+    "m_ap": 12,
+    "zC0": 1,
+    "duel_neg": 2,
+    "rk": 6,
+    "rk_6p": 1,
+    "plaq_haut": 4,
+    "ret_debout": 2,
+    "zP1": 5,
+    "plaq_ok": 9,
+    "plaq_subi": 8,
+    "plaq_jambe": 5,
+    "ret_rapide": 7,
+    "zP0": 2,
+    "zP2": 2,
+    "c_avance": 5,
+    "zC3": 2,
+    "duel_pos": 5,
+    "rk_03": 3,
+    "ro": 5,
+    "ro_neg": 1,
+    "ro_r2": 3,
+    "aerien_pos": 2,
+    "zC1": 1,
+    "rk_46": 1,
+    "ro_pos": 4,
+    "ro_1er": 1,
+    "zC2": 3,
+    "off_pos": 1,
+    "aerien_neg": 1,
+    "jt_court": 1,
+    "rk_av": 1,
+    "ro_r3": 1,
+    "ret_tardif": 1,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "ast_pos": 1,
+    "min": 81,
+    "pts": 10
+   },
+   {
+    "name": "Joel Kpoku",
+    "actions": 46,
+    "ct": 1,
+    "ct_nr": 1,
+    "taches": 28,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "m_n": 4,
+    "m_tot": 16,
+    "m_ap": 8,
+    "c_avance": 3,
+    "zC2": 3,
+    "duel_pos": 3,
+    "rk": 4,
+    "rk_6p": 1,
+    "zC3": 1,
+    "rk_03": 2,
+    "ro": 14,
+    "ro_pos": 13,
+    "ro_1er": 10,
+    "ro_r2": 3,
+    "ro_neg": 1,
+    "ro_r3": 1,
+    "ret_debout": 2,
+    "ast_pos": 3,
+    "ret_rapide": 2,
+    "plaq_haut": 2,
+    "zP0": 2,
+    "plaq_ok": 2,
+    "plaq_subi": 2,
+    "passe_pos": 2,
+    "ret_tardif": 1,
+    "rk_46": 1,
+    "duel_neg": 1,
+    "aerien_neg": 1,
+    "pdb_ea": 1,
+    "zB1": 1,
+    "pdb": 1,
+    "md_n": 2,
+    "mf_pos5": 7,
+    "mf_n": 5,
+    "mf_g": 4,
+    "min": 41,
+    "pts": 0
+   },
+   {
+    "name": "Zinedine Aouad",
+    "actions": 34,
+    "m_n": 2,
+    "m_tot": 12,
+    "m_ap": 5,
+    "c_avance": 2,
+    "zC2": 2,
+    "taches": 21,
+    "duel_pos": 2,
+    "rk": 2,
+    "rk_03": 2,
+    "passe_pos": 1,
+    "ro": 8,
+    "ro_neg": 1,
+    "ro_1er": 7,
+    "plaq_jambe": 5,
+    "ret_rapide": 6,
+    "zP2": 1,
+    "plaq_ok": 6,
+    "plaq_subi": 5,
+    "zP1": 3,
+    "ct": 1,
+    "ct_nr": 1,
+    "rd": 1,
+    "rd_neg": 1,
+    "gratt": 1,
+    "plaq_haut": 1,
+    "ast_pos": 3,
+    "pt_melee": 1,
+    "pen_off": 1,
+    "zF1": 2,
+    "faute": 2,
+    "ret_tardif": 2,
+    "ro_pos": 7,
+    "ro_r3": 1,
+    "ret_debout": 1,
+    "zP0": 2,
+    "pt_hj": 1,
+    "pen_def": 1,
+    "cj": 1,
+    "md_n": 2,
+    "mf_pos3": 7,
+    "mf_n": 5,
+    "mf_g": 4,
+    "min": 30,
+    "pts": 0
+   },
+   {
+    "name": "Leo Chauvin",
+    "actions": 13,
+    "taches": 10,
+    "rd": 2,
+    "rd_neg": 2,
+    "contre": 1,
+    "ret_rapide": 5,
+    "ast_pos": 3,
+    "plaq_jambe": 4,
+    "zP1": 1,
+    "plaq_ok": 4,
+    "plaq_subi": 4,
+    "ct": 1,
+    "ct_pnl": 1,
+    "gratt": 1,
+    "pt_ruck": 1,
+    "pen_def": 1,
+    "zF1": 1,
+    "faute": 1,
+    "zP2": 1,
+    "m_n": 1,
+    "m_tot": 6,
+    "m_ap": 4,
+    "c_avance": 1,
+    "zC1": 1,
+    "duel_pos": 1,
+    "rk": 1,
+    "rk_03": 1,
+    "zP0": 2,
+    "ret_tardif": 2,
+    "tl_n": 2,
+    "tl_g": 2,
+    "md_n": 1,
+    "mf_pos2": 5,
+    "mf_n": 4,
+    "mf_g": 3,
+    "min": 19,
+    "pts": 0
+   },
+   {
+    "name": "Hanru Sirgel",
+    "actions": 22,
+    "taches": 15,
+    "ro": 2,
+    "ro_neg": 1,
+    "ro_r2": 1,
+    "ret_tardif": 3,
+    "ast_pos": 4,
+    "ret_debout": 3,
+    "plaq_haut": 1,
+    "zP0": 3,
+    "plaq_ok": 3,
+    "m_n": 5,
+    "m_tot": 27,
+    "m_ap": 12,
+    "c_avance": 5,
+    "zC2": 4,
+    "duel_pos": 5,
+    "rk": 5,
+    "rk_03": 5,
+    "zC3": 1,
+    "ro_pos": 1,
+    "ro_1er": 1,
+    "plaq_jambe": 3,
+    "ret_rapide": 2,
+    "plaq_subi": 2,
+    "zP1": 1,
+    "plaq_rate": 1,
+    "mf_n": 3,
+    "mf_pos6": 2,
+    "mf_g": 2,
+    "mf_pos7": 1,
+    "min": 19,
+    "pts": 0
+   },
+   {
+    "name": "Jules Gimbert",
+    "actions": 33,
+    "jt_press": 1,
+    "taches": 31,
+    "jap_pos": 1,
+    "passe_pos": 25,
+    "plaq_haut": 1,
+    "ret_rapide": 3,
+    "zP0": 2,
+    "plaq_ok": 2,
+    "plaq_subi": 2,
+    "ro": 1,
+    "ro_pos": 1,
+    "ro_r2": 1,
+    "ast_pos": 2,
+    "plaq_jambe": 1,
+    "ret_debout": 1,
+    "passe_imp": 1,
+    "transfo_neg": 1,
+    "min": 16,
+    "pts": 0
+   },
+   {
+    "name": "Jules Martinez",
+    "actions": 25,
+    "ret_rapide": 1,
+    "taches": 17,
+    "ast_pos": 3,
+    "plaq_haut": 2,
+    "ret_tardif": 4,
+    "zP0": 2,
+    "plaq_ok": 2,
+    "m_n": 5,
+    "m_tot": 9,
+    "m_ap": 7,
+    "c_avance": 4,
+    "zC2": 3,
+    "duel_pos": 4,
+    "rk": 4,
+    "rk_46": 1,
+    "ro": 4,
+    "ro_pos": 4,
+    "ro_r2": 2,
+    "ro_r3": 1,
+    "ro_1er": 1,
+    "zC3": 2,
+    "duel_neg": 1,
+    "rk_6p": 1,
+    "rk_03": 2,
+    "plaq_subi": 1,
+    "to_ea": 1,
+    "zT2": 1,
+    "recup": 1,
+    "plaq_casse": 1,
+    "defbattu": 1,
+    "franch": 1,
+    "mf_n": 3,
+    "mf_pos1": 3,
+    "mf_g": 2,
+    "min": 19,
+    "pts": 0
+   },
+   {
+    "name": "Atila Septar",
+    "actions": 9,
+    "plaq_jambe": 2,
+    "ret_tardif": 1,
+    "zP0": 1,
+    "taches": 6,
+    "plaq_ok": 2,
+    "plaq_subi": 2,
+    "passe_neg": 1,
+    "ro": 1,
+    "ro_pos": 1,
+    "ro_r2": 1,
+    "m_n": 2,
+    "m_tot": 9,
+    "m_ap": 4,
+    "c_avance": 2,
+    "zC3": 1,
+    "duel_pos": 2,
+    "rk": 2,
+    "rk_03": 2,
+    "zC2": 1,
+    "ret_rapide": 1,
+    "zP3": 1,
+    "min": 16,
+    "pts": 0
+   }
+  ],
+  "events": [
+   [
+    0,
+    "disc",
+    "Aérien",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    1.02,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    1.03,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    1.05,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Francis Saili"
+   ],
+   [
+    1.23,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    1.27,
+    "ruck",
+    "Contre-ruck",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    1.27,
+    "ruck",
+    "Contre-ruck",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    1.13,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    1.28,
+    "att",
+    "Passe",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    1.17,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    1.25,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    1.28,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    1.3,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    1.42,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    1.4,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    1.37,
+    "att",
+    "Duel contact",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    1.5,
+    "att",
+    "Perte de balle",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    1.97,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    2.85,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    2.87,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    2.82,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    2.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    2.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    2.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    3.6,
+    "att",
+    "Passe",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    3.63,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    3.58,
+    "att",
+    "Duel contact",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    3.7,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    3.7,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    3.7,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    3.72,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    3.7,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    3.8,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    3.8,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    3.78,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    3.77,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    3.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    3.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    3.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    3.85,
+    "att",
+    "Perte de balle",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    4.35,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    4.98,
+    "att",
+    "Passe",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    4.95,
+    "att",
+    "Duel contact",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    5,
+    "att",
+    "Passe",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    5,
+    "att",
+    "Duel contact",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    5,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    5,
+    "att",
+    "Passe",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    5,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    5,
+    "disc",
+    "Essai",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    5,
+    "disc",
+    "Transformation",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    5.67,
+    "disc",
+    "Aérien",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    5.62,
+    "att",
+    "Duel contact",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    5.73,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    5.73,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    5.73,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    5.73,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    5.87,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    5.83,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    7.17,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    7.23,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    7.23,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    7.4,
+    "def",
+    "Plaquage",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    7.52,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    7.52,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    7.63,
+    "def",
+    "Plaquage",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    7.65,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    7.82,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Francis Saili"
+   ],
+   [
+    7.83,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    7.98,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    8.27,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    8.28,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    8.42,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    8.43,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    8.47,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    8.58,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    8.58,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    8.6,
+    "ruck",
+    "Grattage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    8.48,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    8.65,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    8.62,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    8.75,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    8.75,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    8.75,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    8.78,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    9.1,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    8.98,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    9.17,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    9.12,
+    "att",
+    "Duel contact",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    9.12,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    9.2,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    9.1,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    9.23,
+    "att",
+    "Duel contact",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    9,
+    "disc",
+    "Essai",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    10,
+    "disc",
+    "Transformation",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    10.5,
+    "disc",
+    "Aérien",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    10.45,
+    "att",
+    "Duel contact",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    10.55,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    10.55,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    10.55,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    10.55,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    10.55,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    10.67,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    10.83,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    10.83,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    10.85,
+    "def",
+    "Assistant",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    10.95,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    10.97,
+    "def",
+    "Plaquage",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    11.05,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    11.1,
+    "def",
+    "Plaquage",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    11.1,
+    "def",
+    "Assistant",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    11.52,
+    "att",
+    "Duel contact",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    11.62,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    11.62,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    11.58,
+    "att",
+    "Perte de balle",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    11.43,
+    "disc",
+    "Faute",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    12.83,
+    "att",
+    "Duel contact",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    12.87,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    12.98,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    12.98,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    12.92,
+    "att",
+    "Perte de balle",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    14.03,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    14.05,
+    "ruck",
+    "Grattage",
+    0,
+    "Francis Saili"
+   ],
+   [
+    14.9,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    15.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    15.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    15.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    15.07,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    15.08,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    15.28,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    15.32,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    15.33,
+    "ruck",
+    "Grattage",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    15.47,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    15.48,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    15.53,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    15.53,
+    "def",
+    "Assistant",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    15.6,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    15.65,
+    "def",
+    "Assistant",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    15.67,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Nicolas Ciancio"
+   ],
+   [
+    15.73,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    15.73,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    15.83,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    15.83,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    15.9,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    15.9,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    15.95,
+    "def",
+    "Plaquage",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    15.97,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    15.98,
+    "ruck",
+    "Grattage",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    16.05,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Francis Saili"
+   ],
+   [
+    16.08,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    16.17,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    16.17,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    16.3,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    16.33,
+    "def",
+    "Plaquage",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    16.35,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    16.35,
+    "def",
+    "Assistant",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    16.53,
+    "def",
+    "Plaquage",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    16.63,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    16.65,
+    "def",
+    "Plaquage",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    16.67,
+    "def",
+    "Assistant",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    16.7,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    16.72,
+    "def",
+    "Assistant",
+    1,
+    "Francis Saili"
+   ],
+   [
+    16.85,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    16.87,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    16.88,
+    "def",
+    "Assistant",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    16.9,
+    "ruck",
+    "Grattage",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    16.95,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    16.95,
+    "def",
+    "Assistant",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    17.08,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    17.08,
+    "def",
+    "Assistant",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    17.1,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    17.2,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    17.22,
+    "def",
+    "Assistant",
+    1,
+    "Francis Saili"
+   ],
+   [
+    17.23,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    17.27,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    17.27,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    17.1,
+    "disc",
+    "Faute",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    17.33,
+    "def",
+    "Plaquage",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    17.35,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    18.13,
+    "def",
+    "Plaquage",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    18.13,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    18.27,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    18.28,
+    "def",
+    "Assistant",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    18.35,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    18.37,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    18.42,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    18.42,
+    "def",
+    "Assistant",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    18.43,
+    "def",
+    "Assistant",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    20.05,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    20.05,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    20.05,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    20.48,
+    "att",
+    "Passe",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    20.63,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Francis Saili"
+   ],
+   [
+    20.67,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    20.68,
+    "ruck",
+    "Grattage",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    21.17,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    21.25,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    21.27,
+    "att",
+    "Passe",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    21.3,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    21.43,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    21.68,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    21.78,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    21.8,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    21.8,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    21.85,
+    "att",
+    "Passe",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    21.88,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    21.95,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    21.93,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    22.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    22.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    23.05,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    23.82,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    23.83,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    23.85,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    23.83,
+    "att",
+    "Duel contact",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    24,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    24,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    24,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    24.08,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    24.07,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    24.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    24.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    24.13,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    24.12,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    24.2,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    24.18,
+    "att",
+    "Duel contact",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    24.18,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    24.07,
+    "disc",
+    "Faute",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    24.2,
+    "att",
+    "Duel contact",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    24.2,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    26.65,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    26.68,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    26.72,
+    "att",
+    "Passe",
+    1,
+    "Francis Saili"
+   ],
+   [
+    26.7,
+    "att",
+    "Duel contact",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    26.82,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    26.82,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    26.82,
+    "att",
+    "Duel contact",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    26.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    26.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    26.93,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    26.92,
+    "att",
+    "Perte de balle",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    27.6,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    28,
+    "disc",
+    "Essai",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    29.53,
+    "disc",
+    "Aérien",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    29.48,
+    "att",
+    "Duel contact",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    29.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    29.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    29.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    29.7,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    29.67,
+    "att",
+    "Duel contact",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    29.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    29.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    29.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    29.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    29.9,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    30.07,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    30.08,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    30.1,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    30.12,
+    "ruck",
+    "Grattage",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    30.25,
+    "def",
+    "Plaquage",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    30.25,
+    "def",
+    "Assistant",
+    1,
+    "Francis Saili"
+   ],
+   [
+    30.43,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    30.62,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    30.63,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    30.77,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    30.77,
+    "def",
+    "Assistant",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    30.78,
+    "def",
+    "Plaquage",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    30.82,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    30.88,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    30.8,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    32.82,
+    "att",
+    "Passe",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    32.83,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    32.85,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    33.55,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    33.9,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    34,
+    "disc",
+    "Essai",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    34.27,
+    "disc",
+    "Aérien",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    34.3,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    34.3,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    34.3,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    34.3,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    34.38,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    34.35,
+    "att",
+    "Duel contact",
+    0,
+    "Nicolas Ciancio"
+   ],
+   [
+    34.6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    34.6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    34.6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    34.65,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    34.67,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    35.38,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    35.4,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    35.5,
+    "def",
+    "Plaquage",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    35.53,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    35.6,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    35.72,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Francis Saili"
+   ],
+   [
+    35.73,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    35.73,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    35.83,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    35.85,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    35.87,
+    "ruck",
+    "Grattage",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    35.98,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    36.02,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    36.02,
+    "def",
+    "Assistant",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    36.12,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    36.12,
+    "def",
+    "Assistant",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    36.22,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    36.22,
+    "def",
+    "Assistant",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    36.25,
+    "ruck",
+    "Grattage",
+    0,
+    "Adrian Motoc"
+   ],
+   [
+    36.33,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    36.35,
+    "def",
+    "Assistant",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    36.38,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    36.4,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    36.4,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    36.52,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    36.53,
+    "def",
+    "Assistant",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    36.65,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Francis Saili"
+   ],
+   [
+    36.67,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    36.68,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    36.8,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    36.8,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    36.93,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    36.95,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    37.08,
+    "disc",
+    "Aérien",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    37.03,
+    "att",
+    "Duel contact",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    37.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    37.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    37.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    37.23,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    37.2,
+    "att",
+    "Duel contact",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    37.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    37.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    37.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    37.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    37.42,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    37.48,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    37.52,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Francis Saili"
+   ],
+   [
+    38.43,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    38.55,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    38.55,
+    "att",
+    "Duel contact",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    38.67,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    38.67,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    38.67,
+    "att",
+    "Passe",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    38.67,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    38.78,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    38.78,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    38.8,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    38.78,
+    "att",
+    "Duel contact",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    38.9,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    38.9,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    38.95,
+    "att",
+    "Duel contact",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    39.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    39.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    39.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    39.1,
+    "att",
+    "Passe",
+    1,
+    "Francis Saili"
+   ],
+   [
+    39.08,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    39.18,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    39.18,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    39.18,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    39.13,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    39.25,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    39.25,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    39.25,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    39.25,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    39.27,
+    "att",
+    "Passe",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    39.23,
+    "att",
+    "Duel contact",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    39.35,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    39.35,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    39.35,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    39.47,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    39.45,
+    "att",
+    "Duel contact",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    39.53,
+    "att",
+    "Offload",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    39.58,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    39.65,
+    "att",
+    "Duel contact",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    39.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    39.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    39.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    39.78,
+    "disc",
+    "Jeu au pied",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    40.03,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    40.18,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    40.18,
+    "ruck",
+    "Grattage",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    40.3,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    40.32,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    40.93,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    41.08,
+    "att",
+    "Passe",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    41.12,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    41.82,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    41.83,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    41.82,
+    "att",
+    "Duel contact",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    41.83,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    41.93,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    41.93,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    41.98,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    41.95,
+    "att",
+    "Duel contact",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    42.08,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    42.08,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    42.08,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    42.08,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    42.18,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.25,
+    "disc",
+    "Aérien",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    42.23,
+    "att",
+    "Duel contact",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    42.28,
+    "att",
+    "Offload",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    42.25,
+    "att",
+    "Duel contact",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    42.37,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    42.37,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    42.37,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.38,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    42.4,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    42.4,
+    "att",
+    "Duel contact",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    42.5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    42.5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    42.5,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.53,
+    "att",
+    "Passe",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    42.53,
+    "att",
+    "Passe",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    42.55,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    42.58,
+    "att",
+    "Offload",
+    1,
+    "Francis Saili"
+   ],
+   [
+    42.48,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    42.57,
+    "att",
+    "Duel contact",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    42.63,
+    "att",
+    "Offload",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    42.63,
+    "att",
+    "Duel contact",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.65,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.7,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    42.67,
+    "att",
+    "Duel contact",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    42.7,
+    "att",
+    "Perte de balle",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    43.32,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    43.37,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    43.37,
+    "def",
+    "Assistant",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    43.47,
+    "att",
+    "Duel contact",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    43.52,
+    "att",
+    "Offload",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    43.55,
+    "att",
+    "Passe",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    43.53,
+    "att",
+    "Duel contact",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    43.6,
+    "att",
+    "Offload",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    43.6,
+    "att",
+    "Passe",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    43.5,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    43.6,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    43.6,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    43.62,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    43.72,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    43.72,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    43.72,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    43.77,
+    "att",
+    "Passe",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    43.73,
+    "att",
+    "Duel contact",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    43.85,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    43.85,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    43.85,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    43.88,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    43.87,
+    "att",
+    "Duel contact",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    44.1,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    44.1,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    44.1,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    44.12,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    44.1,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    44.2,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    44.2,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    44.05,
+    "disc",
+    "Faute",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    44.12,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    44.23,
+    "att",
+    "Perte de balle",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    45.23,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    45.25,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    45.27,
+    "ruck",
+    "Grattage",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    45.45,
+    "disc",
+    "Aérien",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    45.75,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    46.52,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    46.53,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    46.55,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    46.63,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    46.63,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    46.63,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    46.6,
+    "att",
+    "Duel contact",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    46.72,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    46.72,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    46.7,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    46.68,
+    "att",
+    "Duel contact",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    46.8,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    46.8,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    46.8,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    46.77,
+    "att",
+    "Duel contact",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    46.85,
+    "att",
+    "Offload",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    46.82,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    46.83,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    46.83,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    46.93,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    46.93,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    46.92,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    46.9,
+    "att",
+    "Duel contact",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    47.03,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    47.03,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    47.03,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    47.02,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    47.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    47.15,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    47.15,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    47.13,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    47.22,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    47.22,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    47.22,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    47.17,
+    "att",
+    "Perte de balle",
+    0,
+    "Francis Saili"
+   ],
+   [
+    47.95,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    48.4,
+    "att",
+    "Perte de balle",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    49.22,
+    "att",
+    "Passe",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    49.22,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    49.22,
+    "att",
+    "Duel contact",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    49.28,
+    "att",
+    "Offload",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    49.27,
+    "att",
+    "Duel contact",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    49.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    49.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    49.33,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    49.32,
+    "att",
+    "Duel contact",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    49.37,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    49.37,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    49.37,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    49.35,
+    "att",
+    "Duel contact",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    49.42,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    49.42,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    49.42,
+    "att",
+    "Passe",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    49.4,
+    "att",
+    "Duel contact",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    49.43,
+    "att",
+    "Offload",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    49.42,
+    "att",
+    "Perte de balle",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    49.47,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    49.48,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    50.43,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    50.45,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    50.45,
+    "def",
+    "Assistant",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    50.47,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    50.47,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Francis Saili"
+   ],
+   [
+    50.57,
+    "def",
+    "Plaquage",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    50.57,
+    "def",
+    "Assistant",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    50.63,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    50.65,
+    "ruck",
+    "Grattage",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    50.63,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    50.7,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    50.68,
+    "att",
+    "Passe",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    50.7,
+    "att",
+    "Passe",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    50.7,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    50.7,
+    "att",
+    "Duel contact",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    50.72,
+    "att",
+    "Offload",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    51.78,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    51.77,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    51.77,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    51.87,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    51.87,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    51.87,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    51.85,
+    "att",
+    "Duel contact",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    51.95,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    51.95,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Francis Saili"
+   ],
+   [
+    51.95,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    51.75,
+    "disc",
+    "Faute",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    51.9,
+    "att",
+    "Perte de balle",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    52.03,
+    "att",
+    "Perte de balle",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    52.18,
+    "att",
+    "Passe",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    52.17,
+    "att",
+    "Duel contact",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    52.17,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    52.18,
+    "att",
+    "Duel contact",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    52.2,
+    "att",
+    "Perte de balle",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    53.47,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    53.48,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    53.52,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Francis Saili"
+   ],
+   [
+    53.57,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    53.58,
+    "def",
+    "Assistant",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    53.68,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    53.73,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Leo Chauvin"
+   ],
+   [
+    53.73,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    53.52,
+    "disc",
+    "Faute",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    55,
+    "def",
+    "Plaquage",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    55.02,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    56.47,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    56.6,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    56.38,
+    "disc",
+    "Faute",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    58.37,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    58.4,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    59.07,
+    "def",
+    "Plaquage",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    59.07,
+    "def",
+    "Assistant",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    59.62,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    59.65,
+    "def",
+    "Assistant",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    59.7,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    59.72,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    59.78,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    59.87,
+    "def",
+    "Plaquage",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    59.87,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    60,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    60.02,
+    "ruck",
+    "Grattage",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    60.18,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    60.28,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    60.3,
+    "def",
+    "Assistant",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    60.43,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    60.47,
+    "ruck",
+    "Grattage",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    60.53,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    60.55,
+    "def",
+    "Assistant",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    60.57,
+    "def",
+    "Assistant",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    60.7,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    60.77,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    60.82,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    60.82,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    60.88,
+    "def",
+    "Plaquage",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    61,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    61,
+    "ruck",
+    "Grattage",
+    0,
+    "Leo Chauvin"
+   ],
+   [
+    60.75,
+    "disc",
+    "Faute",
+    0,
+    "Leo Chauvin"
+   ],
+   [
+    61,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    61,
+    "def",
+    "Plaquage",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    61,
+    "def",
+    "Assistant",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    61,
+    "def",
+    "Plaquage",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    61,
+    "def",
+    "Assistant",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    62.28,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    62.47,
+    "def",
+    "Plaquage",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    62.53,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    62.58,
+    "def",
+    "Plaquage",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    62.72,
+    "disc",
+    "Aérien",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    62.75,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    64.08,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    64.12,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    64.08,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    64.22,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    64.22,
+    "ruck",
+    "Ruck off.",
+    0,
+    "Hanru Sirgel"
+   ],
+   [
+    64.2,
+    "att",
+    "Perte de balle",
+    0,
+    "Francis Saili"
+   ],
+   [
+    64.32,
+    "def",
+    "Plaquage",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    65.27,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    65.33,
+    "disc",
+    "Aérien",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    65.32,
+    "att",
+    "Duel contact",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    65.38,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    65.38,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    65.42,
+    "att",
+    "Passe",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    65.43,
+    "att",
+    "Passe",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    65.43,
+    "att",
+    "Perte de balle",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    66.1,
+    "disc",
+    "Faute",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    67.12,
+    "def",
+    "Plaquage",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    67.12,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    67.17,
+    "def",
+    "Plaquage",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    67.22,
+    "def",
+    "Plaquage",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    67.23,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    67.3,
+    "def",
+    "Plaquage",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    67.3,
+    "def",
+    "Assistant",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    67.3,
+    "def",
+    "Assistant",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    67.37,
+    "def",
+    "Plaquage",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    67.37,
+    "def",
+    "Assistant",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    67.37,
+    "def",
+    "Assistant",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    67.43,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    67.45,
+    "def",
+    "Assistant",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    67.5,
+    "def",
+    "Plaquage",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    67.53,
+    "def",
+    "Assistant",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    67.58,
+    "def",
+    "Plaquage",
+    1,
+    "Atila Septar"
+   ],
+   [
+    67.58,
+    "def",
+    "Assistant",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    67.45,
+    "disc",
+    "Faute",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    67.68,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    67.7,
+    "def",
+    "Assistant",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    67.78,
+    "def",
+    "Plaquage",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    67.8,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    67.8,
+    "def",
+    "Assistant",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    67.85,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    71.73,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    72.08,
+    "att",
+    "Perte de balle",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    72.93,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    72.95,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    73.08,
+    "disc",
+    "Aérien",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    73.12,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    73.18,
+    "disc",
+    "Aérien",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    73.2,
+    "att",
+    "Passe",
+    0,
+    "Atila Septar"
+   ],
+   [
+    73.18,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    73.27,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.25,
+    "att",
+    "Duel contact",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    73.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    73.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    73.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    73.33,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.32,
+    "att",
+    "Duel contact",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    73.4,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    73.4,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    73.42,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.42,
+    "att",
+    "Duel contact",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    73.5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    73.5,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    73.53,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.52,
+    "att",
+    "Duel contact",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    73.6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    73.6,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Atila Septar"
+   ],
+   [
+    73.6,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.58,
+    "att",
+    "Duel contact",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    73.72,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.7,
+    "att",
+    "Duel contact",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    73.8,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.78,
+    "att",
+    "Duel contact",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    73.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    73.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    73.88,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    73.92,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    73.9,
+    "att",
+    "Duel contact",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    74,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    74,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    73.98,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    74.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    74.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    74.07,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    74.13,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.1,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    74.12,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Francis Saili"
+   ],
+   [
+    74.18,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    74.18,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.17,
+    "att",
+    "Duel contact",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    74.25,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    74.25,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    74.25,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.25,
+    "att",
+    "Duel contact",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    74.25,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    74.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    74.33,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    74.33,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.3,
+    "att",
+    "Duel contact",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    74.38,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    74.38,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    74.38,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    74.4,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.38,
+    "att",
+    "Duel contact",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    74.47,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    74.47,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    74.47,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.45,
+    "att",
+    "Duel contact",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    74.5,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    74.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    74.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.58,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    74.62,
+    "att",
+    "Passe",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    74.6,
+    "att",
+    "Duel contact",
+    0,
+    "Jules Martinez"
+   ],
+   [
+    74.68,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    74.68,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    74.68,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    74.7,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.68,
+    "att",
+    "Duel contact",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    74.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    74.77,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    74.78,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.75,
+    "att",
+    "Duel contact",
+    1,
+    "Atila Septar"
+   ],
+   [
+    74.82,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    74.82,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    74.83,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.82,
+    "att",
+    "Duel contact",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    74.9,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    74.9,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    74.95,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    74.93,
+    "att",
+    "Duel contact",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    75.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    75.02,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    75.02,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    75,
+    "att",
+    "Duel contact",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    75.08,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    75.08,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    75.07,
+    "att",
+    "Duel contact",
+    1,
+    "Atila Septar"
+   ],
+   [
+    75.13,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    75.13,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    75.13,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    75.13,
+    "att",
+    "Duel contact",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    75.22,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    75.22,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    76,
+    "disc",
+    "Pénalité",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    76.5,
+    "disc",
+    "Aérien",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    76.47,
+    "att",
+    "Perte de balle",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    77.32,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    77.32,
+    "def",
+    "Assistant",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    77.32,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    77.4,
+    "def",
+    "Plaquage",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    77.48,
+    "def",
+    "Plaquage",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    77.5,
+    "def",
+    "Assistant",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    77.57,
+    "def",
+    "Plaquage",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    77.58,
+    "def",
+    "Assistant",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    77.68,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    77.72,
+    "def",
+    "Assistant",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    77.77,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    77.8,
+    "def",
+    "Assistant",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    77.93,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    77.93,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    77.95,
+    "ruck",
+    "Grattage",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    78.12,
+    "def",
+    "Plaquage",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    78.12,
+    "def",
+    "Assistant",
+    1,
+    "Francis Saili"
+   ],
+   [
+    78.15,
+    "def",
+    "Assistant",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    78.2,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    78.2,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    78.35,
+    "def",
+    "Plaquage",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    78.4,
+    "def",
+    "Plaq. manqué",
+    0,
+    "Hanru Sirgel"
+   ],
+   [
+    78.43,
+    "def",
+    "Plaquage",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    78.43,
+    "def",
+    "Assistant",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    78.47,
+    "ruck",
+    "Grattage",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    78.57,
+    "def",
+    "Plaquage",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    78.57,
+    "def",
+    "Assistant",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    78.65,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    78.65,
+    "def",
+    "Assistant",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    78.67,
+    "ruck",
+    "Contre-ruck",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    78.75,
+    "def",
+    "Plaquage",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    78.77,
+    "def",
+    "Assistant",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    78.77,
+    "ruck",
+    "Grattage",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    78.57,
+    "disc",
+    "Faute",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    78.8,
+    "att",
+    "Passe",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    78.7,
+    "disc",
+    "Carton jaune",
+    0,
+    "Zinedine Aouad",
+    1
+   ],
+   [
+    79.7,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    79.82,
+    "def",
+    "Plaquage",
+    1,
+    "Atila Septar"
+   ],
+   [
+    79.85,
+    "ruck",
+    "Grattage",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    79.92,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    79.93,
+    "def",
+    "Assistant",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    80.02,
+    "def",
+    "Plaquage",
+    1,
+    "Francis Saili"
+   ],
+   [
+    80.02,
+    "def",
+    "Assistant",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    79.93,
+    "def",
+    "Ballon récupéré",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    79.97,
+    "att",
+    "Duel contact",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    79.98,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    79.92,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    80,
+    "att",
+    "Duel contact",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    80.1,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    80.1,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    80.07,
+    "att",
+    "Duel contact",
+    1,
+    "Francis Saili"
+   ],
+   [
+    80.17,
+    "ruck",
+    "Ruck off.",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    80.18,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    80.2,
+    "disc",
+    "Jeu au pied",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    80,
+    "disc",
+    "Essai",
+    1,
+    "Clement Egiziano"
+   ]
+  ],
+  "pts": [
+   [
+    14,
+    55,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    17,
+    54,
+    "T",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    13,
+    83,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    6,
+    90,
+    "C",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    6,
+    91,
+    "B",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    22,
+    93,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    21,
+    76,
+    "C",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    23,
+    81,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    36,
+    81,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    40,
+    81,
+    "B",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    20,
+    97,
+    "C",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    31,
+    97,
+    "C",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    61,
+    18,
+    "C",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    53,
+    14,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    42,
+    55,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    41,
+    51,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    6,
+    47,
+    "P",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    43,
+    44,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    55,
+    39,
+    "P",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    25,
+    46,
+    "P",
+    0,
+    "Francis Saili"
+   ],
+   [
+    26,
+    40,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    57,
+    45,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    45,
+    45,
+    "P",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    41,
+    40,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    54,
+    33,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    55,
+    35,
+    "T",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    53,
+    34,
+    "T",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    51,
+    35,
+    "C",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    40,
+    67,
+    "C",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    56,
+    19,
+    "C",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    57,
+    48,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    43,
+    54,
+    "P",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    43,
+    49,
+    "P",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    20,
+    50,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    2,
+    39,
+    "P",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    3,
+    38,
+    "C",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    3,
+    40,
+    "B",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    3,
+    39,
+    "F",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    13,
+    15,
+    "C",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    20,
+    13,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    23,
+    16,
+    "B",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    45,
+    16,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    55,
+    17,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    52,
+    50,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    61,
+    47,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    36,
+    46,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    24,
+    42,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    12,
+    38,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    31,
+    45,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    48,
+    47,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    45,
+    44,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    38,
+    42,
+    "P",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    15,
+    48,
+    "P",
+    0,
+    "Francis Saili"
+   ],
+   [
+    15,
+    45,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    37,
+    46,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    64,
+    40,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    66,
+    29,
+    "P",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    36,
+    30,
+    "P",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    3,
+    12,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    5,
+    9,
+    "P",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    14,
+    12,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    37,
+    13,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    38,
+    9,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    53,
+    7,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    51,
+    6,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    35,
+    6,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    32,
+    2,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    29,
+    2,
+    "F",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    28,
+    2,
+    "P",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    31,
+    2,
+    "P",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    30,
+    2,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    25,
+    1,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    28,
+    0,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    15,
+    85,
+    "P",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    19,
+    81,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    38,
+    70,
+    "P",
+    0,
+    "Francis Saili"
+   ],
+   [
+    50,
+    63,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    19,
+    46,
+    "T",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    9,
+    50,
+    "T",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    26,
+    41,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    13,
+    44,
+    "C",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    15,
+    47,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    37,
+    84,
+    "C",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    31,
+    90,
+    "C",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    22,
+    92,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    21,
+    93,
+    "C",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    21,
+    93,
+    "F",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    14,
+    94,
+    "C",
+    0,
+    "Theo Idjellidaine"
+   ],
+   [
+    63,
+    79,
+    "C",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    66,
+    81,
+    "C",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    64,
+    83,
+    "B",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    60,
+    20,
+    "C",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    52,
+    19,
+    "C",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    45,
+    52,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    16,
+    46,
+    "P",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    31,
+    48,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    54,
+    52,
+    "P",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    51,
+    42,
+    "P",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    43,
+    47,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    38,
+    49,
+    "T",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    6,
+    91,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    52,
+    19,
+    "C",
+    0,
+    "Nicolas Ciancio"
+   ],
+   [
+    37,
+    54,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    43,
+    52,
+    "P",
+    1,
+    "Adrian Motoc"
+   ],
+   [
+    12,
+    52,
+    "P",
+    0,
+    "Francis Saili"
+   ],
+   [
+    16,
+    50,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    27,
+    54,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    34,
+    51,
+    "P",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    41,
+    42,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    33,
+    43,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    41,
+    42,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    51,
+    42,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    54,
+    40,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    43,
+    42,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    22,
+    47,
+    "P",
+    0,
+    "Francis Saili"
+   ],
+   [
+    23,
+    44,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    40,
+    49,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    47,
+    49,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    58,
+    31,
+    "C",
+    0,
+    "Clement Egiziano"
+   ],
+   [
+    51,
+    28,
+    "C",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    14,
+    59,
+    "T",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    41,
+    69,
+    "C",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    41,
+    70,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    25,
+    70,
+    "C",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    28,
+    70,
+    "C",
+    1,
+    "Nicolas Ciancio"
+   ],
+   [
+    41,
+    72,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    45,
+    74,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    58,
+    72,
+    "C",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    45,
+    72,
+    "C",
+    0,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    49,
+    68,
+    "C",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    9,
+    75,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    26,
+    78,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    21,
+    79,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    23,
+    51,
+    "C",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    13,
+    51,
+    "C",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    11,
+    66,
+    "C",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    17,
+    68,
+    "C",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    58,
+    72,
+    "C",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    29,
+    64,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    19,
+    70,
+    "C",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    6,
+    74,
+    "C",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    1,
+    82,
+    "C",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    -1,
+    85,
+    "B",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    20,
+    88,
+    "P",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    18,
+    83,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    32,
+    48,
+    "C",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    58,
+    51,
+    "C",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    63,
+    75,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    66,
+    83,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    55,
+    88,
+    "C",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    42,
+    90,
+    "C",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    53,
+    88,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    63,
+    91,
+    "F",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    63,
+    90,
+    "B",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    46,
+    69,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    53,
+    81,
+    "C",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    56,
+    86,
+    "C",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    66,
+    90,
+    "C",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    55,
+    92,
+    "C",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    43,
+    90,
+    "C",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    44,
+    88,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    46,
+    90,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    34,
+    90,
+    "C",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    21,
+    91,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    6,
+    92,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    4,
+    95,
+    "B",
+    0,
+    "Francis Saili"
+   ],
+   [
+    11,
+    93,
+    "B",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    19,
+    74,
+    "C",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    12,
+    71,
+    "C",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    21,
+    69,
+    "C",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    33,
+    71,
+    "C",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    41,
+    71,
+    "C",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    46,
+    69,
+    "B",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    45,
+    70,
+    "P",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    44,
+    62,
+    "P",
+    0,
+    "Julien Farnoux"
+   ],
+   [
+    17,
+    71,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    10,
+    73,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    5,
+    72,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    50,
+    69,
+    "P",
+    1,
+    "Clément Martinez"
+   ],
+   [
+    21,
+    68,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    33,
+    66,
+    "T",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    60,
+    67,
+    "C",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    46,
+    88,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    33,
+    88,
+    "C",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    32,
+    88,
+    "F",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    33,
+    89,
+    "B",
+    0,
+    "Bautista Ezcurra"
+   ],
+   [
+    62,
+    61,
+    "B",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    3,
+    44,
+    "C",
+    1,
+    "Boris Goutard"
+   ],
+   [
+    5,
+    46,
+    "C",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    6,
+    46,
+    "B",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    59,
+    57,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    37,
+    60,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    10,
+    71,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    10,
+    69,
+    "F",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    20,
+    36,
+    "P",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    17,
+    68,
+    "P",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    17,
+    68,
+    "F",
+    0,
+    "Boris Goutard"
+   ],
+   [
+    28,
+    52,
+    "P",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    23,
+    44,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    40,
+    44,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    58,
+    41,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    46,
+    42,
+    "P",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    21,
+    46,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    9,
+    32,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    21,
+    39,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    5,
+    32,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    12,
+    32,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    20,
+    30,
+    "P",
+    0,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    27,
+    16,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    26,
+    13,
+    "P",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    49,
+    25,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    44,
+    27,
+    "F",
+    0,
+    "Leo Chauvin"
+   ],
+   [
+    36,
+    14,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    27,
+    11,
+    "P",
+    1,
+    "Hayden Thompson-Stringer"
+   ],
+   [
+    25,
+    5,
+    "P",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    10,
+    81,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    64,
+    78,
+    "P",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
+    55,
+    74,
+    "P",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    33,
+    72,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    34,
+    74,
+    "B",
+    0,
+    "Francis Saili"
+   ],
+   [
+    34,
+    70,
+    "P",
+    1,
+    "Julien Farnoux"
+   ],
+   [
+    53,
+    46,
+    "C",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    1,
+    40,
+    "B",
+    0,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    58,
+    44,
+    "F",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    67,
+    12,
+    "P",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    58,
+    12,
+    "P",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    55,
+    10,
+    "P",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
+    46,
+    10,
+    "P",
+    1,
+    "Leo Chauvin"
+   ],
+   [
+    46,
+    9,
+    "P",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    43,
+    6,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    39,
+    6,
+    "P",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    53,
+    7,
+    "P",
+    1,
+    "Atila Septar"
+   ],
+   [
+    55,
+    5,
+    "F",
+    0,
+    "Bastien Berenguel"
+   ],
+   [
+    45,
+    5,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    47,
+    6,
+    "P",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    48,
+    1,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    59,
+    32,
+    "B",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    10,
+    61,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    20,
+    65,
+    "C",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    8,
+    67,
+    "C",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    15,
+    66,
+    "C",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    26,
+    67,
+    "C",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    29,
+    70,
+    "C",
+    1,
+    "Enzo Labadie"
+   ],
+   [
+    21,
+    69,
+    "C",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    17,
+    68,
+    "C",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    27,
+    68,
+    "C",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    33,
+    70,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    40,
+    69,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    49,
+    72,
+    "C",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    55,
+    77,
+    "C",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    45,
+    81,
+    "C",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    35,
+    79,
+    "C",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    25,
+    76,
+    "C",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    25,
+    84,
+    "C",
+    1,
+    "Francis Saili"
+   ],
+   [
+    18,
+    82,
+    "C",
+    0,
+    "Jules Martinez"
+   ],
+   [
+    13,
+    81,
+    "C",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    10,
+    82,
+    "C",
+    1,
+    "Atila Septar"
+   ],
+   [
+    19,
+    81,
+    "C",
+    0,
+    "Clément Martinez"
+   ],
+   [
+    29,
+    74,
+    "C",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    12,
+    74,
+    "C",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    3,
+    77,
+    "C",
+    1,
+    "Atila Septar"
+   ],
+   [
+    15,
+    77,
+    "C",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    63,
+    39,
+    "B",
+    0,
+    "Joel Kpoku"
+   ],
+   [
+    65,
+    17,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    52,
+    19,
+    "P",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    29,
+    21,
+    "P",
+    1,
+    "Jean-Pascal Barraque"
+   ],
+   [
+    22,
+    21,
+    "P",
+    1,
+    "Hanru Sirgel"
+   ],
+   [
+    53,
+    28,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    60,
+    27,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    37,
+    25,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    9,
+    18,
+    "P",
+    1,
+    "Joel Kpoku"
+   ],
+   [
+    23,
+    17,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    52,
+    29,
+    "P",
+    1,
+    "Clement Egiziano"
+   ],
+   [
+    56,
+    27,
+    "P",
+    0,
+    "Hanru Sirgel"
+   ],
+   [
+    60,
+    19,
+    "P",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    55,
+    17,
+    "P",
+    1,
+    "Jules Gimbert"
+   ],
+   [
+    49,
+    19,
+    "P",
+    1,
+    "Arthur Vignolles"
+   ],
+   [
+    40,
+    19,
+    "P",
+    1,
+    "Zinedine Aouad"
+   ],
+   [
+    41,
+    23,
+    "F",
+    0,
+    "Zinedine Aouad"
+   ],
+   [
+    17,
+    80,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    59,
+    80,
+    "P",
+    1,
+    "Atila Septar"
+   ],
+   [
+    47,
+    79,
+    "P",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
+    27,
+    80,
+    "P",
+    1,
+    "Francis Saili"
+   ],
+   [
+    23,
+    77,
+    "T",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    21,
+    77,
+    "C",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    14,
+    85,
+    "C",
+    1,
+    "Jules Martinez"
+   ],
+   [
+    19,
+    89,
+    "C",
+    1,
+    "Francis Saili"
+   ]
+  ],
+  "team": {
+   "sc": 1,
+   "mo_n": 9,
+   "mo_g": 7,
+   "to_n": 18,
+   "to_g": 15,
+   "to_ex": 12,
+   "ton|6 + 1": 7,
+   "ton|6 + 1|g": 5,
+   "toz|Milieu": 8,
+   "toz|Milieu|g": 7,
+   "tot|Maul": 9,
+   "tot|Maul|g": 9,
+   "to_ct": 12,
+   "ton|7 + 1": 1,
+   "ton|7 + 1|g": 1,
+   "tot|Maul furtif": 2,
+   "tot|Maul furtif|g": 2,
+   "toz|Fond": 5,
+   "toz|Fond|g": 4,
+   "ta_n": 13,
+   "ton|4": 3,
+   "ton|4|g": 2,
+   "toz|Devant": 5,
+   "toz|Devant|g": 4,
+   "tot|Autre": 4,
+   "tot|Autre|g": 1,
+   "tot|Deviation haute": 2,
+   "tot|Deviation haute|g": 2,
+   "md_n": 3,
+   "ton|7": 2,
+   "ton|7|g": 2,
+   "ta_perdu": 3,
+   "ta_vol": 1,
+   "ton|5 + 1": 4,
+   "ton|5 + 1|g": 4,
+   "to_vol": 3,
+   "ton|Autre": 1,
+   "ton|Autre|g": 1,
+   "tot|+15m": 1,
+   "tot|+15m|g": 1,
+   "mo_p": 1
+  },
+  "minutes": {
+   "Adrian Motoc": 40,
+   "Nicolas Ciancio": 49,
+   "Clément Martinez": 62,
+   "Enzo Labadie": 74,
+   "Hayden Thompson-Stringer": 62,
+   "Theo Idjellidaine": 65,
+   "Bautista Ezcurra": 65,
+   "Bastien Berenguel": 69,
+   "Leo Chauvin": 19,
+   "Zinedine Aouad": 30,
+   "Jean-Pascal Barraque": 81,
+   "Francis Saili": 81,
+   "Arthur Vignolles": 81,
+   "Christiaan Van Der Merwe": 81,
+   "Boris Goutard": 81,
+   "Julien Farnoux": 81,
+   "Clement Egiziano": 81,
+   "Joel Kpoku": 41,
+   "Hanru Sirgel": 19,
+   "Jules Martinez": 19,
+   "Jules Gimbert": 16,
+   "Atila Septar": 16
+  },
+  "clock": true,
+  "ht": [
+   40,
+   40
+  ],
+  "tmax": 90,
+  "nbRows": 1139
+ }
+}
