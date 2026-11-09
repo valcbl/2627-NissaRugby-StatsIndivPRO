@@ -9,8 +9,8 @@
  */
 (function(){
   if (window.claude && window.claude.use) return; // déjà dans Claude : on ne touche à rien
-  var KEY = 'nissa-pro-db-v1';
-  var SEED = window.__SEED || { matchs: [], effectif: { joueurs: [] }, minutes: { minutes: {} }, logos: {} };
+  var KEY = window.__DB_KEY || 'nissa-stats-db-v1'; // une clé par site : plusieurs sites sur le même domaine GitHub Pages ne se mélangent pas
+  var SEED = window.__SEED || { matchs: [], effectif: { joueurs: [] }, minutes: { minutes: {} }, logos: {}, docs: {} };
 
   function seedDocs(){
     var d = {};
@@ -18,6 +18,7 @@
     Object.keys(SEED.logos || {}).forEach(function(k){ d['logos/' + k] = SEED.logos[k]; });
     if (SEED.effectif) d['effectif/saison'] = SEED.effectif;
     if (SEED.minutes) d['temps/saison'] = SEED.minutes;
+    Object.keys(SEED.docs || {}).forEach(function(p){ d[p] = SEED.docs[p]; });
     return d;
   }
   var local = { docs: {}, deleted: {} };
@@ -66,11 +67,12 @@
 
   // Export des données (pour mettre à jour data/data.js dans le dépôt) et retour aux données du dépôt
   function exportSeed(){
-    var d = all(), out = { matchs: [], effectif: d['effectif/saison'] || { joueurs: [] }, minutes: d['temps/saison'] || { minutes: {} }, logos: {} };
+    var d = all(), out = { matchs: [], effectif: d['effectif/saison'] || { joueurs: [] }, minutes: d['temps/saison'] || { minutes: {} }, logos: {}, docs: {} };
     Object.keys(d).forEach(function(p){
       var s = p.split('/');
       if (s[0] === 'matchs' && s.length === 2) out.matchs.push(Object.assign({ id: s[1] }, d[p]));
-      if (s[0] === 'logos' && s.length === 2) out.logos[s[1]] = d[p];
+      else if (s[0] === 'logos' && s.length === 2) out.logos[s[1]] = d[p];
+      else if (p !== 'effectif/saison' && p !== 'temps/saison') out.docs[p] = d[p];
     });
     out.matchs.sort(function(a, b){ return String(a.id).localeCompare(String(b.id)); });
     var txt = '/* Exporté depuis le site le ' + new Date().toLocaleString('fr-FR') + ' */\nwindow.__SEED = ' + JSON.stringify(out) + ';\n';

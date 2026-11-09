@@ -1,291 +1,382 @@
 {
  "joueurs": [
   {
+   "annee": null,
+   "grp": "TA",
    "nom": "BAPTISTE MORENO",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "TA"
+   "prenom": "",
+   "nf": "MORENO",
+   "pf": "Baptiste"
   },
   {
+   "annee": null,
+   "grp": "TA",
    "nom": "CLÉMENT MARTINEZ",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "TA"
+   "prenom": "",
+   "nf": "MARTINEZ",
+   "pf": "Clément"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "ETIENNE FALGOUX",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "FALGOUX",
+   "pf": "Etienne"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "FABIO GONZALEZ",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "GONZALEZ",
+   "pf": "Fabio"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "FARAI MUDARIKI",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "MUDARIKI",
+   "pf": "Farai"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "HAYDEN THOMPSON-STRINGER",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "THOMPSON-STRINGER",
+   "pf": "Hayden"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "JULES MARTINEZ",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "MARTINEZ",
+   "pf": "Jules"
   },
   {
+   "annee": null,
+   "grp": "TA",
    "nom": "LEO CHAUVIN",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "TA"
+   "prenom": "",
+   "nf": "CHAUVIN",
+   "pf": "Leo"
   },
   {
+   "annee": null,
+   "grp": "PI",
    "nom": "NICOLAS CIANCIO",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "PI"
+   "prenom": "",
+   "nf": "CIANCIO",
+   "pf": "Nicolas"
   },
   {
+   "annee": null,
+   "grp": "TA",
    "nom": "PAT LEAFA",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "TA"
+   "prenom": "",
+   "nf": "LEAFA",
+   "pf": "Pat"
   },
   {
+   "annee": 2005,
+   "grp": "PI",
    "nom": "ZINEDINE AOUAD",
+   "poste": 3,
    "prenom": "",
-   "annee": null,
-   "poste": null,
-   "grp": "PI"
+   "nf": "AOUAD",
+   "pf": "Zinedine"
   },
   {
+   "annee": null,
+   "grp": "2L",
    "nom": "ADRIAN MOTOC",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "2L"
+   "prenom": "",
+   "nf": "MOTOC",
+   "pf": "Adrian"
   },
   {
+   "annee": null,
+   "grp": "2L",
    "nom": "CHRISTIAAN VAN DER MERWE",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "2L"
+   "prenom": "",
+   "nf": "VAN DER MERWE",
+   "pf": "Christiaan"
   },
   {
+   "annee": null,
+   "grp": "2L",
    "nom": "EVAN OLMSTEAD",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "2L"
+   "prenom": "",
+   "nf": "OLMSTEAD",
+   "pf": "Evan"
   },
   {
+   "annee": null,
+   "grp": "2L",
    "nom": "JOEL KPOKU",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "2L"
+   "prenom": "",
+   "nf": "KPOKU",
+   "pf": "Joel"
   },
   {
+   "annee": 2004,
+   "grp": "3L",
    "nom": "KYLIAN LAURANS",
+   "poste": 8,
    "prenom": "",
-   "annee": null,
-   "poste": null,
-   "grp": "3L"
+   "nf": "LAURANS",
+   "pf": "Kylian"
   },
   {
+   "annee": 2008,
+   "grp": "3L",
    "nom": "ANDY BOSSERAY",
+   "poste": 7,
    "prenom": "",
-   "annee": null,
-   "poste": null,
-   "grp": "3L"
+   "nf": "BOSSERAY",
+   "pf": "Andy"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "ARTHUR VIGNOLLES",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "VIGNOLLES",
+   "pf": "Arthur"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "BASTIEN BERENGUEL",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "BERENGUEL",
+   "pf": "Bastien"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "ENZO LABADIE",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "LABADIE",
+   "pf": "Enzo"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "HANRU SIRGEL",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "SIRGEL",
+   "pf": "Hanru"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "HUGO SARRASIN",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "SARRASIN",
+   "pf": "Hugo"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "IAKOPO PETELO-MAPU",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "PETELO-MAPU",
+   "pf": "Iakopo"
   },
   {
+   "annee": null,
+   "grp": "3L",
    "nom": "LUCAS BACHELIER",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "3L"
+   "prenom": "",
+   "nf": "BACHELIER",
+   "pf": "Lucas"
   },
   {
+   "annee": 2005,
+   "grp": "CH",
    "nom": "FLAVIO ASQUINI",
+   "poste": 10,
    "prenom": "",
-   "annee": null,
-   "poste": null,
-   "grp": "CH"
+   "nf": "ASQUINI",
+   "pf": "Flavio"
   },
   {
+   "annee": null,
+   "grp": "CH",
    "nom": "GUILLAUME ROUET",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CH"
+   "prenom": "",
+   "nf": "ROUET",
+   "pf": "Guillaume"
   },
   {
+   "annee": null,
+   "grp": "CH",
    "nom": "JEAN-PASCAL BARRAQUE",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CH"
+   "prenom": "",
+   "nf": "BARRAQUE",
+   "pf": "Jean-Pascal"
   },
   {
+   "annee": null,
+   "grp": "CH",
    "nom": "JULES GIMBERT",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CH"
+   "prenom": "",
+   "nf": "GIMBERT",
+   "pf": "Jules"
   },
   {
+   "annee": null,
+   "grp": "CH",
    "nom": "MASSIMO ORTOLAN",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CH"
+   "prenom": "",
+   "nf": "ORTOLAN",
+   "pf": "Massimo"
   },
   {
+   "annee": null,
+   "grp": "CH",
    "nom": "THEO IDJELLIDAINE",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CH"
+   "prenom": "",
+   "nf": "IDJELLIDAINE",
+   "pf": "Theo"
   },
   {
+   "annee": null,
+   "grp": "CE",
    "nom": "ATILA SEPTAR",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CE"
+   "prenom": "",
+   "nf": "SEPTAR",
+   "pf": "Atila"
   },
   {
+   "annee": null,
+   "grp": "CE",
    "nom": "BAPTISTE LAFOND",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CE"
+   "prenom": "",
+   "nf": "LAFOND",
+   "pf": "Baptiste"
   },
   {
+   "annee": null,
+   "grp": "CE",
    "nom": "BAUTISTA EZCURRA",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CE"
+   "prenom": "",
+   "nf": "EZCURRA",
+   "pf": "Bautista"
   },
   {
+   "annee": null,
+   "grp": "CE",
    "nom": "FRANCIS SAILI",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CE"
+   "prenom": "",
+   "nf": "SAILI",
+   "pf": "Francis"
   },
   {
+   "annee": null,
+   "grp": "B3",
    "nom": "PABLO PATILLA",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "PATILLA",
+   "pf": "Pablo"
   },
   {
+   "annee": null,
+   "grp": "CE",
    "nom": "TYLER MORGAN",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "CE"
+   "prenom": "",
+   "nf": "MORGAN",
+   "pf": "Tyler"
   },
   {
+   "annee": null,
+   "grp": "B3",
    "nom": "BORIS GOUTARD",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "GOUTARD",
+   "pf": "Boris"
   },
   {
+   "annee": null,
+   "grp": "B3",
    "nom": "CLEMENT EGIZIANO",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "EGIZIANO",
+   "pf": "Clement"
   },
   {
+   "annee": null,
+   "grp": "B3",
    "nom": "INOKE NALAGA KURUKURUVAKATINI",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "NALAGA KURUKURUVAKATINI",
+   "pf": "Inoke"
   },
   {
+   "annee": null,
+   "grp": "B3",
    "nom": "JULIEN FARNOUX",
-   "prenom": "",
-   "annee": null,
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "FARNOUX",
+   "pf": "Julien"
   },
   {
-   "nom": "VINCENT RATTEZ",
-   "prenom": "",
    "annee": null,
+   "grp": "B3",
+   "nom": "VINCENT RATTEZ",
    "poste": null,
-   "grp": "B3"
+   "prenom": "",
+   "nf": "RATTEZ",
+   "pf": "Vincent"
+  },
+  {
+   "annee": null,
+   "grp": "PI",
+   "nom": "BEAU FARRANCE",
+   "poste": null,
+   "prenom": "",
+   "nf": "FARRANCE",
+   "pf": "Beau"
   }
  ]
 }

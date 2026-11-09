@@ -11,7 +11,7 @@ Il lit les exports XML officiels des matchs (format *Individual_v2*, « …_xml_
 
 Les postes sont regroupés en 7 groupes : piliers, talonneurs, 2e ligne, 3e ligne, charnière (9-10), centres, back 3 (11-14-15).
 
-Données incluses : J1 à J7 (Biarritz, Béziers, Brive, Grenoble, Dax, Nevers, Provence Rugby), effectif de 41 joueurs, minutes jouées.
+Données incluses : J1 à J10 (Biarritz, Béziers, Brive, Grenoble, Dax, Nevers, Provence Rugby, Agen, Aurillac, Narbonne), effectif de 42 joueurs, minutes jouées.
 
 ---
 
@@ -25,6 +25,7 @@ data/matchs/*.json      un fichier lisible par match (stats calculées)
 data/effectif.json      joueurs et groupes de poste
 data/minutes.json       minutes jouées par journée
 data/logos.json         logos des adversaires
+data/autres.json        autres réglages enregistrés par le site (créé si besoin)
 tools/build_data.py     data/*.json  →  data/data.js
 tools/split_data.py     data.js exporté depuis le site  →  data/*.json
 .nojekyll               indique à GitHub Pages de servir les fichiers tels quels

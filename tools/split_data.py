@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Découpe un data.js exporté depuis le site (bouton « Exporter les données »)
-en fichiers JSON lisibles dans data/ (matchs/, effectif.json, minutes.json, logos.json).
+en fichiers JSON lisibles dans data/ (matchs/, effectif.json, minutes.json, logos.json, autres.json).
 
 Usage : python3 tools/split_data.py chemin/vers/data.js
 Ensuite : python3 tools/build_data.py  (pour régénérer data/data.js proprement)
@@ -19,4 +19,6 @@ for m in seed.get('matchs', []):
 json.dump(seed.get('effectif', {'joueurs': []}), open(os.path.join(D, 'effectif.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 json.dump(seed.get('minutes', {'minutes': {}}), open(os.path.join(D, 'minutes.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 json.dump(seed.get('logos', {}), open(os.path.join(D, 'logos.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+if seed.get('docs'):
+    json.dump(seed['docs'], open(os.path.join(D, 'autres.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"{len(seed.get('matchs', []))} matchs écrits dans data/matchs/")

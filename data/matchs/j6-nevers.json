@@ -116,7 +116,11 @@
     "jt_press": 1,
     "zP0": 1,
     "min": 65,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1,
+    "jt_deg_g": 1,
+    "jt_out_b": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Jean-Pascal Barraque",
@@ -174,7 +178,13 @@
     "pen": 1,
     "jt_passe": 1,
     "min": 81,
-    "pts": 7
+    "pts": 7,
+    "jt_in_g": 4,
+    "jt_court_g": 1,
+    "jt_out_g": 2,
+    "jt_press_g": 2,
+    "jt_deg_g": 1,
+    "jt_passe_g": 1
    },
    {
     "name": "Francis Saili",
@@ -230,7 +240,9 @@
     "zB2": 1,
     "plaq_dom": 1,
     "min": 81,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1,
+    "jt_out_g": 1
    },
    {
     "name": "Bautista Ezcurra",
@@ -294,7 +306,8 @@
     "pdb_ruck": 1,
     "plaq_dom": 1,
     "min": 65,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Enzo Labadie",
@@ -588,7 +601,8 @@
     "ret_tardif": 1,
     "ast_pos": 1,
     "min": 81,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_g": 1
    },
    {
     "name": "Hayden Thompson-Stringer",
@@ -774,7 +788,8 @@
     "aerien_pos": 2,
     "plaq_jambe": 1,
     "min": 81,
-    "pts": 5
+    "pts": 5,
+    "jt_in_g": 4
    },
    {
     "name": "Clement Egiziano",
@@ -913,6 +928,7 @@
     "zP0": 2,
     "pt_hj": 1,
     "pen_def": 1,
+    "cnf": 1,
     "cj": 1,
     "md_n": 2,
     "mf_pos3": 7,
@@ -1018,7 +1034,8 @@
     "passe_imp": 1,
     "transfo_neg": 1,
     "min": 16,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1
    },
    {
     "name": "Jules Martinez",
@@ -8880,6 +8897,10 @@
    40
   ],
   "tmax": 90,
-  "nbRows": 1139
+  "nbRows": 1139,
+  "score": {
+   "us": 32,
+   "them": 22
+  }
  }
 }

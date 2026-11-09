@@ -48,7 +48,9 @@
     "pdb_ea": 1,
     "zB1": 1,
     "min": 31,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1,
+    "jt_in_g": 1
    },
    {
     "name": "Christiaan Van Der Merwe",
@@ -292,7 +294,9 @@
     "duel_neg": 1,
     "ro_pos": 1,
     "min": 61,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_g": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Evan Olmstead",
@@ -526,10 +530,12 @@
     "ret_rapide": 2,
     "passe_dec": 1,
     "zF0": 1,
+    "cnf": 1,
     "cj": 1,
     "jt_in": 1,
     "min": 69,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1
    },
    {
     "name": "Hanru Sirgel",
@@ -779,7 +785,8 @@
     "passe_pos": 1,
     "ret_debout": 1,
     "min": 80,
-    "pts": 5
+    "pts": 5,
+    "jt_press_g": 1
    },
    {
     "name": "Flavio Asquini",
@@ -830,7 +837,10 @@
     "jt_in": 1,
     "ro_1er": 1,
     "min": 49,
-    "pts": 4
+    "pts": 4,
+    "jt_deg_g": 1,
+    "jt_press_g": 1,
+    "jt_in_g": 1
    },
    {
     "name": "Zinedine Aouad",
@@ -926,7 +936,8 @@
     "zP2": 1,
     "jt_press": 1,
     "min": 19,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_g": 1
    },
    {
     "name": "Joel Kpoku",
@@ -9223,6 +9234,10 @@
    40
   ],
   "tmax": 80,
-  "nbRows": 1324
+  "nbRows": 1324,
+  "score": {
+   "us": 24,
+   "them": 39
+  }
  }
 }

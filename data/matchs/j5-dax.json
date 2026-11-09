@@ -270,7 +270,11 @@
     "zC3": 1,
     "essai": 1,
     "min": 64,
-    "pts": 5
+    "pts": 5,
+    "jt_in_g": 3,
+    "jt_deg_b": 2,
+    "jt_out_g": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Farai Mudariki",
@@ -350,6 +354,7 @@
     "pdb_ruck": 1,
     "zB2": 1,
     "pdb": 1,
+    "cnf": 1,
     "cr": 1,
     "md_n": 1,
     "mf_pos8": 1,
@@ -467,7 +472,8 @@
     "gratt": 1,
     "ast_pos": 1,
     "min": 61,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 2
    },
    {
     "name": "Enzo Labadie",
@@ -570,7 +576,11 @@
     "transfo": 1,
     "jt_deg": 1,
     "min": 80,
-    "pts": 2
+    "pts": 2,
+    "jt_out_b": 2,
+    "jt_passe_g": 1,
+    "jt_court_g": 1,
+    "jt_deg_b": 1
    },
    {
     "name": "Clement Egiziano",
@@ -631,7 +641,8 @@
     "mf_g": 8,
     "mf_pos6": 7,
     "min": 80,
-    "pts": 5
+    "pts": 5,
+    "jt_in_g": 1
    },
    {
     "name": "Bautista Ezcurra",
@@ -671,7 +682,8 @@
     "rk": 1,
     "rk_6p": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_out_g": 1
    },
    {
     "name": "Tyler Morgan",
@@ -755,7 +767,9 @@
     "contre": 1,
     "plaq_dom": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_b": 1,
+    "jt_in_g": 1
    },
    {
     "name": "Arthur Vignolles",
@@ -797,8 +811,6 @@
     "ast_pos": 1,
     "contre": 1,
     "zP0": 1,
-    "cj": 1,
-    "faute": 1,
     "ts_n": 1,
     "ts_g": 1,
     "md_n": 2,
@@ -806,7 +818,7 @@
     "mf_n": 7,
     "mf_g": 6,
     "tc_n": 1,
-    "min": 38,
+    "min": 40,
     "pts": 0
    },
    {
@@ -940,8 +952,10 @@
     "mf_n": 5,
     "mf_pos8": 5,
     "mf_g": 4,
-    "min": 18,
-    "pts": 0
+    "min": 16,
+    "pts": 0,
+    "cj": 1,
+    "cnf": 1
    },
    {
     "name": "Jean-Pascal Barraque",
@@ -972,7 +986,8 @@
     "jt_in": 1,
     "jap_pos": 1,
     "min": 19,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Jules Gimbert",
@@ -1004,7 +1019,8 @@
     "rd_neg": 1,
     "contre": 1,
     "min": 16,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_b": 1
    },
    {
     "name": "Pat Leafa",
@@ -1106,18 +1122,18 @@
     "Leo Chauvin"
    ],
    [
-    0.15,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     0.12,
     "att",
     "Duel contact",
     1,
     "Farai Mudariki"
+   ],
+   [
+    0.15,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     0.23,
@@ -1225,18 +1241,18 @@
     "Etienne Falgoux"
    ],
    [
-    2.8,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     2.78,
     "att",
     "Duel contact",
     1,
     "Adrian Motoc"
+   ],
+   [
+    2.8,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     2.87,
@@ -1323,13 +1339,6 @@
     "Flavio Asquini"
    ],
    [
-    4.62,
-    "disc",
-    "Aérien",
-    0,
-    "Enzo Labadie"
-   ],
-   [
     4.53,
     "def",
     "Ballon récupéré",
@@ -1342,6 +1351,27 @@
     "Duel contact",
     0,
     "Theo Idjellidaine"
+   ],
+   [
+    4.62,
+    "disc",
+    "Aérien",
+    0,
+    "Enzo Labadie"
+   ],
+   [
+    4.67,
+    "att",
+    "Duel contact",
+    1,
+    "Farai Mudariki"
+   ],
+   [
+    4.68,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
    ],
    [
     4.7,
@@ -1365,18 +1395,11 @@
     "Etienne Falgoux"
    ],
    [
-    4.68,
-    "att",
-    "Passe",
-    1,
-    "Bautista Ezcurra"
-   ],
-   [
-    4.67,
+    4.75,
     "att",
     "Duel contact",
     1,
-    "Farai Mudariki"
+    "Julien Farnoux"
    ],
    [
     4.77,
@@ -1393,6 +1416,13 @@
     "Christiaan Van Der Merwe"
    ],
    [
+    4.77,
+    "att",
+    "Duel contact",
+    1,
+    "Iakopo Petelo-Mapu"
+   ],
+   [
     4.78,
     "att",
     "Passe",
@@ -1400,25 +1430,11 @@
     "Theo Idjellidaine"
    ],
    [
-    4.75,
-    "att",
-    "Duel contact",
-    1,
-    "Julien Farnoux"
-   ],
-   [
     4.8,
     "att",
     "Offload",
     1,
     "Julien Farnoux"
-   ],
-   [
-    4.77,
-    "att",
-    "Duel contact",
-    1,
-    "Iakopo Petelo-Mapu"
    ],
    [
     4.88,
@@ -1435,11 +1451,25 @@
     "Clement Egiziano"
    ],
    [
+    5.67,
+    "disc",
+    "Faute",
+    0,
+    "Iakopo Petelo-Mapu"
+   ],
+   [
     5.77,
     "att",
     "Duel contact",
     0,
     "Theo Idjellidaine"
+   ],
+   [
+    5.82,
+    "att",
+    "Perte de balle",
+    0,
+    "Iakopo Petelo-Mapu"
    ],
    [
     5.87,
@@ -1463,25 +1493,25 @@
     "Flavio Asquini"
    ],
    [
-    5.67,
-    "disc",
-    "Faute",
-    0,
-    "Iakopo Petelo-Mapu"
-   ],
-   [
-    5.82,
-    "att",
-    "Perte de balle",
-    0,
-    "Iakopo Petelo-Mapu"
-   ],
-   [
     5.88,
     "att",
     "Duel contact",
     1,
     "Adrian Motoc"
+   ],
+   [
+    5.97,
+    "att",
+    "Duel contact",
+    1,
+    "Tyler Morgan"
+   ],
+   [
+    5.98,
+    "att",
+    "Passe",
+    1,
+    "Etienne Falgoux"
    ],
    [
     6,
@@ -1496,20 +1526,6 @@
     "Ruck off.",
     1,
     "Leo Chauvin"
-   ],
-   [
-    5.98,
-    "att",
-    "Passe",
-    1,
-    "Etienne Falgoux"
-   ],
-   [
-    5.97,
-    "att",
-    "Duel contact",
-    1,
-    "Tyler Morgan"
    ],
    [
     6,
@@ -1681,18 +1697,18 @@
     "Bautista Ezcurra"
    ],
    [
-    8.53,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     8.48,
     "att",
     "Duel contact",
     1,
     "Adrian Motoc"
+   ],
+   [
+    8.53,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     8.7,
@@ -1793,6 +1809,13 @@
     "Etienne Falgoux"
    ],
    [
+    11.27,
+    "att",
+    "Duel contact",
+    1,
+    "Farai Mudariki"
+   ],
+   [
     11.28,
     "att",
     "Passe",
@@ -1800,11 +1823,18 @@
     "Theo Idjellidaine"
    ],
    [
-    11.27,
+    11.38,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
+   ],
+   [
+    11.38,
     "att",
     "Duel contact",
     1,
-    "Farai Mudariki"
+    "Clement Egiziano"
    ],
    [
     11.4,
@@ -1821,13 +1851,6 @@
     "Leo Chauvin"
    ],
    [
-    11.38,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     11.42,
     "att",
     "Passe",
@@ -1835,11 +1858,11 @@
     "Julien Farnoux"
    ],
    [
-    11.38,
+    11.55,
     "att",
     "Duel contact",
     1,
-    "Clement Egiziano"
+    "Leo Chauvin"
    ],
    [
     11.57,
@@ -1868,13 +1891,6 @@
     "Passe",
     1,
     "Flavio Asquini"
-   ],
-   [
-    11.55,
-    "att",
-    "Duel contact",
-    1,
-    "Leo Chauvin"
    ],
    [
     11.68,
@@ -1961,6 +1977,13 @@
     "Leo Chauvin"
    ],
    [
+    12.97,
+    "disc",
+    "Faute",
+    0,
+    "Julien Farnoux"
+   ],
+   [
     13.02,
     "def",
     "Plaquage",
@@ -1987,13 +2010,6 @@
     "Plaquage",
     1,
     "Clement Egiziano"
-   ],
-   [
-    12.97,
-    "disc",
-    "Faute",
-    0,
-    "Julien Farnoux"
    ],
    [
     13.37,
@@ -2101,18 +2117,18 @@
     "Boris Goutard"
    ],
    [
-    16.53,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     16.5,
     "att",
     "Duel contact",
     1,
     "Christiaan Van Der Merwe"
+   ],
+   [
+    16.53,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     16.65,
@@ -2374,18 +2390,18 @@
     "Julien Farnoux"
    ],
    [
-    20.93,
-    "att",
-    "Passe",
-    1,
-    "Julien Farnoux"
-   ],
-   [
     20.92,
     "att",
     "Duel contact",
     1,
     "Flavio Asquini"
+   ],
+   [
+    20.93,
+    "att",
+    "Passe",
+    1,
+    "Julien Farnoux"
    ],
    [
     21.02,
@@ -2507,18 +2523,18 @@
     "Clement Egiziano"
    ],
    [
-    23.18,
-    "att",
-    "Offload",
-    1,
-    "Clement Egiziano"
-   ],
-   [
     23.15,
     "att",
     "Duel contact",
     0,
     "Tyler Morgan"
+   ],
+   [
+    23.18,
+    "att",
+    "Offload",
+    1,
+    "Clement Egiziano"
    ],
    [
     23.27,
@@ -2542,6 +2558,13 @@
     "Clement Egiziano"
    ],
    [
+    23.27,
+    "att",
+    "Duel contact",
+    0,
+    "Etienne Falgoux"
+   ],
+   [
     23.28,
     "att",
     "Passe",
@@ -2554,13 +2577,6 @@
     "Passe",
     1,
     "Farai Mudariki"
-   ],
-   [
-    23.27,
-    "att",
-    "Duel contact",
-    0,
-    "Etienne Falgoux"
    ],
    [
     23.37,
@@ -2598,11 +2614,18 @@
     "Julien Farnoux"
    ],
    [
-    24.55,
+    24.43,
     "def",
-    "Plaquage",
+    "Ballon récupéré",
     1,
-    "Etienne Falgoux"
+    "Theo Idjellidaine"
+   ],
+   [
+    24.45,
+    "disc",
+    "Faute",
+    0,
+    "Farai Mudariki"
    ],
    [
     24.53,
@@ -2612,24 +2635,17 @@
     "Theo Idjellidaine"
    ],
    [
-    24.43,
+    24.55,
     "def",
-    "Ballon récupéré",
+    "Plaquage",
     1,
-    "Theo Idjellidaine"
+    "Etienne Falgoux"
    ],
    [
     24.68,
     "def",
     "Plaquage",
     1,
-    "Farai Mudariki"
-   ],
-   [
-    24.45,
-    "disc",
-    "Faute",
-    0,
     "Farai Mudariki"
    ],
    [
@@ -2658,6 +2674,13 @@
     "ruck",
     "Grattage",
     1,
+    "Hugo Sarrasin"
+   ],
+   [
+    26.93,
+    "disc",
+    "Faute",
+    0,
     "Hugo Sarrasin"
    ],
    [
@@ -2694,13 +2717,6 @@
     "Ruck off.",
     0,
     "Enzo Labadie"
-   ],
-   [
-    26.93,
-    "disc",
-    "Faute",
-    0,
-    "Hugo Sarrasin"
    ],
    [
     27.1,
@@ -2857,6 +2873,13 @@
     "Bautista Ezcurra"
    ],
    [
+    32.82,
+    "att",
+    "Déf. battu / franch.",
+    1,
+    "Tyler Morgan"
+   ],
+   [
     32.87,
     "att",
     "Passe",
@@ -2871,23 +2894,16 @@
     "Bautista Ezcurra"
    ],
    [
-    32.82,
+    32.98,
     "att",
-    "Déf. battu / franch.",
-    1,
+    "Perte de balle",
+    0,
     "Tyler Morgan"
    ],
    [
     33.02,
     "att",
     "Passe",
-    0,
-    "Tyler Morgan"
-   ],
-   [
-    32.98,
-    "att",
-    "Perte de balle",
     0,
     "Tyler Morgan"
    ],
@@ -2899,18 +2915,18 @@
     "Boris Goutard"
    ],
    [
+    34.35,
+    "disc",
+    "Faute",
+    0,
+    "Julien Farnoux"
+   ],
+   [
     34.45,
     "att",
     "Duel contact",
     1,
     "Julien Farnoux"
-   ],
-   [
-    34.55,
-    "ruck",
-    "Ruck off.",
-    0,
-    "Clement Egiziano"
    ],
    [
     34.52,
@@ -2920,11 +2936,11 @@
     "Julien Farnoux"
    ],
    [
-    34.35,
-    "disc",
-    "Faute",
+    34.55,
+    "ruck",
+    "Ruck off.",
     0,
-    "Julien Farnoux"
+    "Clement Egiziano"
    ],
    [
     36.07,
@@ -3095,18 +3111,18 @@
     "Hugo Sarrasin"
    ],
    [
-    38.9,
-    "def",
-    "Plaquage",
-    1,
-    "Christiaan Van Der Merwe"
-   ],
-   [
     38.87,
     "def",
     "Ballon récupéré",
     1,
     "Theo Idjellidaine"
+   ],
+   [
+    38.9,
+    "def",
+    "Plaquage",
+    1,
+    "Christiaan Van Der Merwe"
    ],
    [
     38.95,
@@ -3172,16 +3188,16 @@
     "Etienne Falgoux"
    ],
    [
-    40.35,
-    "disc",
-    "Aérien",
+    40.33,
+    "att",
+    "Passe",
     1,
     "Clement Egiziano"
    ],
    [
-    40.33,
-    "att",
-    "Passe",
+    40.35,
+    "disc",
+    "Aérien",
     1,
     "Clement Egiziano"
    ],
@@ -3228,6 +3244,13 @@
     "Boris Goutard"
    ],
    [
+    40.47,
+    "att",
+    "Duel contact",
+    1,
+    "Farai Mudariki"
+   ],
+   [
     40.48,
     "att",
     "Passe",
@@ -3242,11 +3265,11 @@
     "Christiaan Van Der Merwe"
    ],
    [
-    40.47,
+    40.55,
     "att",
-    "Duel contact",
+    "Passe",
     1,
-    "Farai Mudariki"
+    "Theo Idjellidaine"
    ],
    [
     40.57,
@@ -3263,11 +3286,11 @@
     "Leo Chauvin"
    ],
    [
-    40.55,
+    40.57,
     "att",
-    "Passe",
+    "Duel contact",
     1,
-    "Theo Idjellidaine"
+    "Adrian Motoc"
    ],
    [
     40.58,
@@ -3277,11 +3300,11 @@
     "Flavio Asquini"
    ],
    [
-    40.57,
+    40.68,
     "att",
     "Duel contact",
     1,
-    "Adrian Motoc"
+    "Farai Mudariki"
    ],
    [
     40.72,
@@ -3310,13 +3333,6 @@
     "Passe",
     1,
     "Theo Idjellidaine"
-   ],
-   [
-    40.68,
-    "att",
-    "Duel contact",
-    1,
-    "Farai Mudariki"
    ],
    [
     40.8,
@@ -3333,18 +3349,18 @@
     "Julien Farnoux"
    ],
    [
-    40.82,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     40.8,
     "att",
     "Duel contact",
     1,
     "Leo Chauvin"
+   ],
+   [
+    40.82,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     40.9,
@@ -3368,18 +3384,18 @@
     "Theo Idjellidaine"
    ],
    [
-    40.93,
-    "att",
-    "Passe",
-    1,
-    "Flavio Asquini"
-   ],
-   [
     40.9,
     "att",
     "Duel contact",
     1,
     "Hugo Sarrasin"
+   ],
+   [
+    40.93,
+    "att",
+    "Passe",
+    1,
+    "Flavio Asquini"
    ],
    [
     41.05,
@@ -3396,6 +3412,13 @@
     "Boris Goutard"
    ],
    [
+    41.05,
+    "att",
+    "Duel contact",
+    1,
+    "Farai Mudariki"
+   ],
+   [
     41.07,
     "att",
     "Passe",
@@ -3403,11 +3426,11 @@
     "Theo Idjellidaine"
    ],
    [
-    41.05,
+    41.13,
     "att",
     "Duel contact",
-    1,
-    "Farai Mudariki"
+    0,
+    "Flavio Asquini"
    ],
    [
     41.15,
@@ -3431,11 +3454,11 @@
     "Theo Idjellidaine"
    ],
    [
-    41.13,
+    41.27,
     "att",
     "Duel contact",
-    0,
-    "Flavio Asquini"
+    1,
+    "Farai Mudariki"
    ],
    [
     41.28,
@@ -3466,11 +3489,11 @@
     "Theo Idjellidaine"
    ],
    [
-    41.27,
+    41.37,
     "att",
-    "Duel contact",
+    "Déf. battu / franch.",
     1,
-    "Farai Mudariki"
+    "Clement Egiziano"
    ],
    [
     41.4,
@@ -3508,13 +3531,6 @@
     "Bautista Ezcurra"
    ],
    [
-    41.47,
-    "att",
-    "Passe",
-    1,
-    "Flavio Asquini"
-   ],
-   [
     41.45,
     "att",
     "Déf. battu / franch.",
@@ -3522,11 +3538,11 @@
     "Clement Egiziano"
    ],
    [
-    41.37,
+    41.47,
     "att",
-    "Déf. battu / franch.",
+    "Passe",
     1,
-    "Clement Egiziano"
+    "Flavio Asquini"
    ],
    [
     41.47,
@@ -3592,6 +3608,13 @@
     "Adrian Motoc"
    ],
    [
+    42.07,
+    "att",
+    "Duel contact",
+    1,
+    "Christiaan Van Der Merwe"
+   ],
+   [
     42.08,
     "att",
     "Passe",
@@ -3599,11 +3622,11 @@
     "Theo Idjellidaine"
    ],
    [
-    42.07,
+    42.17,
     "att",
-    "Duel contact",
+    "Passe",
     1,
-    "Christiaan Van Der Merwe"
+    "Theo Idjellidaine"
    ],
    [
     42.18,
@@ -3618,13 +3641,6 @@
     "Ruck off.",
     1,
     "Farai Mudariki"
-   ],
-   [
-    42.17,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
    ],
    [
     42.2,
@@ -3711,16 +3727,16 @@
     "Flavio Asquini"
    ],
    [
-    42.58,
+    42.57,
     "att",
-    "Passe",
+    "Perte de balle",
     0,
     "Bautista Ezcurra"
    ],
    [
-    42.57,
+    42.58,
     "att",
-    "Perte de balle",
+    "Passe",
     0,
     "Bautista Ezcurra"
    ],
@@ -3963,13 +3979,6 @@
     "Bautista Ezcurra"
    ],
    [
-    47.77,
-    "def",
-    "Plaquage",
-    1,
-    "Arthur Vignolles"
-   ],
-   [
     47.68,
     "def",
     "Ballon récupéré",
@@ -3982,6 +3991,13 @@
     "Passe",
     1,
     "Christiaan Van Der Merwe"
+   ],
+   [
+    47.77,
+    "def",
+    "Plaquage",
+    1,
+    "Arthur Vignolles"
    ],
    [
     47.77,
@@ -3998,6 +4014,13 @@
     "Theo Idjellidaine"
    ],
    [
+    48.98,
+    "att",
+    "Duel contact",
+    1,
+    "Tyler Morgan"
+   ],
+   [
     49,
     "att",
     "Passe",
@@ -4005,11 +4028,11 @@
     "Flavio Asquini"
    ],
    [
-    48.98,
-    "att",
-    "Duel contact",
+    49,
+    "disc",
+    "Essai",
     1,
-    "Tyler Morgan"
+    "Theo Idjellidaine"
    ],
    [
     49.1,
@@ -4033,13 +4056,6 @@
     "Theo Idjellidaine"
    ],
    [
-    49.17,
-    "att",
-    "Passe",
-    1,
-    "Bautista Ezcurra"
-   ],
-   [
     49.12,
     "att",
     "Déf. battu / franch.",
@@ -4047,16 +4063,16 @@
     "Arthur Vignolles"
    ],
    [
+    49.17,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
+   ],
+   [
     49.2,
     "att",
     "Déf. battu / franch.",
-    1,
-    "Arthur Vignolles"
-   ],
-   [
-    49.25,
-    "att",
-    "Passe",
     1,
     "Arthur Vignolles"
    ],
@@ -4068,11 +4084,11 @@
     "Theo Idjellidaine"
    ],
    [
-    49,
-    "disc",
-    "Essai",
+    49.25,
+    "att",
+    "Passe",
     1,
-    "Theo Idjellidaine"
+    "Arthur Vignolles"
    ],
    [
     50.2,
@@ -4103,18 +4119,18 @@
     "Theo Idjellidaine"
    ],
    [
-    51.97,
-    "att",
-    "Passe",
-    1,
-    "Bautista Ezcurra"
-   ],
-   [
     51.93,
     "att",
     "Duel contact",
     1,
     "Tyler Morgan"
+   ],
+   [
+    51.97,
+    "att",
+    "Passe",
+    1,
+    "Bautista Ezcurra"
    ],
    [
     52.07,
@@ -4138,13 +4154,6 @@
     "Theo Idjellidaine"
    ],
    [
-    52.1,
-    "att",
-    "Passe",
-    1,
-    "Flavio Asquini"
-   ],
-   [
     52.07,
     "att",
     "Duel contact",
@@ -4152,11 +4161,11 @@
     "Adrian Motoc"
    ],
    [
-    52.13,
+    52.1,
     "att",
-    "Offload",
+    "Passe",
     1,
-    "Adrian Motoc"
+    "Flavio Asquini"
    ],
    [
     52.1,
@@ -4164,6 +4173,13 @@
     "Duel contact",
     1,
     "Hayden Thompson-Stringer"
+   ],
+   [
+    52.13,
+    "att",
+    "Offload",
+    1,
+    "Adrian Motoc"
    ],
    [
     52.13,
@@ -4201,6 +4217,13 @@
     "Clement Egiziano"
    ],
    [
+    52.38,
+    "att",
+    "Duel contact",
+    1,
+    "Leo Chauvin"
+   ],
+   [
     52.4,
     "ruck",
     "Ruck off.",
@@ -4222,11 +4245,18 @@
     "Theo Idjellidaine"
    ],
    [
-    52.38,
+    52.48,
     "att",
     "Duel contact",
+    0,
+    "Hugo Sarrasin"
+   ],
+   [
+    52.52,
+    "att",
+    "Passe",
     1,
-    "Leo Chauvin"
+    "Theo Idjellidaine"
    ],
    [
     52.53,
@@ -4243,18 +4273,11 @@
     "Zinedine Aouad"
    ],
    [
-    52.52,
+    52.6,
     "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
-    52.48,
-    "att",
-    "Duel contact",
+    "Perte de balle",
     0,
-    "Hugo Sarrasin"
+    "Bautista Ezcurra"
    ],
    [
     52.62,
@@ -4267,13 +4290,6 @@
     52.63,
     "att",
     "Passe",
-    0,
-    "Bautista Ezcurra"
-   ],
-   [
-    52.6,
-    "att",
-    "Perte de balle",
     0,
     "Bautista Ezcurra"
    ],
@@ -4299,13 +4315,6 @@
     "Julien Farnoux"
    ],
    [
-    54.37,
-    "ruck",
-    "Ruck off.",
-    1,
-    "Zinedine Aouad"
-   ],
-   [
     54.35,
     "att",
     "Duel contact",
@@ -4313,16 +4322,23 @@
     "Adrian Motoc"
    ],
    [
-    54.48,
+    54.37,
     "ruck",
     "Ruck off.",
-    0,
-    "Arthur Vignolles"
+    1,
+    "Zinedine Aouad"
    ],
    [
     54.43,
     "att",
     "Perte de balle",
+    0,
+    "Arthur Vignolles"
+   ],
+   [
+    54.48,
+    "ruck",
+    "Ruck off.",
     0,
     "Arthur Vignolles"
    ],
@@ -4339,6 +4355,13 @@
     "Duel contact",
     0,
     "Leo Chauvin"
+   ],
+   [
+    55.67,
+    "att",
+    "Duel contact",
+    1,
+    "Zinedine Aouad"
    ],
    [
     55.7,
@@ -4362,13 +4385,6 @@
     "Bautista Ezcurra"
    ],
    [
-    55.67,
-    "att",
-    "Duel contact",
-    1,
-    "Zinedine Aouad"
-   ],
-   [
     55.78,
     "ruck",
     "Ruck off.",
@@ -4383,18 +4399,18 @@
     "Arthur Vignolles"
    ],
    [
-    55.87,
-    "att",
-    "Passe",
-    1,
-    "Theo Idjellidaine"
-   ],
-   [
     55.83,
     "att",
     "Duel contact",
     1,
     "Christiaan Van Der Merwe"
+   ],
+   [
+    55.87,
+    "att",
+    "Passe",
+    1,
+    "Theo Idjellidaine"
    ],
    [
     55.98,
@@ -4467,16 +4483,16 @@
     "Clement Egiziano"
    ],
    [
-    56.7,
-    "disc",
-    "Aérien",
+    56.63,
+    "att",
+    "Duel contact",
     1,
     "Hugo Sarrasin"
    ],
    [
-    56.63,
-    "att",
-    "Duel contact",
+    56.7,
+    "disc",
+    "Aérien",
     1,
     "Hugo Sarrasin"
    ],
@@ -4572,13 +4588,6 @@
     "Flavio Asquini"
    ],
    [
-    61.08,
-    "att",
-    "Perte de balle",
-    0,
-    "Leo Chauvin"
-   ],
-   [
     60.27,
     "def",
     "Plaquage",
@@ -4591,6 +4600,13 @@
     "Assistant",
     1,
     "Bautista Ezcurra"
+   ],
+   [
+    61.08,
+    "att",
+    "Perte de balle",
+    0,
+    "Leo Chauvin"
    ],
    [
     62.33,
@@ -4677,18 +4693,18 @@
     "Christiaan Van Der Merwe"
    ],
    [
-    64.23,
-    "att",
-    "Passe",
-    1,
-    "Jules Gimbert"
-   ],
-   [
     64.2,
     "att",
     "Duel contact",
     1,
     "Hayden Thompson-Stringer"
+   ],
+   [
+    64.23,
+    "att",
+    "Passe",
+    1,
+    "Jules Gimbert"
    ],
    [
     64.3,
@@ -4936,6 +4952,13 @@
     "Jules Gimbert"
    ],
    [
+    67.53,
+    "att",
+    "Duel contact",
+    1,
+    "Bastien Berenguel"
+   ],
+   [
     67.55,
     "att",
     "Passe",
@@ -4948,13 +4971,6 @@
     "Passe",
     1,
     "Jean-Pascal Barraque"
-   ],
-   [
-    67.53,
-    "att",
-    "Duel contact",
-    1,
-    "Bastien Berenguel"
    ],
    [
     67.63,
@@ -5111,18 +5127,18 @@
     "Bautista Ezcurra"
    ],
    [
-    70.47,
-    "att",
-    "Passe",
-    1,
-    "Tyler Morgan"
-   ],
-   [
     70.45,
     "att",
     "Perte de balle",
     0,
     "Jean-Pascal Barraque"
+   ],
+   [
+    70.47,
+    "att",
+    "Passe",
+    1,
+    "Tyler Morgan"
    ],
    [
     71.3,
@@ -5328,16 +5344,16 @@
     "Bastien Berenguel"
    ],
    [
-    75.18,
-    "disc",
-    "Aérien",
+    75.13,
+    "att",
+    "Perte de balle",
     0,
     "Boris Goutard"
    ],
    [
-    75.13,
-    "att",
-    "Perte de balle",
+    75.18,
+    "disc",
+    "Aérien",
     0,
     "Boris Goutard"
    ],
@@ -5398,18 +5414,18 @@
     "Flavio Asquini"
    ],
    [
-    77.32,
-    "att",
-    "Passe",
-    1,
-    "Bastien Berenguel"
-   ],
-   [
     77.28,
     "att",
     "Duel contact",
     1,
     "Bautista Ezcurra"
+   ],
+   [
+    77.32,
+    "att",
+    "Passe",
+    1,
+    "Bastien Berenguel"
    ],
    [
     77.38,
@@ -5605,8 +5621,15 @@
     "disc",
     "Carton jaune",
     0,
-    "Arthur Vignolles",
+    "Bastien Berenguel",
     1
+   ],
+   [
+    78.8,
+    "att",
+    "Perte de balle",
+    0,
+    "Bastien Berenguel"
    ],
    [
     78.85,
@@ -5621,13 +5644,6 @@
     "Grattage",
     0,
     "Zinedine Aouad"
-   ],
-   [
-    78.8,
-    "att",
-    "Perte de balle",
-    0,
-    "Bastien Berenguel"
    ],
    [
     79.05,
@@ -7472,7 +7488,7 @@
    "Adrian Motoc": 62,
    "Hugo Sarrasin": 62,
    "Theo Idjellidaine": 64,
-   "Arthur Vignolles": 38,
+   "Arthur Vignolles": 40,
    "Christiaan Van Der Merwe": 80,
    "Flavio Asquini": 80,
    "Clement Egiziano": 80,
@@ -7483,7 +7499,7 @@
    "Hayden Thompson-Stringer": 30,
    "Jean-Pascal Barraque": 19,
    "Pat Leafa": 18,
-   "Bastien Berenguel": 18,
+   "Bastien Berenguel": 16,
    "Evan Olmstead": 18,
    "Jules Gimbert": 16
   },
@@ -7493,6 +7509,10 @@
    40
   ],
   "tmax": 80,
-  "nbRows": 915
+  "nbRows": 915,
+  "score": {
+   "us": 22,
+   "them": 50
+  }
  }
 }

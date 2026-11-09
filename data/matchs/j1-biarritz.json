@@ -52,7 +52,10 @@
     "jt_out": 1,
     "jap_contre": 1,
     "min": 57,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1,
+    "jt_in_g": 6,
+    "jt_deg_g": 1
    },
    {
     "name": "Inoke Nalaga Kurukuruvakatini",
@@ -204,6 +207,7 @@
     "pen_def": 1,
     "zF0": 1,
     "faute": 1,
+    "cnf": 1,
     "cj": 1,
     "passe_imp": 1,
     "passe_pos": 2,
@@ -378,7 +382,11 @@
     "pdb": 2,
     "jt_court": 1,
     "min": 62,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 3,
+    "jt_deg_b": 1,
+    "jt_in_g": 1,
+    "jt_court_g": 1
    },
    {
     "name": "Leo Chauvin",
@@ -508,7 +516,8 @@
     "tl_n": 1,
     "tl_vol": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Farai Mudariki",
@@ -719,7 +728,8 @@
     "contre": 1,
     "zC1": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_g": 1
    },
    {
     "name": "Julien Farnoux",
@@ -764,7 +774,8 @@
     "rk_46": 1,
     "ro_r3": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Tyler Morgan",
@@ -809,7 +820,8 @@
     "ret_debout": 3,
     "passe_pos": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1
    },
    {
     "name": "Clément Martinez",
@@ -1043,7 +1055,8 @@
     "ro_r2": 1,
     "ast_pos": 1,
     "min": 23,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Jules Gimbert",
@@ -1076,7 +1089,9 @@
     "plaq_haut": 1,
     "plaq_rate": 1,
     "min": 18,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_b": 2,
+    "jt_press_g": 1
    },
    {
     "name": "Joel Kpoku",
@@ -8373,6 +8388,10 @@
    40
   ],
   "tmax": 80,
-  "nbRows": 1005
+  "nbRows": 1005,
+  "score": {
+   "us": 5,
+   "them": 37
+  }
  }
 }

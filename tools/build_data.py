@@ -24,6 +24,7 @@ seed = {
     'effectif': load('effectif.json', {'joueurs': []}),
     'minutes': load('minutes.json', {'minutes': {}}),
     'logos': load('logos.json', {}),
+    'docs': load('autres.json', {}),
 }
 with open(os.path.join(D, 'data.js'), 'w', encoding='utf-8') as out:
     out.write('/* Généré par tools/build_data.py, ne pas modifier à la main */\n')

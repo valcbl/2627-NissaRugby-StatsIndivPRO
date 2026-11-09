@@ -48,7 +48,10 @@
     "jt_deg": 3,
     "zB3": 1,
     "min": 46,
-    "pts": 6
+    "pts": 6,
+    "jt_in_g": 2,
+    "jt_press_g": 1,
+    "jt_deg_b": 3
    },
    {
     "name": "Vincent Rattez",
@@ -113,7 +116,10 @@
     "ret_tardif": 1,
     "ro_r4": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1,
+    "jt_court_g": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Francis Saili",
@@ -170,7 +176,8 @@
     "rk_perdu": 1,
     "ro_r2": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Christiaan Van Der Merwe",
@@ -318,7 +325,10 @@
     "jt_passe": 1,
     "off_neg": 1,
     "min": 61,
-    "pts": 0
+    "pts": 0,
+    "jt_deg_b": 2,
+    "jt_press_g": 2,
+    "jt_passe_g": 1
    },
    {
     "name": "Leo Chauvin",
@@ -416,7 +426,8 @@
     "franch": 1,
     "essai": 1,
     "min": 80,
-    "pts": 5
+    "pts": 5,
+    "jt_press_g": 1
    },
    {
     "name": "Arthur Vignolles",
@@ -881,7 +892,10 @@
     "zP0": 1,
     "transfo_neg": 1,
     "min": 34,
-    "pts": 7
+    "pts": 7,
+    "jt_out_g": 1,
+    "jt_deg_b": 2,
+    "jt_out_b": 1
    },
    {
     "name": "Clément Martinez",
@@ -1066,7 +1080,9 @@
     "rk": 1,
     "rk_46": 1,
     "min": 19,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Bastien Berenguel",
@@ -7905,6 +7921,10 @@
    40
   ],
   "tmax": 80,
-  "nbRows": 1051
+  "nbRows": 1051,
+  "score": {
+   "us": 43,
+   "them": 6
+  }
  }
 }

@@ -57,7 +57,10 @@
     "defbattu": 1,
     "aerien_neg": 1,
     "min": 39,
-    "pts": 5
+    "pts": 5,
+    "jt_in_g": 4,
+    "jt_court_g": 1,
+    "jt_press_g": 1
    },
    {
     "name": "Evan Olmstead",
@@ -129,7 +132,8 @@
     "md_n": 2,
     "tc_n": 1,
     "min": 81,
-    "pts": 0
+    "pts": 0,
+    "jt_in_g": 1
    },
    {
     "name": "Theo Idjellidaine",
@@ -162,7 +166,10 @@
     "zP2": 1,
     "plaq_rate": 1,
     "min": 53,
-    "pts": 0
+    "pts": 0,
+    "jt_passe_b": 1,
+    "jt_deg_g": 1,
+    "jt_in_g": 5
    },
    {
     "name": "Atila Septar",
@@ -671,7 +678,9 @@
     "essai": 1,
     "ro_r3": 1,
     "min": 81,
-    "pts": 5
+    "pts": 5,
+    "jt_deg_g": 1,
+    "jt_in_g": 3
    },
    {
     "name": "Pablo Patilla",
@@ -687,8 +696,8 @@
     "plaq_dom": 1,
     "ast_pos": 3,
     "plaq_dang": 1,
+    "cnf": 1,
     "cr": 1,
-    "faute": 1,
     "min": 24,
     "pts": 0
    },
@@ -721,6 +730,7 @@
     "ct_nr": 1,
     "gratt": 1,
     "plaq_dang": 1,
+    "cnf": 1,
     "cj": 1,
     "to_ea": 1,
     "zT1": 1,
@@ -739,7 +749,6 @@
     "plaq_casse": 1,
     "defbattu": 1,
     "ro_1er": 1,
-    "faute": 1,
     "min": 71,
     "pts": 0
    },
@@ -803,7 +812,9 @@
     "defbattu": 1,
     "rk_46": 1,
     "min": 70,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1,
+    "jt_out_g": 1
    },
    {
     "name": "Massimo Ortolan",
@@ -855,7 +866,9 @@
     "jt_court": 1,
     "ro_1er": 1,
     "min": 49,
-    "pts": 2
+    "pts": 2,
+    "jt_out_b": 1,
+    "jt_passe_g": 1
    },
    {
     "name": "Zinedine Aouad",
@@ -1055,7 +1068,10 @@
     "passe_dec": 1,
     "jt_deg": 1,
     "min": 28,
-    "pts": 0
+    "pts": 0,
+    "jt_press_g": 1,
+    "jt_court_g": 1,
+    "jt_passe_b": 1
    },
    {
     "name": "Pat Leafa",
@@ -9357,6 +9373,10 @@
    40
   ],
   "tmax": 90,
-  "nbRows": 1278
+  "nbRows": 1278,
+  "score": {
+   "us": 17,
+   "them": 38
+  }
  }
 }

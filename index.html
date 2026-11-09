@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<script>window.__DB_KEY="nissa-pro-db-v1";</script>
 <script src="data/data.js"></script>
 <script src="js/local-db.js"></script>
 </head>
@@ -242,6 +243,124 @@ button.danger{background:var(--card);color:var(--bad);border-color:var(--line)}
 .mtab th small.nc{color:var(--nissa);font-weight:600}
 .mtab td.nc{font-size:10px;font-style:italic}
 footer{border-top:1px solid var(--line);padding-top:10px}
+/* Fiche individuelle */
+.fiche{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--nissa);border-radius:12px;padding:22px 24px 18px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
+.fiche::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(127,127,120,.05) 22px 23px);pointer-events:none}
+.fiche>*{position:relative}
+.fc-head{display:grid;grid-template-columns:150px minmax(0,1fr) 84px;grid-template-areas:"ph id logo" "ph box box";gap:12px 20px;align-items:start}
+.fc-photo{grid-area:ph;width:150px;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--track);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.fc-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.fc-photo span{font-family:var(--display);font-weight:800;font-size:44px;color:var(--muted);letter-spacing:.04em}
+.fc-id{grid-area:id;display:flex;flex-direction:column;gap:6px;min-width:0}
+.fc-id h1{margin:0;font-family:var(--display);font-weight:800;color:var(--nissa);text-transform:uppercase;letter-spacing:.14em;line-height:1.05;font-size:clamp(26px,4.6vw,40px);display:flex;flex-direction:column;overflow-wrap:anywhere}
+.fc-id h1 .pre{text-transform:none;letter-spacing:.1em;font-size:.78em}
+.fc-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;font-family:var(--display);font-size:20px;color:var(--muted);letter-spacing:.12em}
+.fc-meta b{color:var(--nissa-dark,var(--nissa));font-weight:800}
+.fc-meta .pos{font-family:var(--font);font-size:12px;letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.fc-scope{font-size:12px;color:var(--muted);font-weight:500}
+.fc-logo{grid-area:logo;width:84px;height:auto;justify-self:end}
+.fc-boxes{grid-area:box;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fc-boxes div{border:1.5px solid var(--ink);border-radius:4px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--card)}
+.fc-boxes b{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.fc-boxes span{font-size:12px;color:var(--nissa);font-weight:600}
+.fc-empty{margin:0;padding:10px 14px;border:1px dashed var(--line);border-radius:8px;color:var(--muted)}
+.fc-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 34px}
+.fc-col{display:flex;flex-direction:column;gap:18px;min-width:0}
+.fc-sec h3{margin:0 0 8px;font-family:var(--display);font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:8px;padding-bottom:5px;border-bottom:1.5px solid var(--ink)}
+.fc-sec h3 .hex{width:14px;height:16px;flex:none}
+.fc-body{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:center}
+.fc-body.has-ring{grid-template-columns:minmax(0,1fr) 136px}
+.fc-body ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.fc-body li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:2px 0;border-bottom:1px dotted var(--line)}
+.fc-body li span{color:var(--ink)}
+.fc-body li b{font-variant-numeric:tabular-nums;font-weight:700;display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.fc-body li.pos b{color:var(--good)} .fc-body li.neg b{color:var(--bad)}
+.fc-body li.z b{color:var(--muted);font-weight:500}
+.fc-body li.ind span{padding-left:16px;color:var(--muted)}
+.fc-body li.hd{border-bottom:0;padding-top:6px} .fc-body li.hd span{font-weight:600}
+.fc-body li.sp{border:0;height:8px;padding:0}
+.fc-ring{display:flex;flex-direction:column;align-items:center;gap:4px}
+.fc-ring svg{width:88px;height:88px;display:block}
+.fc-ring text{font-family:var(--display)}
+.fc-ring span{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:center}
+.fc-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.fc-mini div{border:1.5px solid var(--ink);border-radius:4px;padding:6px 4px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.fc-mini b{font-family:var(--display);font-size:20px;font-weight:800}
+.fc-mini span{font-size:11px;color:var(--nissa);font-weight:600}
+.cdot{display:inline-block;width:10px;height:13px;border-radius:2px;border:1px solid rgba(0,0,0,.35);vertical-align:-2px;margin-left:6px}
+.cdot.w{background:var(--card-white,#fff)} .cdot.y{background:var(--card-yellow,#f2c200)} .cdot.r{background:var(--card-red,#d7262b)}
+.fc-sec h3 .fc-spk{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:var(--font);font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:none;color:var(--muted)}
+.fc-spk svg{width:112px;height:26px;display:block;overflow:visible}
+.fc-strip{display:flex;flex-wrap:wrap;gap:6px}
+.fc-strip .mt{display:flex;flex-direction:column;align-items:center;min-width:62px;padding:4px 6px;border:1.5px solid var(--line);border-radius:4px;font-size:10.5px;line-height:1.3;background:var(--card)}
+.fc-strip .mt b{font-family:var(--display);font-size:12px;letter-spacing:.04em}
+.fc-strip .mt em{font-style:normal;font-weight:700;font-variant-numeric:tabular-nums}
+.fc-strip .mt.V{border-color:var(--good)} .fc-strip .mt.V em{color:var(--good)}
+.fc-strip .mt.D{border-color:var(--bad)} .fc-strip .mt.D em{color:var(--bad)}
+.fc-strip .mt.np{opacity:.45;border-style:dashed}
+.fc-strip .mt i{font-style:normal;color:var(--muted)}
+.fc-stk{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--track);margin:8px 0 3px}
+.fc-stk b{display:block;height:100%}
+.fc-lg{display:flex;flex-wrap:wrap;gap:2px 10px;font-size:10.5px;color:var(--muted)}
+.fc-lg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;vertical-align:0}
+.fc-per{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:8px}
+.fc-per div{border:1.5px solid var(--ink);border-radius:4px;padding:3px 2px;display:flex;flex-direction:column;align-items:center}
+.fc-per b{font-family:var(--display);font-size:17px;font-weight:800;line-height:1.1}
+.fc-per b.z{color:var(--muted);font-weight:500}
+.fc-per span{font-size:10px;color:var(--nissa);font-weight:600}
+.fc-cap{font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.fc-band{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px 30px;align-items:start}
+.fc-band .fc-sec{min-width:0}
+.fc-rk{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+.fc-rk li{display:grid;grid-template-columns:minmax(0,1fr) 40px 64px 34px;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--line);font-size:12.5px}
+.fc-rk li>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fc-rk li b{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+.fc-rk li em{font-style:normal;font-size:11px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.fc-rk .dots{display:flex;gap:2px;align-items:center}
+.fc-rk .dots i{flex:1;height:6px;border-radius:2px;background:var(--track)}
+.fc-rk .dots i.me{height:11px;background:var(--nissa)}
+.fc-rk li.g em{color:var(--good);font-weight:700} .fc-rk li.r em{color:var(--bad);font-weight:700}
+.fc-tw{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.fc-tw h4{margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fc-tw .good h4{color:var(--good)} .fc-tw .bad h4{color:var(--bad)}
+.fc-tw ol{margin:0;padding-left:18px;font-size:12.5px;line-height:1.45}
+.fc-tw ol small{color:var(--muted)}
+.fc-form{width:100%;border-collapse:collapse;font-size:12px}
+.fc-form th{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:right;padding:2px 4px}
+.fc-form th:first-child,.fc-form td:first-child{text-align:left}
+.fc-form td{padding:3px 4px;border-bottom:1px dotted var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.fc-form td.g{color:var(--good);font-weight:700} .fc-form td.r{color:var(--bad);font-weight:700}
+.fc-note{margin:0;font-size:11px;color:var(--muted)}
+@media (max-width:760px){ .fc-band{grid-template-columns:minmax(0,1fr)} .fc-rk{grid-template-columns:minmax(0,1fr)} }
+.exporting .fc-band{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)!important}
+.exporting .fc-rk{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.fc-foot{margin:0;font-size:10.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5}
+.fc-up span{display:flex;gap:8px;flex-wrap:wrap}
+.fc-up em{font-style:normal;text-transform:none;letter-spacing:0}
+@media (max-width:720px){
+  .fiche{padding:16px}
+  .fc-head{grid-template-columns:104px minmax(0,1fr);grid-template-areas:"ph id" "box box"}
+  .fc-photo{width:104px}
+  .fc-logo{display:none}
+  .fc-cols{grid-template-columns:minmax(0,1fr)}
+  .fc-meta{font-size:16px}
+}
+.exporting .fc-head{grid-template-columns:150px minmax(0,1fr) 84px!important;grid-template-areas:"ph id logo" "ph box box"!important}
+.exporting .fc-photo{width:150px!important}
+.exporting .fc-logo{display:block!important}
+.exporting .fc-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.exporting .fiche::before{display:none}
+
+.fc-refs{display:flex;flex-direction:column;gap:2px;width:100%;margin-top:4px;border-top:1px solid var(--line);padding-top:5px}
+.fc-ring .fc-r{display:grid;grid-template-columns:minmax(0,1fr) auto 28px;align-items:baseline;gap:4px;font-size:10.5px;line-height:1.35;text-align:left;letter-spacing:0;text-transform:none}
+.fc-r em{font-style:normal;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fc-r b{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.fc-r i{font-style:normal;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.fc-r.up i{color:var(--good)} .fc-r.dn i{color:var(--bad)}
+.fc-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:end}
+.fc-ctl label{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fc-ctl input[type=number]{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px;width:100%;box-sizing:border-box}
+
 </style>
 <div class="wrap">
 <div class="bar-tools no-print">
@@ -577,14 +696,16 @@ function conquete(){
 /* ---------- DISCIPLINE ---------- */
 function discipline(){
   const f=sum('faute'), cj=sum('cj');
-  const fev=EV.filter(e=>e[2]==='Faute'||e[2].startsWith('Carton'));
+  // un carton codé seul (export officiel) n'est pas une faute sifflée : il est compté à part
+  const fev=EV.filter(e=>e[2]==='Faute'||(e[2].startsWith('Carton')&&e[5]!==1));
+  const cardsIn=p=>v(p,'cj')+v(p,'cr')+v(p,'cb')-v(p,'cnf');
   const cb=sum('cb'), cr=sum('cr'), nc=cj+cb+cr;
   const cardTxt=[cj?cj+' CJ':'',cr?cr+' CR':'',cb?cb+' CB':''].filter(Boolean).join(' · ');
   const mt1=fev.filter(e=>e[0]<SPLIT).length, mt2=fev.length-mt1;
-  const fl=P.filter(p=>v(p,'faute')).sort((a,b)=>v(b,'faute')-v(a,'faute')||v(b,'cj')-v(a,'cj'));
-  const k=`<div class="kpis">${kpi('Fautes concédées',f,`${fl.length} joueurs sanctionnés`,status(f,8,11,false))}${kpi('Cartons',nc,nc?cardTxt:'aucun',cr||cj?['bad','À corriger']:cb?['warn','À surveiller']:['good','Bon'])}${kpi('1re mi-temps',mt1,`fautes avant la pause`,null)}${kpi('2e mi-temps',mt2,`fautes après la pause`,null)}</div>`;
-  const rows=fl.map(p=>({name:p.name,tot:v(p,'faute'),pc:0,pcTxt:[v(p,'cr')?'CR':'',v(p,'cj')?'CJ':'',v(p,'cb')?'CB':''].filter(Boolean).join(' '),cls:'r',segs:[{n:'Faute',v:v(p,'faute')-v(p,'cj')-v(p,'cr')-v(p,'cb'),c:C.or},{n:'Carton blanc',v:v(p,'cb'),c:'var(--card-white)',o:1},{n:'Carton jaune',v:v(p,'cj'),c:'var(--card-yellow)'},{n:'Carton rouge',v:v(p,'cr'),c:'var(--card-red)'}]}));
-  const chart=stacked('Fautes par joueur','',[['Faute',C.or],...(cb?[['Carton blanc','var(--card-white)']]:[]),['Carton jaune','var(--card-yellow)'],...(cr?[['Carton rouge','var(--card-red)']]:[])],rows,{});
+  const fl=P.filter(p=>v(p,'faute')+v(p,'cj')+v(p,'cr')+v(p,'cb')).sort((a,b)=>(v(b,'faute')+v(b,'cnf'))-(v(a,'faute')+v(a,'cnf'))||v(b,'cr')-v(a,'cr')||v(b,'cj')-v(a,'cj'));
+  const k=`<div class="kpis">${kpi('Fautes concédées',f,`${P.filter(p=>v(p,'faute')).length} joueurs pénalisés`,status(f,8,11,false))}${kpi('Cartons',nc,nc?cardTxt:'aucun',cr||cj?['bad','À corriger']:cb?['warn','À surveiller']:['good','Bon'])}${kpi('1re mi-temps',mt1,`fautes avant la pause`,null)}${kpi('2e mi-temps',mt2,`fautes après la pause`,null)}</div>`;
+  const rows=fl.map(p=>({name:p.name,tot:v(p,'faute')+v(p,'cnf'),pc:0,pcTxt:[v(p,'cr')?'CR':'',v(p,'cj')?'CJ':'',v(p,'cb')?'CB':''].filter(Boolean).join(' '),cls:'r',segs:[{n:'Faute',v:v(p,'faute')-cardsIn(p),c:C.or},{n:'Carton blanc',v:v(p,'cb'),c:'var(--card-white)',o:1},{n:'Carton jaune',v:v(p,'cj'),c:'var(--card-yellow)'},{n:'Carton rouge',v:v(p,'cr'),c:'var(--card-red)'}]}));
+  const chart=stacked('Fautes et cartons par joueur','',[['Faute',C.or],...(cb?[['Carton blanc','var(--card-white)']]:[]),['Carton jaune','var(--card-yellow)'],...(cr?[['Carton rouge','var(--card-red)']]:[])],rows,{});
   const per=breakdown('Fautes par période',CLOCK?'Chrono du match, mi-temps à 40\'.':'Temps vidéo.'+(HT?` Mi-temps placée à la coupure entre ${Math.floor(HT[0])}' et ${Math.ceil(HT[1])}'.`:''),[
     {n:'1re MT · 0-20\'',v:fev.filter(e=>e[0]<20).length,c:C.or},{n:'1re MT · 20\'-pause',v:fev.filter(e=>e[0]>=20&&e[0]<SPLIT).length,c:C.or},
     {n:'2e MT · reprise-'+Q4+'\'',v:fev.filter(e=>e[0]>=SPLIT&&e[0]<Q4).length,c:C.or},{n:'2e MT · '+Q4+'\'-fin',v:fev.filter(e=>e[0]>=Q4).length,c:C.or}]);
@@ -718,7 +839,7 @@ function proExtra(p,raw,t,name,PTS){
     else if(a==='RUCK'&&!raw.__NP){ add('rk'); const vt=one('VITESSE DE LIBERATION'); add(vt.startsWith('0')?'rk_03':vt.startsWith('4')?'rk_46':vt.startsWith('+')?'rk_6p':'rk_av');
       const f=one('FIN DE RUCK'); if(f==='PERDU') add('rk_perdu'); if(f==='PENALITE OBTENUE') add('rk_pen'); }
     else if(a==='PENALITE'){ const tp=one('TYPE DE PENALITE'); const e=PEN_TYPES.find(x=>x[0]===tp); add(e?e[1]:'pt_autre'); add(one('ORIGINE DE LA FAUTE')==='OFFENSIVE'?'pen_off':'pen_def'); pt('F',0); }
-    else if(a==='JEU AU PIED'){ const tp=one('TYPE DE JEU AU PIED'); const e=KICK_TYPES.find(x=>x[0]===tp); if(e) add(e[1]); if(one('50-22')==='OUI') add('j5022'); if(one('EST CONTRE')==='OUI') add('jap_contre'); }
+    else if(a==='JEU AU PIED'){ const tp=one('TYPE DE JEU AU PIED'); const e=KICK_TYPES.find(x=>x[0]===tp); if(e){ add(e[1]); const rj=one('RESULTAT DU JEU AU PIED'); if(rj==='POSITIF') add(e[1]+'_g'); else if(rj==='NEGATIF') add(e[1]+'_b'); } if(one('50-22')==='OUI') add('j5022'); if(one('EST CONTRE')==='OUI') add('jap_contre'); }
     else if(a==='BOTTEUR'){ if(one('ORIGINE DU JEU AU PIED')==='PENALITE'){ add('pk_tot'); if(one('EST DIRECT EN TOUCHE')==='OUI') add('pk_touche'); } }
     else if(a==='CONTEST'){ add('ct'); const f=one('FIN DU CONTEST'); add(f==='PENALITE OBTENUE'?'ct_pen':f==='BALLON RECUPERE'?'ct_rec':f==='CONTEST PENALISE'?'ct_pnl':'ct_nr'); if(f==='PENALITE OBTENUE'||f==='BALLON RECUPERE') pt('T',1); }
     else if(a==='TURN OVER'){ const tp=one('TYPE DE RECUPERATION'); if(tp!=='JEU AU PIED'){ const e=TO_TYPES.find(x=>x[0]===tp); add(e?e[1]:'to_autre'); pt('T',1); } }
@@ -814,6 +935,12 @@ function parseXML(text){
     rows.cards=all.filter(o=>!o.x&&ours(o.player.split(' - ')[0])&&/ - CARTON$/.test(norm(o.player))&&o.raw.JOUEUR).map(o=>({c:toMin(o.t),n:o.raw.JOUEUR[0],col:norm((o.raw['COULEUR DU CARTON']||[''])[0])}));
     rows.subs=all.filter(o=>!o.x&&ours(o.player.split(' - ')[0])&&/ - REMPLACEMENT$/.test(norm(o.player))).map(o=>({c:+((o.raw.CHRONO||[])[0]||toMin(o.t)),type:norm((o.raw['TYPE DE REMPLACEMENT']||[''])[0]),out:(o.raw['JOUEUR SORTANT']||[])[0],inn:(o.raw['JOUEUR ENTRANT']||[])[0]}));
   }
+  // score du match : essais et coups de pied réussis codés au niveau des équipes
+  const sc={us:0,them:0}; let nsc=0;
+  all.filter(o=>!o.x&&/ - (ESSAI|BUTEUR)$/.test(norm(o.player))).forEach(o=>{ const w=ours(o.player.split(' - ')[0])?'us':'them', N=k=>norm((o.raw[k]||[''])[0]);
+    if(/ESSAI$/.test(norm(o.player))){ sc[w]+=/PENALITE/.test(N("TYPE D'ESSAI"))?7:5; nsc++; }
+    else if(N('RESULTAT DU BUTEUR')==='POSITIF'){ const tp=N('TYPE DE BUTEUR'); sc[w]+=tp==='TRANSFORMATION'?2:3; nsc++; } });
+  if(nsc) rows.score=sc;
   if(mi){ const g=t=>{const e=mi.getElementsByTagName(t)[0]; return e?e.textContent.trim():'';};
     const loc=g('EquipeLocale'), vis=g('EquipeVisiteuse'), r=g('Journee').match(/(\d+)/), d=g('Date').match(/^(\d{4})-(\d{2})-(\d{2})/);
     rows.info={journee:r?'J'+(+r[1]):'',adversaire:ours(loc)?vis:loc,date:d?`${d[3]}/${d[2]}/${d[1]}`:''}; }
@@ -845,7 +972,7 @@ function compute(rows){
       add(p,'rd'); add(p,ok?'rd_pos':'rd_neg');
       if(contre){add(p,'contre'); if(ok)add(p,'contre_pos');} else {add(p,'gratt'); if(ok)add(p,'gratt_pos');}
       ev.push([t,'ruck',contre?'Contre-ruck':'Grattage',ok?1:0,name]); }
-    if(g.disc){ const N=toks(g.disc).map(norm); if(!N.includes('NOFAUTE')) add(p,'faute'); const cj=N.includes('CJ'), cr=N.includes('CR'), cb=N.includes('CB'); if(cj)add(p,'cj'); if(cr)add(p,'cr'); if(cb)add(p,'cb');
+    if(g.disc){ const N=toks(g.disc).map(norm); if(!N.includes('NOFAUTE')) add(p,'faute'); else add(p,'cnf'); const cj=N.includes('CJ'), cr=N.includes('CR'), cb=N.includes('CB'); if(cj)add(p,'cj'); if(cr)add(p,'cr'); if(cb)add(p,'cb');
       ev.push([t,'disc',cr?'Carton rouge':cj?'Carton jaune':cb?'Carton blanc':'Faute',0,name].concat(N.includes('NOFAUTE')?[1]:[])); }
     if(g.att){ for(const x of toks(g.att).map(norm)){
       const m={'PASSE +':'passe_pos','PASSE -':'passe_neg','PDB':'pdb','DEF BATTU':'defbattu','OFFLOAD +':'off_pos','OFFLOAD -':'off_neg','FRANCHISSEMENT':'franch'}[x];
@@ -869,7 +996,6 @@ function compute(rows){
       else if(x==='DROP +'){add(p,'drop');ev.push([t,'disc','Drop',1,name]);}
       else if(x==='TRANSFO -') add(p,'transfo_neg'); else if(x==='PENALITE -') add(p,'pen_neg'); else if(x==='DROP -') add(p,'drop_neg'); } }
   }
-  ev.filter(e=>e[1]==='disc'&&e[2].startsWith('Carton')&&e[5]===1).forEach(e=>{ const p=M.get(e[4]); if(p&&!ev.some(f=>f[2]==='Faute'&&f[4]===e[4]&&Math.abs(f[0]-e[0])<=1)){ p.faute=(p.faute||0)+1; } });
   const team=rows.sc?conquestSC(rows.sc,M):undefined;
   const minutes=rows.clock?playMinutes(rows,M):undefined;
   const players=[...M.values()]; players.forEach(p=>{p.pts=5*(p.essai||0)+2*(p.transfo||0)+3*(p.pen||0)+3*(p.drop||0);});
@@ -877,7 +1003,7 @@ function compute(rows){
   const ts=rows.map(r=>r.t/60).sort((a,b)=>a-b); const tmax=Math.max(10,Math.ceil((ts[ts.length-1]||80)/10)*10);
   let ht=null, best=4;
   if(rows.clock) ht=[40,40]; else for(let i=1;i<ts.length;i++){ const gap=ts[i]-ts[i-1], mid=(ts[i]+ts[i-1])/2; if(gap>best && mid>tmax*.25 && mid<tmax*.75){best=gap;ht=[Math.round(ts[i-1]*10)/10,Math.round(ts[i]*10)/10];} }
-  return {players, events:ev, pts:PTS, team, minutes, clock:rows.clock||undefined, ht, tmax:rows.clock?Math.max(80,Math.ceil((rows.end||80)/10)*10):tmax, nbRows:rows.length};
+  return {players, events:ev, pts:PTS, team, minutes, clock:rows.clock||undefined, ht, tmax:rows.clock?Math.max(80,Math.ceil((rows.end||80)/10)*10):tmax, nbRows:rows.length, score:rows.score};
 }
 
 
@@ -952,7 +1078,7 @@ if(window.__ROSTER) setRoster(window.__ROSTER);
 function renderReport(m){
   const el=document.getElementById('report');
   if(!m){ el.innerHTML=`<div class="card empty"><h3>Aucun match importé</h3><p>Clique sur « Importer un match » et dépose l’export CSV ou XML de ton logiciel de codage. Le rapport complet (défense, attaque, ruck, discipline, spécifique) se génère tout seul.</p></div>`; return; }
-  const d=m.data; P=mapPlayers(d.players); EV=d.events.map(e=>[e[0],e[1],e[2],e[3],canon(e[4])]); ZP=(d.pts||[]).map(z=>[z[0],z[1],z[2],z[3],canon(z[4])]); TM=d.team||{}; CLOCK=!!d.clock; HT=d.ht; TMAX=d.tmax;
+  const d=m.data; P=mapPlayers(d.players); EV=d.events.map(e=>[e[0],e[1],e[2],e[3],canon(e[4]),e[5]]); ZP=(d.pts||[]).map(z=>[z[0],z[1],z[2],z[3],canon(z[4])]); TM=d.team||{}; CLOCK=!!d.clock; HT=d.ht; TMAX=d.tmax;
   SPLIT=HT?(HT[0]+HT[1])/2:TMAX/2; Q4=Math.round((SPLIT+(TMAX-SPLIT)*0.6)/5)*5;
   const title=m.adversaire?`Match contre ${h(m.adversaire)}`:'Rapport de match';
   const meta=[m.date, `${P.length} joueurs`, `${d.nbRows} séquences codées`, `${sum('pts')} points marqués`].filter(Boolean).join(' · ');
@@ -1010,7 +1136,7 @@ function seasonData(list){
       for(const k in p) if(k!=='name'&&typeof p[k]==='number') a[k]=(a[k]||0)+p[k];
     }
     // temps ramenés sur 90' (mi-temps à 45') pour les répartitions par période
-    for(const e of d.events){ if(d.clock){ ev.push([e[0],e[1],e[2],e[3],e[4]]); continue; } const t=e[0]<split? e[0]*45/split : 45+(e[0]-split)*45/Math.max(1,d.tmax-split); ev.push([Math.round(t*10)/10,e[1],e[2],e[3],e[4]]); }
+    for(const e of d.events){ if(d.clock){ ev.push([e[0],e[1],e[2],e[3],e[4],e[5]]); continue; } const t=e[0]<split? e[0]*45/split : 45+(e[0]-split)*45/Math.max(1,d.tmax-split); ev.push([Math.round(t*10)/10,e[1],e[2],e[3],e[4]]); }
   }
   return {players:[...M.values()], events:ev, team:list.reduce((a,m)=>{for(const k in (m.data.team||{})) a[k]=(a[k]||0)+m.data.team[k]; return a;},{}), pts:list.flatMap(m=>(m.data.pts||[]).map(z=>[z[0],z[1],z[2],z[3],canon(z[4])]))};
 }
@@ -1239,11 +1365,258 @@ const FRATES=[
   ['Jeu aérien gagné',p=>pct(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')),p=>v(p,'aerien_pos')+v(p,'aerien_neg'),65,50]];
 const isFwd=p=>['PI','TA','2L','3L'].includes(grpOf(p.name));
 const pmin=p=>minTot(p.name)||v(p,'min');
+/* ===== Fiche individuelle (gabarit fiche staff) ===== */
+let PHOTOS={};
+const photoId=n=>slug(n);
+function photoFile(file,max=360){return new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>{const img=new Image();img.onload=()=>{const s=Math.min(1,max/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',0.82));};img.onerror=()=>rej(new Error('Image illisible.'));img.src=fr.result;};fr.onerror=()=>rej(new Error('Fichier illisible.'));fr.readAsDataURL(file);});}
+const FC_TOFF=p=>v(p,'ro')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'pdb')+v(p,'defbattu')+v(p,'franch')+v(p,'duel_pos')+v(p,'duel_neg');
+const FC_TDEF=p=>v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'rd')+v(p,'recup');
+const FC_COMBAT=p=>v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'ro')+v(p,'rd')+v(p,'duel_pos')+v(p,'duel_neg');
+const FC_RATE={
+  att:[p=>v(p,'duel_pos'),p=>v(p,'duel_pos')+v(p,'duel_neg')],
+  ro:[p=>v(p,'ro_pos'),p=>v(p,'ro')],
+  def:[p=>v(p,'plaq_ok'),p=>v(p,'plaq_ok')+v(p,'plaq_rate')],
+  rd:[p=>v(p,'rd_pos'),p=>v(p,'rd')],
+  ct:[p=>v(p,'tl_g')+v(p,'ts_g'),p=>v(p,'tl_n')+v(p,'ts_n')],
+  jap:[p=>v(p,'jap_pos'),p=>v(p,'jap_pos')+v(p,'jap_neg')]};
+function fcRef(lab,ps,key,x){
+  const [fn,fd]=FC_RATE[key]; const n=ps.reduce((s,q)=>s+fn(q),0), d=ps.reduce((s,q)=>s+fd(q),0);
+  if(!d) return `<span class="fc-r"><em>${h(lab)}</em><b>–</b></span>`;
+  const y=Math.round(100*n/d), dif=x==null?null:x-y, cls=dif==null?'':dif>=3?' up':dif<=-3?' dn':' eq';
+  return `<span class="fc-r${cls}"><em>${h(lab)}</em><b>${y} %</b><i title="Écart du joueur">${dif==null?'':(dif>0?'+':dif<0?'−':'')+Math.abs(dif)}</i></span>`;
+}
+function fcRing(num,den,lab,refs=''){
+  const x=den?Math.round(100*num/den):null, R=34, C=2*Math.PI*R;
+  return `<div class="fc-ring" role="img" aria-label="${lab} : ${x==null?'aucune donnée':x+' %'}"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="41" fill="#1d1d1b"/><circle cx="42" cy="42" r="${R}" fill="none" stroke="#3a3a37" stroke-width="5"/>${x?`<circle cx="42" cy="42" r="${R}" fill="none" stroke="#e30613" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(C*x/100).toFixed(1)} ${C.toFixed(1)}" transform="rotate(-90 42 42)"/>`:''}<text x="42" y="${x==null?47:49}" text-anchor="middle" fill="#ffffff" font-size="${x==null?16:19}" font-weight="800">${x==null?'–':x+'%'}</text></svg><span>${lab}</span>${refs?`<div class="fc-refs">${refs}</div>`:''}</div>`;
+}
+const fcRow=(lab,val,cls='')=>`<li class="${cls}${val?'':' z'}"><span>${lab}</span><b>${val==null||val===''?'–':String(val).replace('.',',')}</b></li>`;
+const fcPair=(lab,p,kp,kn)=>fcRow(lab+' +',v(p,kp),'pos')+fcRow(lab+' −',v(p,kn),'neg');
+const fcRate=(a,b)=>b?`${a}/${b}`:0;
+function fcSec(title,body,ring='',spk=''){ return `<section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>${title}${spk}</h3><div class="fc-body${ring?' has-ring':''}"><ul>${body}</ul>${ring}</div></section>`; }
+const nameParts=n=>{ const r=rosterOf(n); if(r&&r.nf) return [r.nf.toUpperCase(),r.pf||'']; const w=n.split(' '); return [w.slice(1).join(' ').toUpperCase()||n.toUpperCase(),w.length>1?w[0]:'']; };
+async function saveRoster(n,patch){ const list=ROSTER.map(({display,...x})=>x); const r=rosterOf(n);
+  if(r){ const i=ROSTER.indexOf(r); list[i]={...list[i],...patch}; } else list.push({nom:n.toUpperCase(),prenom:'',annee:null,poste:null,...patch});
+  if(DB) await DB.doc('effectif/saison').set({joueurs:list}); setRoster(list); }
+/* --- repères de la fiche : résultat, rang dans le groupe, forme, sparklines --- */
+const mRes=m=>{ const s=m&&m.data&&m.data.score; if(!s) return null; return {us:s.us,them:s.them,r:s.us>s.them?'V':s.us<s.them?'D':'N'}; };
+const resTxt=x=>x?`${x.r} ${x.us}-${x.them}`:'';
+const DISC_LAB=['Faute','Carton jaune','Carton rouge','Carton blanc'];
+const fcF1=x=>x==null||!isFinite(x)?'–':(Math.round(x*10)/10).toString().replace('.',',');
+// stats classées dans le groupe de poste : [libellé, numérateur, dénominateur (taux) ou null (par 80 min), plus = mieux]
+const FC_RANK=[
+  ['Tâches',p=>v(p,'taches'),null,1],
+  ['Plaquages réussis',p=>v(p,'plaq_ok'),null,1],
+  ['Plaquages dominants',p=>v(p,'plaq_dom'),null,1],
+  ['Réussite au plaquage',p=>v(p,'plaq_ok'),p=>v(p,'plaq_ok')+v(p,'plaq_rate'),1],
+  ['Contacts gagnés',p=>v(p,'duel_pos'),null,1],
+  ['Mètres gagnés',p=>v(p,'m_tot'),null,1],
+  ['Défenseurs battus',p=>v(p,'defbattu'),null,1],
+  ['Passes réussies',p=>v(p,'passe_pos'),null,1],
+  ['Rucks offensifs',p=>v(p,'ro'),null,1],
+  ['Efficacité au ruck',p=>v(p,'ro_pos'),p=>v(p,'ro'),1],
+  ['Rucks défensifs gagnés',p=>v(p,'rd_pos'),null,1],
+  ['Ballons récupérés',p=>v(p,'recup'),null,1],
+  ['Lancers réussis',p=>v(p,'tl_g'),p=>v(p,'tl_n'),1],
+  ['Ballons gagnés au saut',p=>v(p,'ts_g'),null,1],
+  ['Jeu au pied réussi',p=>v(p,'jap_pos'),p=>v(p,'jap_pos')+v(p,'jap_neg'),1],
+  ['Aérien gagné',p=>v(p,'aerien_pos'),null,1],
+  ['Pertes de balle',p=>v(p,'pdb'),null,0],
+  ['Pénalités',p=>v(p,'faute'),null,0]];
+function fcRanks(me,peers,minOfP,minRef){
+  // peers : joueurs du groupe (sans « me ») avec assez de minutes ; renvoie une ligne par stat utile
+  const cand=[me,...peers.filter(q=>minOfP(q)>=minRef)];
+  if(cand.length<2) return [];
+  const out=[];
+  for(const [lab,fn,fd,hi] of FC_RANK){
+    const val=q=>{ const m=minOfP(q); if(fd){ const d=fd(q); return d>=3?100*fn(q)/d:null; } return m?fn(q)*80/m:null; };
+    const vals=cand.map(q=>({q,x:val(q)})).filter(o=>o.x!=null);
+    const mine=vals.find(o=>o.q===me); if(!mine||vals.length<2) continue;
+    if(!cand.some(q=>fn(q)>0)) continue;
+    if(hi&&!fn(me)&&!fd) { /* stat jamais faite : on la classe quand même, dernière */ }
+    const better=vals.filter(o=>hi?o.x>mine.x:o.x<mine.x).length, N=vals.length, rank=better+1;
+    const avg=vals.filter(o=>o.q!==me).reduce((a,o)=>a+o.x,0)/(N-1);
+    out.push({lab,rate:!!fd,hi,x:mine.x,avg,rank,N,pc:N>1?(N-rank)/(N-1):null,raw:fn(me)});
+  }
+  return out;
+}
+function fcSpark(vals,lab,lowGood){
+  // vals : [{t:'J1 Biarritz', x:nombre|null}] ; points = matchs, ligne = moyenne glissante sur 3 matchs
+  const pts=vals.map((o,i)=>({...o,i})).filter(o=>o.x!=null&&isFinite(o.x));
+  if(pts.length<3) return '';
+  const W=112,H=26,n=vals.length, xs=i=>n>1?4+i*(W-8)/(n-1):W/2;
+  const lo=Math.min(...pts.map(o=>o.x)), hi=Math.max(...pts.map(o=>o.x)), sp=hi-lo||1, ys=x=>H-3-(x-lo)*(H-6)/sp;
+  const roll=pts.map((o,k)=>{ const w=pts.slice(Math.max(0,k-2),k+1); return {i:o.i,x:w.reduce((a,b)=>a+b.x,0)/w.length}; });
+  const first=roll[Math.min(2,roll.length-1)].x, last=roll[roll.length-1].x, up=last>first*1.05+0.01, dn=last<first*0.95-0.01;
+  const trend=up?(lowGood?'bad':'good'):dn?(lowGood?'good':'bad'):'';
+  const col=trend==='good'?'var(--good)':trend==='bad'?'var(--bad)':'var(--ink)';
+  const tip=lab+' — '+pts.map(o=>o.t+' : '+fcF1(o.x)).join(' · ');
+  return `<span class="fc-spk" title="${h(tip)}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${h(tip)}">${pts.map(o=>`<circle cx="${xs(o.i).toFixed(1)}" cy="${ys(o.x).toFixed(1)}" r="1.8" fill="var(--muted)" opacity=".55"/>`).join('')}<polyline fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="${roll.map(o=>xs(o.i).toFixed(1)+','+ys(o.x).toFixed(1)).join(' ')}"/></svg>${up?'↗':dn?'↘':'→'}</span>`;
+}
+const fcStack=segs=>{ const t=segs.reduce((a,s)=>a+s[1],0); if(!t) return '';
+  return `<div class="fc-stk" role="img" aria-label="${h(segs.map(s=>s[0]+' '+s[1]).join(', '))}">${segs.filter(s=>s[1]).map(s=>`<b style="width:${100*s[1]/t}%;background:${s[2]}" title="${h(s[0])} : ${s[1]} (${Math.round(100*s[1]/t)} %)"></b>`).join('')}</div><div class="fc-lg">${segs.map(s=>`<span><i style="background:${s[2]}"></i>${h(s[0])} ${Math.round(100*s[1]/t)} %</span>`).join('')}</div>`; };
 function renderFiche(){
   if(!CMP_OK){ renderLock(FICHE_ID); window.__report={id:FICHE_ID,season:true,ajoute:'lock'}; return; }
   const el=document.getElementById('report');
   const list=[...MATCHES].sort((a,b)=>jnum(a)-jnum(b));
   if(!list.length){ renderReport(null); return; }
+  const sd=seasonData(list), all=sd.players;
+  const names=all.map(p=>p.name).sort((a,b)=>a.localeCompare(b,'fr'));
+  if(!names.includes(FICHE.who)) FICHE.who=[...all].sort((a,b)=>pmin(b)-pmin(a))[0]?.name;
+  if(FICHE.scope!=='saison'&&!list.find(m=>m.id===FICHE.scope)) FICHE.scope='saison';
+  const season=FICHE.scope==='saison', n=FICHE.who, r=rosterOf(n), m=season?null:list.find(x=>x.id===FICHE.scope);
+  const pool=season?all:mapPlayers(m.data.players);
+  const p0=pool.find(x=>x.name===n)||{name:n}; const p={...p0,tl_bad:v(p0,'tl_n')-v(p0,'tl_g'),ts_bad:v(p0,'ts_n')-v(p0,'ts_g')};
+  const minOf=(mm,nm)=>{ const c=colOf(mm); const a=(MIN[nm]||{})[c]; if(a!=null&&a!=='') return +a; const e=Object.entries(mm.data.minutes||{}).find(([k])=>canon(k)===nm); return e?e[1]:null; };
+  const perMatch=list.map(mm=>({mm,mn:minOf(mm,n),pl:mapPlayers(mm.data.players).find(x=>x.name===n)}));
+  const mins=season?perMatch.reduce((s,x)=>s+(+x.mn||0),0):(minOf(m,n)||0);
+  const nbm=season?perMatch.filter(x=>(+x.mn||0)>0||x.pl).length:((mins||p.actions)?1:0);
+  const [nom,pre]=nameParts(n), photo=PHOTOS[photoId(n)], myG=grpOf(n);
+  const gpool=myG?pool.filter(q=>grpOf(q.name)===myG):[];
+  const ring=(key,lab)=>{ const [fn,fd]=FC_RATE[key], num=fn(p), den=fd(p), x=den?Math.round(100*num/den):null;
+    return fcRing(num,den,lab,fcRef('Équipe',pool,key,x)+(myG?fcRef(GROUPES[myG].replace(/ \(.*\)/,''),gpool,key,x):'')); };
+  const cards=[v(p,'cb')?`<i class="cdot w"></i>${v(p,'cb')} blanc${v(p,'cb')>1?'s':''}`:'',v(p,'cj')?`<i class="cdot y"></i>${v(p,'cj')} jaune${v(p,'cj')>1?'s':''}`:'',v(p,'cr')?`<i class="cdot r"></i>${v(p,'cr')} rouge${v(p,'cr')>1?'s':''}`:''].filter(Boolean).join(' ');
+  const plNeutre=Math.max(0,v(p,'plaq_ok')-v(p,'plaq_dom')-v(p,'plaq_subi'));
+  const t80=mins?(Math.round((FC_TOFF(p)+FC_TDEF(p))*80/mins*10)/10):null;
+  const scopeTxt=season?`Saison 2026-2027 · ${nbm} match${nbm>1?'s':''} joué${nbm>1?'s':''}`:label(m)+(mRes(m)?` · ${({V:'Victoire',D:'Défaite',N:'Nul'})[mRes(m).r]} ${mRes(m).us}-${mRes(m).them}`:'');
+  const opt=GORDER.map(g=>`<optgroup label="${GROUPES[g]}">${names.filter(x=>grpOf(x)===g).map(x=>`<option value="${h(x)}"${x===n?' selected':''}>${h(x)}</option>`).join('')}</optgroup>`).join('')+(names.some(x=>!grpOf(x))?`<optgroup label="Sans poste">${names.filter(x=>!grpOf(x)).map(x=>`<option value="${h(x)}"${x===n?' selected':''}>${h(x)}</option>`).join('')}</optgroup>`:'');
+  const scopeOpts=`<option value="saison"${season?' selected':''}>Saison (${list.length} matchs)</option>`+[...list].reverse().map(x=>`<option value="${h(x.id)}"${x.id===FICHE.scope?' selected':''}>${h(label(x))}</option>`).join('');
+  const ed=!!(DB&&canWrite);
+  const conq=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'mf_n')+v(p,'md_n')>0;
+  // ---- contexte des matchs ----
+  const mres=m?mRes(m):null;
+  const played=perMatch.filter(x=>(+x.mn||0)>0||x.pl);
+  const strip=season?`<div class="fc-strip" aria-label="Matchs de la saison">${perMatch.map(({mm,mn,pl})=>{ const rr=mRes(mm), np=!((+mn||0)>0||pl);
+    return `<div class="mt ${rr?rr.r:''}${np?' np':''}" title="${h(label(mm))}${rr?' · '+resTxt(rr):''}${np?' · n’a pas joué':mn!=null?' · '+mn+' min':''}"><b>${h(mm.journee||'')}</b><span>${h((mm.adversaire||'').replace(' Rugby','').slice(0,11))}</span>${rr?`<em>${rr.r} ${rr.us}-${rr.them}</em>`:''}<i>${np?'—':mn!=null?mn+'′':''}</i></div>`; }).join('')}</div>`:'';
+  // ---- évolution par bloc (saison) ----
+  const ser=f=>perMatch.map(({mm,mn,pl})=>({t:`${mm.journee||''} ${mm.adversaire||''}`.trim(),x:pl&&(+mn||0)>0?f(pl,+mn):null}));
+  const r3=(a,b)=>(q,mn)=>{ const d=b(q); return d>=2?100*a(q)/d:null; };
+  const SPK=season&&played.length>=3?{
+    act:fcSpark(ser((q,mn)=>(FC_TOFF(q)+FC_TDEF(q))*80/mn),'Tâches / 80 min'),
+    att:fcSpark(ser(r3(q=>v(q,'duel_pos'),q=>v(q,'duel_pos')+v(q,'duel_neg'))),'Contacts gagnés (%)'),
+    ro:fcSpark(ser(r3(q=>v(q,'ro_pos'),q=>v(q,'ro'))),'Efficacité au ruck (%)'),
+    def:fcSpark(ser(r3(q=>v(q,'plaq_ok'),q=>v(q,'plaq_ok')+v(q,'plaq_rate'))),'Plaquages réussis (%)'),
+    rd:fcSpark(ser((q,mn)=>v(q,'rd')*80/mn),'Rucks défensifs / 80 min'),
+    ct:fcSpark(ser(r3(q=>v(q,'tl_g')+v(q,'ts_g'),q=>v(q,'tl_n')+v(q,'ts_n'))),'Touche, lancer + saut (%)'),
+    jap:fcSpark(ser(r3(q=>v(q,'jap_pos'),q=>v(q,'jap_pos')+v(q,'jap_neg'))),'Jeu au pied réussi (%)'),
+    dis:fcSpark(ser((q,mn)=>v(q,'faute')*80/mn),'Pénalités / 80 min',1)}:{};
+  // ---- détail discipline : type, origine, période ----
+  const evs=(season?list:[m]).flatMap(mm=>(mm.data.events||[]).filter(e=>e[4]===n&&DISC_LAB.includes(e[2])&&!e[5]));
+  const per=[0,0,0,0]; evs.forEach(e=>{ per[Math.min(3,Math.floor((+e[0]||0)/20))]++; });
+  const penT=[...new Map(PEN_TYPES.map(x=>[x[1],x[2]])).entries(),['pt_autre','Autre']].map(([k,l])=>[l,v(p,k)]).filter(x=>x[1]);
+  const disc=fcRow('Pénalités concédées',v(p,'faute'),'neg')+(v(p,'pen_off')+v(p,'pen_def')?fcRow('En attaque',v(p,'pen_off'),'ind')+fcRow('En défense',v(p,'pen_def'),'ind'):'')
+    +(penT.length?'<li class="hd"><span>Par type</span></li>'+penT.map(([l,x])=>fcRow(l,x,'ind')).join(''):'')
+    +`<li class="${cards?'':'z'}"><span>Cartons</span><b>${cards||'0'}</b></li>`;
+  const perHtml=evs.length?`<div class="fc-cap">Par période</div><div class="fc-per">${['0-20','20-40','40-60','60-80'].map((l,i)=>`<div><b class="${per[i]?'':'z'}">${per[i]}</b><span>${l}′</span></div>`).join('')}</div>`:'';
+  // ---- détail jeu au pied ----
+  const kt=[...new Map(KICK_TYPES.map(x=>[x[1],x[2]])).entries()].map(([k,l])=>({l,n:v(p,k),g:v(p,k+'_g'),b:v(p,k+'_b')})).filter(x=>x.n);
+  const japN=v(p,'jap_pos')+v(p,'jap_neg');
+  const kick=japN||kt.length||v(p,'aerien_pos')+v(p,'aerien_neg')>=3;
+  const kickBody=fcPair('JAP',p,'jap_pos','jap_neg')+(kt.length?'<li class="hd"><span>Par type · % de positifs</span></li>'+kt.map(x=>fcRow(x.l,`${x.n} · ${Math.round(100*x.g/x.n)} %`,'ind')).join(''):'')
+    +(v(p,'j5022')?fcRow('50-22',v(p,'j5022'),'pos'):'')+(v(p,'jap_contre')?fcRow('Contrés',v(p,'jap_contre'),'neg'):'')+(v(p,'pk_tot')?fcRow('Pénalités en touche',`${v(p,'pk_touche')}/${v(p,'pk_tot')}`):'')
+    +'<li class="sp"></li>'+fcPair('Aérien',p,'aerien_pos','aerien_neg');
+  // ---- défense : qualité du plaquage ----
+  const plStack=fcStack([['Dominants',v(p,'plaq_dom'),'var(--good)'],['Neutres',plNeutre,'#9a9a95'],['Subis',v(p,'plaq_subi'),'var(--orange)'],['Manqués',v(p,'plaq_rate'),'var(--bad)']]);
+  // ---- ruck : rang d'arrivée moyen ----
+  const arr=[v(p,'ro_1er'),v(p,'ro_r2'),v(p,'ro_r3'),v(p,'ro_r4')], arrN=arr.reduce((a,b)=>a+b,0), arrAvg=arrN?(arr[0]+2*arr[1]+3*arr[2]+4*arr[3])/arrN:null;
+  // ---- rang dans le groupe ----
+  const minP=season?(q=>pmin(q)||0):(q=>+minOf(m,q.name)||0);
+  const minRef=season?120:20;
+  const peers=gpool.filter(q=>q.name!==n);
+  const RK=myG&&mins?fcRanks(p,peers,minP,minRef):[];
+  const nGrp=RK.length?Math.max(...RK.map(r=>r.N)):0;
+  const ord=x=>x===1?'1er':x+'e';
+  const rkList=RK.map(r=>{ const cls=r.pc==null?'':r.pc>=.67?'g':r.pc<=.33?'r':''; return `<li class="${cls}" title="${h(r.lab)} : ${fcF1(r.x)}${r.rate?' %':' / 80 min'} · moyenne du groupe ${fcF1(r.avg)}${r.rate?' %':''}"><span>${h(r.lab)}${r.hi?'':' <small>(moins = mieux)</small>'}</span><b>${r.rate?Math.round(r.x)+'%':fcF1(r.x)}</b><span class="dots" aria-hidden="true">${Array.from({length:r.N},(_,i)=>`<i class="${i===r.N-r.rank?'me':''}"></i>`).join('')}</span><em>${ord(r.rank)}/${r.N}</em></li>`; }).join('');
+  const sig=RK.filter(r=>r.raw>0||!r.hi);
+  const top=[...sig].filter(r=>r.pc>=.5&&r.rank<=Math.ceil(r.N/2)).sort((a,b)=>b.pc-a.pc||a.rank-b.rank).slice(0,3);
+  const low=[...RK].filter(r=>r.pc<.5&&!top.includes(r)).sort((a,b)=>a.pc-b.pc||b.rank-a.rank).slice(0,3);
+  const twItem=r=>`<li><b>${h(r.lab)}</b> · ${r.rate?Math.round(r.x)+' %':fcF1(r.x)+' / 80'} <small>(groupe ${r.rate?Math.round(r.avg)+' %':fcF1(r.avg)}) · ${ord(r.rank)} sur ${r.N}</small></li>`;
+  // ---- forme récente : 3 derniers matchs joués vs saison ----
+  let form='';
+  if(season&&played.length>=4){
+    const last=played.slice(-3), agg=arr2=>{ const o={}; arr2.forEach(x=>{ if(x.pl) for(const k in x.pl) if(typeof x.pl[k]==='number') o[k]=(o[k]||0)+x.pl[k]; }); o.__m=arr2.reduce((a,x)=>a+(+x.mn||0),0); return o; };
+    const L=agg(last), S=agg(played);
+    const FM=[['Tâches / 80',q=>q.__m?(FC_TOFF(q)+FC_TDEF(q))*80/q.__m:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / 80',q=>q.__m?v(q,'m_tot')*80/q.__m:null,1,''],['Pénalités / 80',q=>q.__m?v(q,'faute')*80/q.__m:null,0,'']];
+    const rowsF=FM.map(([l,f,hi,u])=>{ const a=f(L), b=f(S); if(a==null&&b==null) return ''; const d=a!=null&&b!=null?a-b:null, th=u?3:Math.max(.3,Math.abs(b||0)*.1);
+      const cls=d==null||Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r';
+      const f2=x=>x==null?'–':u?Math.round(x)+u:fcF1(x);
+      return `<tr><td>${l}</td><td class="${cls}">${f2(a)}</td><td>${f2(b)}</td><td class="${cls}">${d==null||Math.abs(d)<th?'=':(d>0?'↗':'↘')}</td></tr>`; }).join('');
+    form=`<div><h4 style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Forme récente</h4><table class="fc-form"><thead><tr><th></th><th>${h(last.map(x=>x.mm.journee).join(', '))}</th><th>Saison</th><th></th></tr></thead><tbody>${rowsF}</tbody></table></div>`;
+  }
+  const band=myG?`<div class="fc-band">
+      ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par 80 minutes ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk">${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
+      <section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Repères</h3><div class="fc-tw">
+        ${RK.length?`<div class="good"><h4>Top 3</h4>${top.length?`<ol>${top.map(twItem).join('')}</ol>`:'<p class="fc-note">Aucune stat dans la première moitié du groupe.</p>'}</div><div class="bad"><h4>À travailler</h4>${low.length?`<ol>${low.map(twItem).join('')}</ol>`:'<p class="fc-note">Aucune stat dans la seconde moitié du groupe.</p>'}</div>`:''}
+        ${form}
+      </div></section>
+    </div>`:'';
+  el.innerHTML=`<div class="card fc-ctl no-print">
+    <label for="fWho">Joueur<select id="fWho">${opt}</select></label>
+    <label for="fcS">Périmètre<select id="fcS">${scopeOpts}</select></label>
+    <label for="fGrp">Groupe de poste<select id="fGrp"${ed?'':' disabled'}>${GORDER.map(g=>`<option value="${g}"${g===myG?' selected':''}>${GROUPES[g]}</option>`).join('')}</select></label>
+    <label for="fNum">N° de poste<input type="number" id="fNum" min="1" max="15" value="${r&&r.poste||''}"${ed?'':' disabled'}></label>
+    <label for="fAn">Né en<input type="number" id="fAn" min="1980" max="2012" value="${r&&r.annee||''}"${ed?'':' disabled'}></label>
+    ${ed?`<label class="fc-up">Photo du joueur<span><button type="button" id="fcPhotoBtn" class="ghost">${photo?'Changer la photo':'Ajouter une photo'}</button>${photo?'<button type="button" id="fcPhotoDel" class="ghost">Retirer</button>':''}<input type="file" id="fcPhoto" accept="image/*" hidden></span></label>`:''}
+    <span class="msg" id="fMsg" aria-live="polite"></span>
+  </div>
+  <main style="display:flex;flex-direction:column;gap:28px">
+  <article class="fiche" aria-label="Fiche de ${h(n)}">
+    <header class="fc-head">
+      <div class="fc-photo">${photo?`<img src="${photo}" alt="${h(n)}">`:`<span aria-hidden="true">${h((pre[0]||'')+(nom[0]||''))}</span>`}</div>
+      <div class="fc-id">
+        <h1><span>${h(nom)}</span>${pre?`<span class="pre">${h(pre)}</span>`:''}</h1>
+        <div class="fc-meta">${r&&r.annee?`<b>${r.annee}</b>`:''}${r&&r.poste?`<span>N° <b>${r.poste}</b></span><span class="pos">${h(POSTES[r.poste]||'')}</span>`:(myG?`<span class="pos">${h({PI:'Pilier',TA:'Talonneur','2L':'2e ligne','3L':'3e ligne',CH:'Charnière',CE:'Centre',B3:'Back 3'}[myG]||GROUPES[myG])}</span>`:'')}</div>
+        <div class="fc-scope">${h(scopeTxt)}</div>
+      </div>
+      <img class="fc-logo" src="data:image/png;base64,${LOGO}" alt="Nissa Rugby">
+      <div class="fc-boxes">
+        <div><b>${nbm||'–'}</b><span>match${nbm>1?'s':''}</span></div>
+        <div><b>${mins||'–'}</b><span>minutes</span></div>
+        <div><b>${v(p,'pts')}</b><span>points</span></div>
+      </div>
+    </header>
+    ${!p.actions?`<p class="fc-empty">Aucune action codée pour ${h(n)} sur ce périmètre.</p>`:''}
+    ${strip}
+    <div class="fc-cols">
+      <div class="fc-col">
+        ${fcSec('Activité',fcRow('Tâches off',FC_TOFF(p))+fcRow('Tâches déf',FC_TDEF(p))+fcRow('Actions de combat',FC_COMBAT(p))+fcRow('Tâches / 80 min',t80),'',SPK.act)}
+        ${fcSec('Attaque',fcPair('Contacts',p,'duel_pos','duel_neg')+fcRow('Mètres gagnés',v(p,'m_tot'))+fcRow('Mètres après contact',v(p,'m_ap'))+'<li class="sp"></li>'+fcPair('Passes',p,'passe_pos','passe_neg')+fcPair('Offloads',p,'off_pos','off_neg')+fcRow('Passes décisives',v(p,'passe_dec'),'pos'),ring('att','contacts gagnés'),SPK.att)
+          .replace('</div></section>',`</div><div class="fc-mini"><div><b>${v(p,'pdb')}</b><span>Pertes de balle</span></div><div><b>${v(p,'franch')}</b><span>Breaks</span></div><div><b>${v(p,'defbattu')}</b><span>Déf. battus</span></div></div></section>`)}
+        ${fcSec('Ruck offensif',fcRow('Bonnes attitudes',v(p,'ro_pos'),'pos')+fcRow('Attitudes mauvaises',v(p,'ro_neg'),'neg')+'<li class="hd"><span>Arrivée</span></li>'+fcRow('1er',v(p,'ro_1er'),'ind')+fcRow('2e',v(p,'ro_r2'),'ind')+fcRow('3e et +',v(p,'ro_r3')+v(p,'ro_r4'),'ind')+fcRow('Rang d’arrivée moyen',arrAvg==null?0:fcF1(arrAvg),'ind')+'<li class="sp"></li>'+fcRow('Rucks porteur',v(p,'rk'))+fcRow('Ballons rapides quand porteur (0-3 s)',v(p,'rk')?`${v(p,'rk_03')} · ${pct(v(p,'rk_03'),v(p,'rk'))} %`:0)+(v(p,'rk')?fcRow('Ballons lents (+6 s) ou perdus',`${v(p,'rk_6p')} · ${v(p,'rk_perdu')}`,'ind'):''),ring('ro','efficacité'),SPK.ro)}
+        ${fcSec('Discipline',disc,'',SPK.dis).replace('</div></section>',perHtml+'</div></section>')}
+      </div>
+      <div class="fc-col">
+        ${fcSec('Défense',fcRow('Plaquages +',v(p,'plaq_dom'),'pos')+fcRow('Plaquages =',plNeutre)+fcRow('Plaquages −',v(p,'plaq_subi'),'neg')+fcRow('Plaquages manqués',v(p,'plaq_rate'),'neg')+fcRow('Assistants +',v(p,'ast_pos'),'pos')+fcRow('Assistants −',v(p,'ast_neg'),'neg')+fcRow('Ballons récupérés',v(p,'recup'),'pos')+fcRow('Plaquages aux jambes',v(p,'plaq_haut')+v(p,'plaq_jambe')?`${v(p,'plaq_jambe')} · ${pct(v(p,'plaq_jambe'),v(p,'plaq_haut')+v(p,'plaq_jambe'))} %`:0),ring('def','plaquages réussis'),SPK.def).replace('</div></section>',plStack?`</div><div class="fc-cap">Qualité du plaquage</div>${plStack}</section>`:'</div></section>')}
+        ${fcSec('Ruck défensif',fcRow('Contests',fcRate(v(p,'gratt_pos'),v(p,'gratt')))+fcRow('Contres-ruck',fcRate(v(p,'contre_pos'),v(p,'contre')))+fcRow('Ratés',v(p,'rd_neg'),'neg'),ring('rd','réussite'),SPK.rd)}
+        ${conq?fcSec('Conquête',fcPair('Lancers',p,'tl_g','tl_bad')+fcPair('Sauts',p,'ts_g','ts_bad')+fcRow('Contres en touche',v(p,'tc_n')?`${v(p,'tc_vol')} volé${v(p,'tc_vol')>1?'s':''} / ${v(p,'tc_n')}`:0)+fcRow('Mêlées jouées',v(p,'mf_n')+v(p,'md_n')),v(p,'tl_n')+v(p,'ts_n')?ring('ct','touche (lancer + saut)'):'',SPK.ct):''}
+        ${kick?fcSec('Jeu au pied',kickBody,japN?ring('jap','jeu au pied réussi'):'',SPK.jap):''}
+      </div>
+    </div>
+    ${band}
+    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
+  </article>
+  ${season?ficheAnalyse():''}
+  </main>`;
+  bindTables(el); SEASON=false;
+  const save=()=>{try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(e){} renderFiche();};
+  $('fWho').addEventListener('change',e=>{ FICHE.who=e.target.value; save(); window.scrollTo(0,0); });
+  $('fcS').addEventListener('change',e=>{ FICHE.scope=e.target.value; save(); });
+  const msg=(t,ok=true)=>{ const x=$('fMsg'); if(x){ x.className='msg '+(ok?'ok':'err'); x.textContent=t; } };
+  const upd=async(patch,txt)=>{ try{ await saveRoster(n,patch); renderFiche(); msg(txt); }catch(e){ msg('Enregistrement impossible, réessaie.',false); } };
+  if(ed){
+    $('fGrp').addEventListener('change',e=>upd({grp:e.target.value},'Groupe enregistré.'));
+    $('fNum').addEventListener('change',e=>{ const x=+e.target.value; upd({poste:x>=1&&x<=15?x:null},'Numéro enregistré.'); });
+    $('fAn').addEventListener('change',e=>{ const x=+e.target.value; upd({annee:x>=1980&&x<=2012?x:null},'Année enregistrée.'); });
+    const fi=$('fcPhoto'); $('fcPhotoBtn').addEventListener('click',()=>fi.click());
+    fi.addEventListener('change',async()=>{ const f=fi.files[0]; if(!f) return; msg('Enregistrement…');
+      try{ const url=await photoFile(f); await DB.doc('photos/'+photoId(n)).set({nom:n,dataUrl:url}); PHOTOS[photoId(n)]=url; renderFiche(); }
+      catch(e){ msg((e&&e.message)||'Enregistrement impossible.',false); } });
+    const pd=$('fcPhotoDel'); if(pd) pd.addEventListener('click',async()=>{ try{ await DB.doc('photos/'+photoId(n)).delete(); delete PHOTOS[photoId(n)]; renderFiche(); }catch(e){ msg('Suppression impossible.',false); } });
+  }
+  window.__report={id:FICHE_ID,season:true,ajoute:list.map(x=>x.ajoute).join('|')};
+}
+
+function ficheAnalyse(){
+  const list=[...MATCHES].sort((a,b)=>jnum(a)-jnum(b));
   const sd=seasonData(list); P=sd.players; EV=sd.events; ZP=sd.pts; TM=sd.team; SEASON=true;
   const names=P.map(p=>p.name).sort((a,b)=>a.localeCompare(b,'fr'));
   if(!names.includes(FICHE.who)) FICHE.who=[...P].sort((a,b)=>pmin(b)-pmin(a))[0]?.name;
@@ -1267,26 +1640,22 @@ function renderFiche(){
   const rateC=rates.length?breakdown('Taux de réussite','Saison, sur toutes ses actions (3 tentatives minimum).',rates.map(r=>({n:r.lab,e:`${r.n} tentatives`,v:r.x||0,t:r.x+' %',c:r.x>=r.g?C.b1:r.x>=r.w?C.b2:C.red}))):'';
   const t80=`<div class="card"><h3>Par 80 minutes</h3><p class="sub">Comparé aux ${refLab} ayant joué au moins 120 minutes (${grp.length} joueur${grp.length>1?'s':''}). Rang : 1 = meilleur${mins<120?' · temps de jeu encore faible, à interpréter avec prudence':''}.</p><div class="tw"><table><thead><tr><th>Stat</th><th>Total</th><th>Joueur / 80</th><th>Moyenne / 80</th><th>Écart</th><th>Rang</th></tr></thead><tbody>${rows80.map(r=>{ const d=r.mv!=null&&r.avg!=null?r.mv-r.avg:null; const good=d==null?'':(r.hi?d>0:d<0)?'g':(r.hi?d<0:d>0)?'r':''; return `<tr><td>${h(r.lab)}${r.hi?'':' <span class="d">(moins = mieux)</span>'}</td><td>${r.raw}</td><td class="pct">${f1(r.mv)}</td><td class="d">${f1(r.avg)}</td><td class="pct ${good}">${d==null?'–':(d>0?'+':'')+f1(d)}</td><td>${r.rank?r.rank+' / '+r.n:'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
   const evo=stacked('Actions par match','Défense, attaque, ruck et conquête · minutes jouées à droite.',[['Défense',C.b1],['Attaque','var(--nissa)'],['Ruck',C.b2],['Conquête & pied',C.b3]],pm.map(({m,p,mn})=>{ p=p||{}; const d=v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'recup'), a=v(p,'duel_pos')+v(p,'duel_neg')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'defbattu')+v(p,'pdb'), r=v(p,'ro')+v(p,'rd'), c=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'jap_pos')+v(p,'jap_neg')+v(p,'aerien_pos')+v(p,'aerien_neg');
-    return {name:`${m.journee||''} ${m.adversaire||''}`.trim(),tot:d+a+r+c,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
-  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Min.</th><th>Tâches</th><th>Tâches/80</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn})=>{ if(!p&&!mn) return `<tr><td>${h(label(m))}</td><td colspan="${fwd?14:14}" class="d">n’a pas joué</td></tr>`; p=p||{};
-    return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td>${mn??'–'}</td><td>${v(p,'taches')}</td><td class="pct">${mn?f1(v(p,'taches')*80/mn):'–'}</td><td>${fr(v(p,'plaq_ok'),v(p,'plaq_ok')+v(p,'plaq_rate'))}</td><td class="${v(p,'plaq_rate')>=2?'r':''}">${v(p,'plaq_rate')||'–'}</td><td>${fr(v(p,'duel_pos'),v(p,'duel_pos')+v(p,'duel_neg'))}</td><td>${v(p,'m_tot')||'–'}</td><td>${v(p,'ro')?fr(v(p,'ro_pos'),v(p,'ro')):'–'}</td><td class="${v(p,'pdb')>=2?'r':''}">${v(p,'pdb')||'–'}</td><td class="${v(p,'faute')>=2||v(p,'cj')||v(p,'cr')?'r':''}">${v(p,'faute')||'–'}${v(p,'cr')?' CR':v(p,'cj')?' CJ':''}</td>${fwd?`<td>${v(p,'tl_n')?'L '+fr(v(p,'tl_g'),v(p,'tl_n')):''}${v(p,'ts_n')?' S '+fr(v(p,'ts_g'),v(p,'ts_n')):''}${!v(p,'tl_n')&&!v(p,'ts_n')?'–':''}</td><td>${v(p,'mf_n')+v(p,'md_n')||'–'}</td>`:`<td>${v(p,'jap_pos')+v(p,'jap_neg')?fr(v(p,'jap_pos'),v(p,'jap_pos')+v(p,'jap_neg')):'–'}</td><td>${v(p,'aerien_pos')+v(p,'aerien_neg')?fr(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')):'–'}</td>`}<td>${v(p,'pts')||'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
+    return {name:`${m.journee||''} ${m.adversaire||''}${mRes(m)?' · '+resTxt(mRes(m)):''}`.trim(),tot:d+a+r+c,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
+  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Score</th><th>Min.</th><th>Tâches</th><th>Tâches/80</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn})=>{ if(!p&&!mn) return `<tr><td>${h(label(m))}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td colspan="14" class="d">n’a pas joué</td></tr>`; p=p||{};
+    return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td>${mn??'–'}</td><td>${v(p,'taches')}</td><td class="pct">${mn?f1(v(p,'taches')*80/mn):'–'}</td><td>${fr(v(p,'plaq_ok'),v(p,'plaq_ok')+v(p,'plaq_rate'))}</td><td class="${v(p,'plaq_rate')>=2?'r':''}">${v(p,'plaq_rate')||'–'}</td><td>${fr(v(p,'duel_pos'),v(p,'duel_pos')+v(p,'duel_neg'))}</td><td>${v(p,'m_tot')||'–'}</td><td>${v(p,'ro')?fr(v(p,'ro_pos'),v(p,'ro')):'–'}</td><td class="${v(p,'pdb')>=2?'r':''}">${v(p,'pdb')||'–'}</td><td class="${v(p,'faute')>=2||v(p,'cj')||v(p,'cr')?'r':''}">${v(p,'faute')||'–'}${v(p,'cr')?' CR':v(p,'cj')?' CJ':''}</td>${fwd?`<td>${v(p,'tl_n')?'L '+fr(v(p,'tl_g'),v(p,'tl_n')):''}${v(p,'ts_n')?' S '+fr(v(p,'ts_g'),v(p,'ts_n')):''}${!v(p,'tl_n')&&!v(p,'ts_n')?'–':''}</td><td>${v(p,'mf_n')+v(p,'md_n')||'–'}</td>`:`<td>${v(p,'jap_pos')+v(p,'jap_neg')?fr(v(p,'jap_pos'),v(p,'jap_pos')+v(p,'jap_neg')):'–'}</td><td>${v(p,'aerien_pos')+v(p,'aerien_neg')?fr(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')):'–'}</td>`}<td>${v(p,'pts')||'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
+  // victoires / défaites
+  const grpVD=w=>{ const o={__m:0,__n:0}; pm.forEach(({m,p,mn})=>{ const rr=mRes(m); if(!rr||rr.r!==w||!p||!(+mn>0)) return; o.__m+=+mn; o.__n++; for(const k in p) if(typeof p[k]==='number') o[k]=(o[k]||0)+p[k]; }); return o; };
+  const VW=grpVD('V'), VL=grpVD('D');
+  const VDS=[['Tâches / 80',q=>q.__m?v(q,'taches')*80/q.__m:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / 80',q=>q.__m?v(q,'m_tot')*80/q.__m:null,1,''],['Pertes de balle / 80',q=>q.__m?v(q,'pdb')*80/q.__m:null,0,''],['Pénalités / 80',q=>q.__m?v(q,'faute')*80/q.__m:null,0,'']];
+  const f2=(x,u)=>x==null?'–':u?Math.round(x)+u:f1(x);
+  const vdC=VW.__n&&VL.__n?`<div class="card"><h3>Victoires et défaites</h3><p class="sub">Ses stats dans les ${VW.__n} victoire${VW.__n>1?'s':''} et les ${VL.__n} défaite${VL.__n>1?'s':''} où il a joué (score calculé à partir des essais et coups de pied codés).</p><div class="tw"><table><thead><tr><th>Stat</th><th>Victoires</th><th>Défaites</th></tr></thead><tbody>${VDS.map(([l,f,hi,u])=>{ const a=f(VW), b=f(VL); const d=a!=null&&b!=null?a-b:0, th=u?3:.3; const ca=Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r', cb=Math.abs(d)<th?'':(hi?d<0:d>0)?'g':'r'; return `<tr><td>${l}</td><td class="${ca}">${f2(a,u)}</td><td class="${cb}">${f2(b,u)}</td></tr>`; }).join('')}</tbody></table></div></div>`:'';
   const zp=ZP.filter(z=>z[4]===me.name);
   const zc=zp.length?`<div class="card"><div class="card-head"><h3>Carte de ses actions</h3><span>saison · ${zp.length} actions situées</span></div><div class="legend">${Object.entries(ZTYPES).filter(([t])=>zp.some(z=>z[2]===t)).map(([t,[n,c]])=>`<span><i style="background:${c}"></i>${n} (${zp.filter(z=>z[2]===t).length})</span>`).join('')}</div>${pitch(zp)}</div>`:'';
   const opt=GORDER.map(g=>`<optgroup label="${GROUPES[g]}">${names.filter(n=>grpOf(n)===g).map(n=>`<option value="${h(n)}"${n===me.name?' selected':''}>${h(n)}</option>`).join('')}</optgroup>`).join('')+(names.some(n=>!grpOf(n))?`<optgroup label="Sans poste">${names.filter(n=>!grpOf(n)).map(n=>`<option value="${h(n)}"${n===me.name?' selected':''}>${h(n)}</option>`).join('')}</optgroup>`:'');
   const conq=(v(me,'tl_n')||v(me,'ts_n')||v(me,'tc_n')||v(me,'mf_n')+v(me,'md_n'))?`<div class="kpis">${v(me,'tl_n')?kpi('Lancers',pct(v(me,'tl_g'),v(me,'tl_n'))+' %',`${v(me,'tl_g')} / ${v(me,'tl_n')} réussis${v(me,'tl_vol')?` · ${v(me,'tl_vol')} volés`:''}`,status(pct(v(me,'tl_g'),v(me,'tl_n')),85,75)):''}${v(me,'ts_n')?kpi('Sauts en touche',pct(v(me,'ts_g'),v(me,'ts_n'))+' %',`${v(me,'ts_g')} / ${v(me,'ts_n')} ballons gagnés`,status(pct(v(me,'ts_g'),v(me,'ts_n')),85,75)):''}${v(me,'tc_n')?kpi('Contres en touche',v(me,'tc_vol'),`ballons volés sur ${v(me,'tc_n')} contres`,null):''}${v(me,'mf_n')+v(me,'md_n')?kpi('Mêlées jouées',v(me,'mf_n')+v(me,'md_n'),`${v(me,'mf_g')} gagnées sur notre intro (${v(me,'mf_n')})`,null):''}</div>`:'';
-  el.innerHTML=`<header class="mast"><img src="data:image/png;base64,${LOGO}" alt="Nissa Rugby"><div class="t"><div class="eyebrow">Nissa Rugby · Staff Pro · Fiche joueur · réservé au staff</div><h1>${h(me.name)}</h1><div class="meta">${[myG?GROUPES[myG]:(fwd?'Avant':'Arrière'),posteOf(me.name)?POSTES[posteOf(me.name)]:'',anneeOf(me.name)?'né en '+anneeOf(me.name):'','Saison 2026-2027',`${played.length} match${played.length>1?'s':''} · ${mins} min`].filter(Boolean).join(' · ')}</div></div></header>
-  <div class="card cmp-ctl no-print"><label for="fWho">Joueur<select id="fWho">${opt}</select></label><label for="fGrp">Poste${DB&&canWrite?'':' (lecture seule)'}<select id="fGrp"${DB&&canWrite?'':' disabled'}>${GORDER.map(g=>`<option value="${g}"${g===myG?' selected':''}>${GROUPES[g]}</option>`).join('')}</select></label><span class="msg" id="fMsg" aria-live="polite"></span></div>
-  <main style="display:flex;flex-direction:column;gap:28px">
-  ${sec('fiche-bilan','Bilan','Saison 2026-2027',k+conq+`<div class="grid2">${t80}<div class="side">${ret}${rateC}</div></div>`)}
+  return `  ${sec('fiche-bilan','Analyse','Saison 2026-2027 · par 80 minutes et comparaison au groupe',`<div class="grid2">${t80}<div class="side">${rateC}${vdC}</div></div>`)}
   ${sec('fiche-evo','Évolution','Match après match',`<div class="grid2">${evo}<div class="side">${zc}</div></div>`+tbm)}
-  </main>
-  <footer style="margin-top:18px">Par 80 minutes = total ramené à un match complet à partir des minutes jouées. Postes : saisis par le staff, sinon déduits des données (numéro en mêlée, lancers, jeu de passe et au pied, jeu aérien). Fiche réservée au staff.</footer>`;
-  bindTables(el); SEASON=false;
-  const fg=$('fGrp'); if(fg) fg.addEventListener('change',async e=>{ const g=e.target.value, n=me.name, list=ROSTER.map(({display,...x})=>x); const r=rosterOf(n);
-    if(r){ const i=ROSTER.indexOf(r); list[i]={...list[i],grp:g}; } else list.push({nom:n.toUpperCase(),prenom:'',annee:null,poste:null,grp:g});
-    try{ if(DB) await DB.doc('effectif/saison').set({joueurs:list}); setRoster(list); renderFiche(); const m=$('fMsg'); if(m){ m.className='msg ok'; m.textContent='Poste enregistré.'; } }catch(err){ const m=$('fMsg'); if(m){ m.className='msg err'; m.textContent='Enregistrement impossible, réessaie.'; } } });
-  $('fWho').addEventListener('change',e=>{ FICHE.who=e.target.value; try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(_){} renderFiche(); window.scrollTo(0,0); });
-  window.__report={id:FICHE_ID,season:true,ajoute:list.map(m=>m.ajoute).join('|')};
+`;
 }
 
 /* ===== Temps de jeu & tâches ===== */
@@ -1551,6 +1920,7 @@ renderReport(null); fillSelect();
   db.doc('temps/saison').onSnapshot(s=>{ const d=s.exists?s.data():null; MIN=JSON.parse(JSON.stringify((d&&d.minutes)||{})); MIN_LOADED=true;
     if(current===MIN_ID && !(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.mtab'))) renderMinutes();
     if(current===SEASON_ID) renderSeason(); if(current===FICHE_ID&&CMP_OK) renderFiche(); },()=>{});
+  db.collection('photos').onSnapshot(snap=>{ PHOTOS={}; snap.docs.forEach(d=>{const x=d.data(); if(x&&x.dataUrl) PHOTOS[d.id]=x.dataUrl;}); if(current===FICHE_ID&&CMP_OK&&!(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.fc-ctl'))) renderFiche(); },()=>{});
   db.collection('logos').onSnapshot(snap=>{
     snap.docs.forEach(d=>{const x=d.data(); if(x&&x.dataUrl) LOGOS[d.id]=x.dataUrl;});
     if(current===SEASON_ID) renderSeason(); else if(current===COMPARE_ID) renderCompare(); else if(current===MIN_ID) renderMinutes(); else if(current===FICHE_ID) renderFiche(); else if(window.__report) renderReport(window.__report);
@@ -1566,5 +1936,7 @@ renderReport(null); fillSelect();
 })();
 
 </script>
+
+
 </body>
 </html>
