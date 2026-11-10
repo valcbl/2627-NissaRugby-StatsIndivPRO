@@ -172,7 +172,9 @@
     "pts": 0,
     "jt_in_g": 2,
     "jt_out_b": 1,
-    "jt_court_g": 1
+    "jt_court_g": 1,
+    "jd_n": 6,
+    "jd_tot": 190
    },
    {
     "name": "Hanru Sirgel",
@@ -386,7 +388,9 @@
     "jt_press": 2,
     "min": 61,
     "pts": 14,
-    "jt_in_g": 4
+    "jt_in_g": 4,
+    "jd_n": 8,
+    "jd_tot": 262
    },
    {
     "name": "Adrian Motoc",
@@ -632,7 +636,9 @@
     "pts": 0,
     "jt_in_g": 2,
     "jt_out_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 6,
+    "jd_tot": 203
    },
    {
     "name": "Lucas Bachelier",
@@ -795,7 +801,9 @@
     "franch": 1,
     "zC3": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 2,
+    "jd_tot": 29
    },
    {
     "name": "Jules Martinez",

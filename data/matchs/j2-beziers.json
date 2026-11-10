@@ -51,7 +51,9 @@
     "pts": 6,
     "jt_in_g": 2,
     "jt_press_g": 1,
-    "jt_deg_b": 3
+    "jt_deg_b": 3,
+    "jd_n": 6,
+    "jd_tot": 234
    },
    {
     "name": "Vincent Rattez",
@@ -119,7 +121,9 @@
     "pts": 0,
     "jt_in_g": 1,
     "jt_court_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 3,
+    "jd_tot": 104
    },
    {
     "name": "Francis Saili",
@@ -177,7 +181,9 @@
     "ro_r2": 1,
     "min": 80,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 43
    },
    {
     "name": "Christiaan Van Der Merwe",
@@ -328,7 +334,9 @@
     "pts": 0,
     "jt_deg_b": 2,
     "jt_press_g": 2,
-    "jt_passe_g": 1
+    "jt_passe_g": 1,
+    "jd_n": 6,
+    "jd_tot": 122
    },
    {
     "name": "Leo Chauvin",
@@ -427,7 +435,9 @@
     "essai": 1,
     "min": 80,
     "pts": 5,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 1,
+    "jd_tot": 35
    },
    {
     "name": "Arthur Vignolles",
@@ -771,7 +781,9 @@
     "mf_rj": 1,
     "mf_pos2": 1,
     "min": 80,
-    "pts": 5
+    "pts": 5,
+    "jd_n": 1,
+    "jd_tot": 9
    },
    {
     "name": "Clement Egiziano",
@@ -808,7 +820,9 @@
     "off_pos": 1,
     "zC3": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 11
    },
    {
     "name": "Farai Mudariki",
@@ -895,7 +909,9 @@
     "pts": 7,
     "jt_out_g": 1,
     "jt_deg_b": 2,
-    "jt_out_b": 1
+    "jt_out_b": 1,
+    "jd_n": 6,
+    "jd_tot": 184
    },
    {
     "name": "Clément Martinez",
@@ -1082,7 +1098,9 @@
     "min": 19,
     "pts": 0,
     "jt_in_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 3,
+    "jd_tot": 107
    },
    {
     "name": "Bastien Berenguel",

@@ -49,6 +49,7 @@ section.sector{display:flex;flex-direction:column;gap:14px;scroll-margin-top:56p
 .chip.bad{background:var(--chip-bad-bg);color:var(--bad)}
 .chip.info{background:var(--track);color:var(--muted)}
 .grid2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start}
+.grid2.g-ana,.exporting .grid2.g-ana{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
 .side{display:flex;flex-direction:column;gap:14px;min-width:0}
 @media (max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}}
 .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--muted);margin-bottom:12px}
@@ -312,7 +313,7 @@ footer{border-top:1px solid var(--line);padding-top:10px}
 .fc-band{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px 30px;align-items:start}
 .fc-band .fc-sec{min-width:0}
 .fc-rk{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
-.fc-rk li{display:grid;grid-template-columns:minmax(0,1fr) 40px 64px 34px;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--line);font-size:12.5px}
+.fc-rk li{display:grid;grid-template-columns:minmax(0,1fr) 40px 40px 64px 34px;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--line);font-size:12.5px}
 .fc-rk li>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fc-rk li b{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
 .fc-rk li em{font-style:normal;font-size:11px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
@@ -345,6 +346,65 @@ footer{border-top:1px solid var(--line);padding-top:10px}
 .fc-radar text.v{font-size:9.5px;fill:var(--muted)}
 .fc-radar .fc-lg{justify-content:center}
 .fc-side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.exporting.land .wrap,.exporting.land #report{width:1500px}
+.exporting.land #fiche-bilan th,.exporting.land #fiche-bilan td,.exporting.land #fiche-evo th,.exporting.land #fiche-evo td{padding:3px 8px}
+.exporting.land #fiche-bilan .card,.exporting.land #fiche-evo .card{padding:12px 14px}
+.exporting.land #fiche-bilan .brk{gap:7px}
+.exporting.land #fiche-bilan .side,.exporting.land #fiche-evo .side{gap:10px}
+.exporting.land #fiche-bilan,.exporting.land #fiche-evo{gap:10px}
+.exporting.land #fiche-evo .grid2.evo-l{grid-template-columns:minmax(0,1fr) minmax(0,.62fr)!important;align-items:stretch}
+.exporting.land #fiche-evo .evo-main{display:flex;flex-direction:column;gap:10px;min-width:0}
+.exporting.land #fiche-evo .evo-main th,.exporting.land #fiche-evo .evo-main td{padding:3px 5px;font-size:12px}
+.exporting.land #fiche-evo .evo-main th{font-size:9.5px;white-space:normal}
+.pitch-h{display:none}
+.exporting.land #fiche-evo .maps2{grid-template-columns:minmax(0,1fr);gap:8px;align-content:space-evenly}
+.exporting.land #fiche-evo .maps2 .legend{min-height:0}
+.exporting.land #fiche-evo .pitch-v{display:none!important}
+.exporting.land #fiche-evo .pitch-h{display:block!important}
+.maps2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.maps2 h4{margin:4px 0 2px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.maps2 .legend{font-size:10.5px;min-height:30px}
+.exporting.land .sector.fill{display:flex;flex-direction:column}
+.exporting.land .fiche.fill>.fc-cols{flex:1;align-items:stretch}
+.exporting.land .fiche.fill .fc-col{display:flex;flex-direction:column}
+.exporting.land .fc-cols.c4{gap:12px!important}
+.exporting.land .fc-cols.c4 .fc-col{gap:12px}
+.exporting.land .fc-cols.c4 .fc-sec{background:#f6f6f3;border:1px solid var(--line);border-radius:8px;padding:8px 10px 10px}
+.exporting.land .fc-cols.c4 .fc-sec h3{font-size:15px;white-space:nowrap}
+.exporting.land .fc-cols.c4 .fc-spk svg{width:72px;height:20px}
+.exporting.land .fiche.fill .fc-cols.c4 .fc-sec{flex:1 1 auto}
+.exporting.land .fiche.fill .fc-body li{padding:var(--lp,1px) 0}
+.exporting.land .fc-strip{flex-wrap:nowrap}
+.exporting.land .fc-strip .mt{flex:1 1 0;min-width:0}
+.exporting.land .sector.fill>.grid2{flex:1;align-items:stretch!important}
+.exporting.land .sector.fill .grid2>.card,.exporting.land .sector.fill .side>.card,.exporting.land .sector.fill .evo-main>.card{display:flex;flex-direction:column}
+.exporting.land .sector.fill .side{align-items:stretch!important}
+.exporting.land .sector.fill .side>.card{flex:1}
+.exporting.land .sector.fill .evo-main>.card:last-child{flex:1}
+.exporting.land .sector.fill .card>.tw{flex:1;display:flex;flex-direction:column}
+.exporting.land .sector.fill .card>.tw>table{flex:1;height:100%}
+.exporting.land .sector.fill .brk{flex:1;justify-content:space-around}
+.exporting.land .sector.fill .maps2{flex:1;align-items:center}
+.exporting.land .sector.fill .side>.card>svg{flex:1 1 0;min-height:0;width:100%!important;max-width:none!important;height:auto!important;margin:8px 0 0!important}
+.exporting.land #fiche-bilan .grid2.bil-l{grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr)!important}
+.exporting.land #fiche-bilan .grid2.bil-l>.side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+
+.exporting.land .fc-cols.c4{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px 26px}
+.exporting.land .fc-head{grid-template-columns:120px minmax(0,1fr) 540px 84px!important;grid-template-areas:"ph id box logo"!important;align-items:center}
+.exporting.land .fc-photo{width:120px!important}
+.exporting.land .fc-body.has-ring{grid-template-columns:minmax(0,1fr) 96px;gap:8px}
+.exporting.land .fc-ring svg{width:76px;height:76px}
+.exporting.land .fc-band.c3{grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1fr)!important;gap:18px 30px}
+.exporting.land .fc-radar svg{max-width:none}
+.exporting.land .fc-radar{justify-content:center;flex:1}
+.exporting.land .fc-rk li.hdr+li.hdr{display:none}
+@media (max-width:760px){ .fc-rk li.hdr+li.hdr{display:none} }
+.exporting.land .fc-rk li{grid-template-columns:minmax(0,1fr) 38px 36px 40px 32px;font-size:12px}
+.fc-rk li i.avg{font-style:normal;font-size:11px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.fc-rk li.hdr{border-bottom:1px solid var(--ink);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.fc-rk li.hdr b,.fc-rk li.hdr em,.fc-rk li.hdr i{font-weight:600;font-size:10px;color:var(--muted);font-style:normal;text-align:right}
+.exporting.land .fc-rk li small{display:none}
+.exporting.land .fc-rk{grid-template-columns:minmax(0,1fr)!important}
 .fc-foot{margin:0;font-size:10.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5}
 .fc-up span{display:flex;gap:8px;flex-wrap:wrap}
 .fc-up em{font-style:normal;text-transform:none;letter-spacing:0}
@@ -425,7 +485,7 @@ function stacked(title, sub, legend, rows, opts={}){
   rows = rows.filter(r=>r.segs.reduce((a,s)=>a+s.v,0)>0); if(!opts.keep) rows.sort((a,b)=>b.tot-a.tot || (b.pc??0)-(a.pc??0));
   if(!rows.length) return `<div class="card"><h3>${title}</h3><p class="sub">Aucune action codée.</p></div>`;
   const max = Math.max(...rows.map(r=>r.tot));
-  const step = max>12?4:max>6?2:1, top=Math.ceil(max/step)*step;
+  const step = max>96?20:max>48?10:max>12?4:max>6?2:1, top=Math.ceil(max/step)*step;
   const lg = legend.map(([n,c])=>`<span><i style="background:${c};box-shadow:inset 0 0 0 1px ${c==='var(--card-white)'?'var(--ink)':'transparent'}"></i>${n}</span>`).join('') + (opts.pcLabel?`<span>· ${opts.pcLabel}</span>`:'');
   const rs = rows.map(r=>`<div class="prow" title="${h(r.name)} : ${r.segs.map(s=>s.n+' '+s.v).join(', ')}"><span class="nm">${badge(r.name)}${h(r.name)}</span><span class="track">${r.segs.filter(s=>s.v).map(s=>`<b style="width:${100*s.v/top}%;background:${s.c}${s.o?';box-shadow:inset 0 0 0 1px var(--ink)':''}"></b>`).join('')}</span><span class="pc ${r.cls||''}">${r.pcTxt??''}</span></div>`).join('');
   let ticks=''; for(let t=0;t<=top;t+=step) ticks+=`<span style="left:${100*t/top}%">${t}</span>`;
@@ -629,15 +689,24 @@ function recup(){
 /* ---------- ZONES DU TERRAIN ---------- */
 const ZTYPES={P:['Plaquages','var(--b1)'],C:['Contacts','var(--nissa)'],T:['Récupérations','var(--good)'],B:['Ballons perdus','var(--orange)'],F:['Fautes','var(--card-yellow)']};
 let ZSEL={type:'P',who:''};
-function pitch(pts){
-  const W=700,H=1000, sx=x=>x/70*W, sy=y=>H-y/100*H;
-  let g=`<rect x="0" y="0" width="${W}" height="${H}" fill="var(--track)" stroke="var(--line)"/>`;
-  [[22,'22'],[50,'50'],[78,'22']].forEach(([y,l])=>{g+=`<line x1="0" x2="${W}" y1="${sy(y)}" y2="${sy(y)}" stroke="var(--muted)" stroke-width="${y===50?2:1.2}" ${y===50?'':'stroke-dasharray="10 8"'}/>`;});
-  [40,60].forEach(y=>{g+=`<line x1="0" x2="${W}" y1="${sy(y)}" y2="${sy(y)}" stroke="var(--line)" stroke-dasharray="4 10"/>`;});
-  [5,15,55,65].forEach(x=>{g+=`<line x1="${sx(x)}" x2="${sx(x)}" y1="0" y2="${H}" stroke="var(--line)" stroke-dasharray="4 10"/>`;});
-  g+=`<text x="${W/2}" y="28" text-anchor="middle" style="font-size:22px">Attaque → en-but adverse</text><text x="${W/2}" y="${H-12}" text-anchor="middle" style="font-size:22px">Notre en-but</text>`;
-  pts.forEach(p=>{const c=ZTYPES[p[2]][1]; g+=`<circle cx="${sx(p[0]).toFixed(0)}" cy="${sy(p[1]).toFixed(0)}" r="11" fill="${p[3]||p[2]==='B'||p[2]==='F'?c:'none'}" stroke="${p[3]||p[2]==='B'||p[2]==='F'?'var(--card)':'var(--red)'}" stroke-width="${p[3]||p[2]==='B'||p[2]==='F'?2:4}" fill-opacity=".85"><title>${h(p[4])} · ${ZTYPES[p[2]][0]}${p[3]||p[2]==='B'||p[2]==='F'?'':' (raté)'}</title></circle>`;});
-  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto" role="img" aria-label="Terrain : position des actions">${g}</svg>`;
+function pitch(pts,horiz){
+  // terrain de rugby vu du dessus : 70 m de large, 100 m entre les lignes d'essai + 2 en-buts de 10 m ; notre en-but en bas
+  const W=700, IG=100, H=1000+2*IG, sx=x=>x/70*W, sy=y=>IG+(100-y)*10;
+  const grass=['#3f8f4a','#469a51'];
+  let g=`<rect x="-24" y="-14" width="${W+48}" height="${H+28}" rx="10" fill="#2f7439"/>`;
+  for(let k=0;k<12;k++) g+=`<rect x="0" y="${k*100}" width="${W}" height="100" fill="${grass[k%2]}"/>`;
+  g+=`<rect x="0" y="0" width="${W}" height="${IG}" fill="#367f41"/><rect x="0" y="${H-IG}" width="${W}" height="${IG}" fill="#367f41"/>`;
+  const L=(y,w,d)=>`<line x1="0" x2="${W}" y1="${sy(y)}" y2="${sy(y)}" stroke="#fff" stroke-width="${w}"${d?` stroke-dasharray="${d}"`:''} stroke-opacity=".92"/>`;
+  g+=`<rect x="0" y="0" width="${W}" height="${H}" fill="none" stroke="#fff" stroke-width="5"/>`;
+  g+=L(0,5)+L(100,5)+L(22,3.5)+L(78,3.5)+L(50,3.5)+L(40,2.5,'18 14')+L(60,2.5,'18 14')+L(5,2,'10 14')+L(95,2,'10 14');
+  [5,15,55,65].forEach(x=>{ g+=`<line x1="${sx(x)}" x2="${sx(x)}" y1="${sy(95)}" y2="${sy(5)}" stroke="#fff" stroke-width="2" stroke-dasharray="10 30" stroke-opacity=".55"/>`; });
+  [[0,1],[100,-1]].forEach(([y])=>{ const yy=sy(y), a=sx(35-2.8), b=sx(35+2.8); g+=`<line x1="${a}" x2="${b}" y1="${yy}" y2="${yy}" stroke="#fff" stroke-width="6"/><circle cx="${a}" cy="${yy}" r="7" fill="#fff"/><circle cx="${b}" cy="${yy}" r="7" fill="#fff"/>`; });
+  [[22,'22'],[40,'10'],[50,'50'],[60,'10'],[78,'22']].forEach(([y,l])=>{ g+=`<text x="${sx(10)}" y="${sy(y)-8}" text-anchor="middle" fill="#fff" fill-opacity=".75" style="font-size:20px;font-weight:700">${l}</text><text x="${sx(60)}" y="${sy(y)-8}" text-anchor="middle" fill="#fff" fill-opacity=".75" style="font-size:20px;font-weight:700">${l}</text>`; });
+  g+=`<text x="${W/2}" y="${IG/2+8}" text-anchor="middle" fill="#fff" style="font-size:24px;font-weight:700">En-but adverse · sens de l’attaque ↑</text><text x="${W/2}" y="${H-IG/2+8}" text-anchor="middle" fill="#fff" style="font-size:24px;font-weight:700">Notre en-but</text>`;
+  pts.forEach(p=>{const c=ZTYPES[p[2]][1], full=p[3]||p[2]==='B'||p[2]==='F'; g+=`<circle cx="${sx(p[0]).toFixed(0)}" cy="${sy(p[1]).toFixed(0)}" r="12" fill="${full?c:'#fff'}" fill-opacity="${full?1:.9}" stroke="${full?'#fff':'var(--red)'}" stroke-width="${full?2.5:5}"><title>${h(p[4])} · ${ZTYPES[p[2]][0]}${full?'':' (raté)'}</title></circle>`;});
+  // version couchée (export paysage) : notre en-but à gauche, l'attaque vers la droite
+  if(horiz) return `<svg class="pitch-h" viewBox="0 -24 ${H+28} ${W+48}" style="width:100%;height:auto" role="img" aria-label="Terrain de rugby : position des actions"><g transform="translate(${H+14},0) rotate(90)">${g}</g></svg>`;
+  return `<svg class="pitch-v" viewBox="-24 -14 ${W+48} ${H+28}" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto" role="img" aria-label="Terrain de rugby : position des actions">${g}</svg>`;
 }
 function zonesBody(){
   const pts=ZP.filter(p=>p[2]===ZSEL.type&&(!ZSEL.who||p[4]===ZSEL.who));
@@ -646,7 +715,7 @@ function zonesBody(){
   const brk=breakdown('Répartition par zone',`${lab}${ZSEL.who?' · '+h(ZSEL.who):''} : ${pts.length} actions situées.`,ZONES.map((z,i)=>({n:z,v:zc[i],t:`${zc[i]} · ${pct(zc[i],pts.length)??0} %`,c:ZTYPES[ZSEL.type][1]})).reverse());
   const lr=[0,1,2].map(i=>pts.filter(p=>i===0?p[0]<23:i===1?p[0]<47&&p[0]>=23:p[0]>=47).length);
   const larg=breakdown('Largeur','Couloir où se situe l’action.',[{n:'Côté gauche',v:lr[0],c:C.b2},{n:'Axe',v:lr[1],c:C.b2},{n:'Côté droit',v:lr[2],c:C.b2}]);
-  return `<div class="grid2"><div class="card"><div class="card-head"><h3>Carte des actions</h3><span>${lab}${ZSEL.who?' · '+h(ZSEL.who):' · toute l’équipe'}</span></div>${pitch(pts)}<p class="sub" style="margin-top:8px">Point creux = action ratée. Repères : 22 m, 40 m, 50 m, 60 m et 22 m adverses ; couloirs 5 m et 15 m.</p></div><div class="side">${brk}${larg}</div></div>`;
+  return `<div class="grid2"><div class="card"><div class="card-head"><h3>Carte des actions</h3><span>${lab}${ZSEL.who?' · '+h(ZSEL.who):' · toute l’équipe'}</span></div>${pitch(pts)}<p class="sub" style="margin-top:8px">Point blanc cerclé de rouge = action ratée. Terrain vu du dessus : lignes d’essai, 22 m, 10 m, ligne médiane, lignes des 5 m et couloirs 5 m et 15 m.</p></div><div class="side">${brk}${larg}</div></div>`;
 }
 function zones(){
   if(!ZP||!ZP.length) return '';
@@ -850,7 +919,7 @@ function proExtra(p,raw,t,name,PTS){
     else if(a==='RUCK'&&!raw.__NP){ add('rk'); const vt=one('VITESSE DE LIBERATION'); add(vt.startsWith('0')?'rk_03':vt.startsWith('4')?'rk_46':vt.startsWith('+')?'rk_6p':'rk_av');
       const f=one('FIN DE RUCK'); if(f==='PERDU') add('rk_perdu'); if(f==='PENALITE OBTENUE') add('rk_pen'); }
     else if(a==='PENALITE'){ const tp=one('TYPE DE PENALITE'); const e=PEN_TYPES.find(x=>x[0]===tp); add(e?e[1]:'pt_autre'); add(one('ORIGINE DE LA FAUTE')==='OFFENSIVE'?'pen_off':'pen_def'); pt('F',0); }
-    else if(a==='JEU AU PIED'){ const tp=one('TYPE DE JEU AU PIED'); const e=KICK_TYPES.find(x=>x[0]===tp); if(e){ add(e[1]); const rj=one('RESULTAT DU JEU AU PIED'); if(rj==='POSITIF') add(e[1]+'_g'); else if(rj==='NEGATIF') add(e[1]+'_b'); } if(one('50-22')==='OUI') add('j5022'); if(one('EST CONTRE')==='OUI') add('jap_contre'); }
+    else if(a==='JEU AU PIED'){ const tp=one('TYPE DE JEU AU PIED'); const e=KICK_TYPES.find(x=>x[0]===tp); if(e){ add(e[1]); const rj=one('RESULTAT DU JEU AU PIED'); if(rj==='POSITIF') add(e[1]+'_g'); else if(rj==='NEGATIF') add(e[1]+'_b'); } { const x0=num('COORDONNEE X DEPART'), y0=num('COORDONNEE Y DEPART'), x1=num('COORDONNEE X ARRIVEE'), y1=num('COORDONNEE Y ARRIVEE'); if([x0,y0,x1,y1].every(z=>z!=null)){ add('jd_n'); add('jd_tot',Math.round(Math.hypot(x1-x0,y1-y0))); } } if(one('50-22')==='OUI') add('j5022'); if(one('EST CONTRE')==='OUI') add('jap_contre'); }
     else if(a==='BOTTEUR'){ if(one('ORIGINE DU JEU AU PIED')==='PENALITE'){ add('pk_tot'); if(one('EST DIRECT EN TOUCHE')==='OUI') add('pk_touche'); } }
     else if(a==='CONTEST'){ add('ct'); const f=one('FIN DU CONTEST'); add(f==='PENALITE OBTENUE'?'ct_pen':f==='BALLON RECUPERE'?'ct_rec':f==='CONTEST PENALISE'?'ct_pnl':'ct_nr'); if(f==='PENALITE OBTENUE'||f==='BALLON RECUPERE') pt('T',1); }
     else if(a==='TURN OVER'){ const tp=one('TYPE DE RECUPERATION'); if(tp!=='JEU AU PIED'){ const e=TO_TYPES.find(x=>x[0]===tp); add(e?e[1]:'to_autre'); pt('T',1); } }
@@ -1403,7 +1472,7 @@ function fcRing(num,den,lab,refs=''){
 const fcRow=(lab,val,cls='')=>`<li class="${cls}${val?'':' z'}"><span>${lab}</span><b>${val==null||val===''?'–':String(val).replace('.',',')}</b></li>`;
 const fcPair=(lab,p,kp,kn)=>fcRow(lab+' +',v(p,kp),'pos')+fcRow(lab+' −',v(p,kn),'neg');
 const fcRate=(a,b)=>b?`${a}/${b}`:0;
-function fcSec(title,body,ring='',spk=''){ return `<section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>${title}${spk}</h3><div class="fc-body${ring?' has-ring':''}"><ul>${body}</ul>${ring}</div></section>`; }
+function fcSec(title,body,ring='',spk=''){ return `<section class="fc-sec" data-t="${title}"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>${title}${spk}</h3><div class="fc-body${ring?' has-ring':''}"><ul>${body}</ul>${ring}</div></section>`; }
 const nameParts=n=>{ const r=rosterOf(n); if(r&&r.nf) return [r.nf.toUpperCase(),r.pf||'']; const w=n.split(' '); return [w.slice(1).join(' ').toUpperCase()||n.toUpperCase(),w.length>1?w[0]:'']; };
 async function saveRoster(n,patch){ const list=ROSTER.map(({display,...x})=>x); const r=rosterOf(n);
   if(r){ const i=ROSTER.indexOf(r); list[i]={...list[i],...patch}; } else list.push({nom:n.toUpperCase(),prenom:'',annee:null,poste:null,...patch});
@@ -1429,6 +1498,7 @@ const RA={
   tc:['Contres en touche',p=>v(p,'tc_n'),null,1],
   jap:['Jeu au pied',p=>v(p,'jap_pos')+v(p,'jap_neg'),null,1],
   japp:['Réussite JAP',p=>v(p,'jap_pos'),p=>v(p,'jap_pos')+v(p,'jap_neg'),1],
+  jd:['Distance moy. JAP',p=>v(p,'jd_tot'),p=>v(p,'jd_n'),1,'m'],
   db:['Défenseurs battus',p=>v(p,'defbattu'),null,1],
   off:['Offloads',p=>v(p,'off_pos'),null,1],
   fr:['Franchissements',p=>v(p,'franch'),null,1],
@@ -1440,30 +1510,30 @@ const FC_RADAR_G={
   TA:['tl','me','pl','plp','ro','ct','rec','dis'],
   '2L':['ts','tc','pl','plp','ro','rop','ct','dis'],
   '3L':['pl','pld','rec','ro','ct','map','ts','dis'],
-  CH:['pa','pap','jap','japp','m','pl','plp','pdb'],
+  CH:['pa','pap','jap','jd','m','pl','plp','pdb'],
   CE:['ct','m','db','off','pl','plp','pld','pdb'],
   B3:['m','db','fr','aep','jap','plp','rec','pdb']};
 const FC_RADAR=['tac','pl','plp','ct','m','pa','ro','rop','rec','dis'];
 function fcRadar(me,team,grp,minP,gLab,g){
-  const val=(q,fn,fd)=>{ const m=minP(q); if(fd){ const d=fd(q); return d>=3?100*fn(q)/d:null; } return m?fn(q)*80/m:null; };
+  let U=''; const val=(q,fn,fd)=>{ const m=minP(q); if(fd){ const d=fd(q); return d>=3?(U?fn(q)/d:100*fn(q)/d):null; } return m?fn(q)*80/m:null; };
   const avg=(arr,fn,fd)=>{ const xs=arr.map(q=>val(q,fn,fd)).filter(x=>x!=null); return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null; };
   // échelle : le meilleur du groupe de poste (lui compris) quand le groupe compte au moins 3 joueurs, sinon le meilleur de l'équipe
   const ref=grp.length>=2?[me,...grp]:team;
-  const ax=(FC_RADAR_G[g]||FC_RADAR).map(k=>RA[k]).map(([lab,fn,fd,hi])=>{
+  const ax=(FC_RADAR_G[g]||FC_RADAR).map(k=>RA[k]).map(([lab,fn,fd,hi,u])=>{ U=u||'';
     const xs=ref.map(q=>val(q,fn,fd)).filter(x=>x!=null); const mx=Math.max(0,...xs), mn=xs.length?Math.min(...xs):0;
     // échelle : 0 → meilleur de l'équipe pour les volumes ; pire → meilleur pour les taux ; inversée pour la discipline
     const lo=Math.min(mn,mx-10); const sc=x=>{ if(x==null) return null; let t; if(fd) t=mx>lo?(x-lo)/(mx-lo):1; else t=mx?x/mx:0; if(!hi) t=mx?1-x/mx:1; return Math.max(0,Math.min(1,t)); };
     const a=val(me,fn,fd), b=avg(team,fn,fd), c=grp.length?avg(grp,fn,fd):null;
-    return {lab,fd,hi,a,b,c,sa:sc(a),sb:sc(b),sc:sc(c)}; });
+    return {lab,fd,hi,u:U,a,b,c,sa:sc(a),sb:sc(b),sc:sc(c)}; });
   const N=ax.length, R=108, cx=170, cy=150, ang=i=>-Math.PI/2+2*Math.PI*i/N, P=(i,r)=>[cx+r*Math.cos(ang(i)),cy+r*Math.sin(ang(i))];
   const poly=(k,stroke,fill,dash)=>{ if(ax.every(o=>o[k]==null)) return ''; const pts=ax.map((o,i)=>P(i,R*(o[k]??0)).map(z=>z.toFixed(1)).join(',')).join(' ');
     return `<polygon points="${pts}" fill="${fill}" stroke="${stroke}" stroke-width="2"${dash?' stroke-dasharray="4 3"':''} stroke-linejoin="round"/>`; };
   const grid=[.25,.5,.75,1].map(f=>`<polygon points="${ax.map((o,i)=>P(i,R*f).map(z=>z.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`).join('')+ax.map((o,i)=>{ const [x,y]=P(i,R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; }).join('');
-  const fmt=o=>o.a==null?'–':o.fd?Math.round(o.a)+' %':fcF1(o.a);
+  const fq=(o,x)=>x==null?'–':o.u?Math.round(x)+' '+o.u:o.fd?Math.round(x)+' %':fcF1(x); const fmt=o=>fq(o,o.a);
   const labels=ax.map((o,i)=>{ const [x,y]=P(i,R+16), c=Math.cos(ang(i)), anc=Math.abs(c)<.2?'middle':c>0?'start':'end', dy=Math.sin(ang(i))>.5?10:Math.sin(ang(i))<-.5?-4:3;
     return `<text x="${x.toFixed(1)}" y="${(y+dy).toFixed(1)}" text-anchor="${anc}">${h(o.lab)}</text><text class="v" x="${x.toFixed(1)}" y="${(y+dy+11).toFixed(1)}" text-anchor="${anc}">${fmt(o)}</text>`; }).join('');
   const dots=ax.map((o,i)=>o.sa==null?'':`<circle cx="${P(i,R*o.sa)[0].toFixed(1)}" cy="${P(i,R*o.sa)[1].toFixed(1)}" r="3" fill="var(--nissa)"/>`).join('');
-  const desc=ax.map(o=>`${o.lab} : ${fmt(o)} (équipe ${o.b==null?'–':o.fd?Math.round(o.b)+' %':fcF1(o.b)}${o.c!=null?`, ${gLab} ${o.fd?Math.round(o.c)+' %':fcF1(o.c)}`:''})`).join(' · ');
+  const desc=ax.map(o=>`${o.lab} : ${fmt(o)} (équipe ${fq(o,o.b)}${o.c!=null?`, ${gLab} ${fq(o,o.c)}`:''})`).join(' · ');
   return `<div class="fc-radar"><svg viewBox="-85 0 510 300" role="img" aria-label="${h('Profil : '+desc)}"><title>${h(desc)}</title>${grid}${poly('sb','#1d1d1b','none',1)}${grp.length?poly('sc','#2f6fd0','rgba(47,111,208,.08)',0):''}${poly('sa','var(--nissa)','rgba(227,6,19,.18)',0)}${dots}${labels}</svg>
     <div class="fc-lg"><span><i style="background:var(--nissa)"></i>Joueur</span><span><i style="background:#1d1d1b"></i>Moyenne équipe</span>${grp.length?`<span><i style="background:#2f6fd0"></i>Moyenne ${h(gLab)}</span>`:''}</div></div>`;
 }
@@ -1581,9 +1651,9 @@ function renderFiche(){
   const kt=[...new Map(KICK_TYPES.map(x=>[x[1],x[2]])).entries()].map(([k,l])=>({l,n:v(p,k),g:v(p,k+'_g'),b:v(p,k+'_b')})).filter(x=>x.n);
   const japN=v(p,'jap_pos')+v(p,'jap_neg');
   const kick=japN||kt.length||v(p,'aerien_pos')+v(p,'aerien_neg')>=3;
-  const kickBody=fcPair('JAP',p,'jap_pos','jap_neg')+(kt.length?'<li class="hd"><span>Par type · % de positifs</span></li>'+kt.map(x=>fcRow(x.l,`${x.n} · ${Math.round(100*x.g/x.n)} %`,'ind')).join(''):'')
-    +(v(p,'j5022')?fcRow('50-22',v(p,'j5022'),'pos'):'')+(v(p,'jap_contre')?fcRow('Contrés',v(p,'jap_contre'),'neg'):'')+(v(p,'pk_tot')?fcRow('Pénalités en touche',`${v(p,'pk_touche')}/${v(p,'pk_tot')}`):'')
-    +'<li class="sp"></li>'+fcPair('Aérien',p,'aerien_pos','aerien_neg');
+  const kickBody=(japN?fcPair('JAP',p,'jap_pos','jap_neg'):'')+(kt.length?'<li class="hd"><span>Par type · % de positifs</span></li>'+kt.map(x=>fcRow(x.l,`${x.n} · ${Math.round(100*x.g/x.n)} %`,'ind')).join(''):'')
+    +(v(p,'jd_n')?fcRow('Distance moyenne',Math.round(v(p,'jd_tot')/v(p,'jd_n'))+' m'):'')+(v(p,'j5022')?fcRow('50-22',v(p,'j5022'),'pos'):'')+(v(p,'jap_contre')?fcRow('Contrés',v(p,'jap_contre'),'neg'):'')+(v(p,'pk_tot')?fcRow('Pénalités en touche',`${v(p,'pk_touche')}/${v(p,'pk_tot')}`):'')
+    +(v(p,'aerien_pos')+v(p,'aerien_neg')?'<li class="sp"></li>'+fcPair('Aérien',p,'aerien_pos','aerien_neg'):'');
   // ---- défense : qualité du plaquage ----
   const plStack=fcStack([['Dominants',v(p,'plaq_dom'),'var(--good)'],['Neutres',plNeutre,'#9a9a95'],['Subis',v(p,'plaq_subi'),'var(--orange)'],['Manqués',v(p,'plaq_rate'),'var(--bad)']]);
   // ---- ruck : rang d'arrivée moyen ----
@@ -1595,10 +1665,10 @@ function renderFiche(){
   const RK=myG&&mins?fcRanks(p,peers,minP,minRef):[];
   const nGrp=RK.length?Math.max(...RK.map(r=>r.N)):0;
   const ord=x=>x===1?'1er':x+'e';
-  const rkList=RK.map(r=>{ const cls=r.pc==null?'':r.pc>=.67?'g':r.pc<=.33?'r':''; return `<li class="${cls}" title="${h(r.lab)} : ${fcF1(r.x)}${r.rate?' %':' / 80 min'} · moyenne du groupe ${fcF1(r.avg)}${r.rate?' %':''}"><span>${h(r.lab)}${r.hi?'':' <small>(moins = mieux)</small>'}</span><b>${r.rate?Math.round(r.x)+'%':fcF1(r.x)}</b><span class="dots" aria-hidden="true">${Array.from({length:r.N},(_,i)=>`<i class="${i===r.N-r.rank?'me':''}"></i>`).join('')}</span><em>${ord(r.rank)}/${r.N}</em></li>`; }).join('');
-  const sig=RK.filter(r=>r.raw>0||!r.hi);
+  const rkList=RK.map(r=>{ const cls=r.pc==null?'':r.pc>=.67?'g':r.pc<=.33?'r':''; return `<li class="${cls}" title="${h(r.lab)} : ${fcF1(r.x)}${r.rate?' %':' / 80 min'} · moyenne du groupe ${fcF1(r.avg)}${r.rate?' %':''}"><span>${h(r.lab)}${r.hi?'':' <small>(moins = mieux)</small>'}</span><b>${r.rate?Math.round(r.x)+'%':fcF1(r.x)}</b><i class="avg">${r.rate?Math.round(r.avg)+'%':fcF1(r.avg)}</i><span class="dots" aria-hidden="true">${Array.from({length:r.N},(_,i)=>`<i class="${i===r.N-r.rank?'me':''}"></i>`).join('')}</span><em>${ord(r.rank)}/${r.N}</em></li>`; }).join('');
+  const minVol=season?5:2; const sig=RK.filter(r=>!r.hi||r.raw>=minVol);
   const top=[...sig].filter(r=>r.pc>=.5&&r.rank<=Math.ceil(r.N/2)).sort((a,b)=>b.pc-a.pc||a.rank-b.rank).slice(0,3);
-  const low=[...RK].filter(r=>r.pc<.5&&!top.includes(r)).sort((a,b)=>a.pc-b.pc||b.rank-a.rank).slice(0,3);
+  const low=[...RK].filter(r=>r.pc<.5&&!top.includes(r)&&(r.raw>0||!r.hi||r.avg>=.5)).sort((a,b)=>a.pc-b.pc||b.rank-a.rank).slice(0,3);
   const twItem=r=>`<li><b>${h(r.lab)}</b> · ${r.rate?Math.round(r.x)+' %':fcF1(r.x)+' / 80'} <small>(groupe ${r.rate?Math.round(r.avg)+' %':fcF1(r.avg)}) · ${ord(r.rank)} sur ${r.N}</small></li>`;
   // ---- forme récente : 3 derniers matchs joués vs saison ----
   let form='';
@@ -1615,7 +1685,7 @@ function renderFiche(){
   const teamQ=pool.filter(q=>minP(q)>=minRef), grpQ=peers.filter(q=>minP(q)>=minRef);
   const radar=mins&&teamQ.length>=3?fcRadar(p,teamQ,grpQ,minP,myG?{PI:'piliers',TA:'talonneurs','2L':'2e ligne','3L':'3e ligne',CH:'charnière',CE:'centres',B3:'back 3'}[myG]:'',myG):'';
   const band=myG?`<div class="fc-band">
-      ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par 80 minutes ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk">${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
+      ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par 80 minutes ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk"><li class="hdr"><span>Par 80 min ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li><li class="hdr"><span>Par 80 min ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li>${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
       <div class="fc-side">
       ${radar?`<section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Profil</h3>${radar}</section>`:''}
       <section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Repères</h3><div class="fc-tw">
@@ -1631,6 +1701,7 @@ function renderFiche(){
     <label for="fNum">N° de poste<input type="number" id="fNum" min="1" max="15" value="${r&&r.poste||''}"${ed?'':' disabled'}></label>
     <label for="fAn">Né en<input type="number" id="fAn" min="1980" max="2012" value="${r&&r.annee||''}"${ed?'':' disabled'}></label>
     ${ed?`<label class="fc-up">Photo du joueur<span><button type="button" id="fcPhotoBtn" class="ghost">${photo?'Changer la photo':'Ajouter une photo'}</button>${photo?'<button type="button" id="fcPhotoDel" class="ghost">Retirer</button>':''}<input type="file" id="fcPhoto" accept="image/*" hidden></span></label>`:''}
+    <label for="fPdf">Format du PDF<select id="fPdf"><option value="portrait"${FICHE.pdf!=='paysage'?' selected':''}>Portrait</option><option value="paysage"${FICHE.pdf==='paysage'?' selected':''}>Paysage</option></select></label>
     <span class="msg" id="fMsg" aria-live="polite"></span>
   </div>
   <main style="display:flex;flex-direction:column;gap:28px">
@@ -1646,7 +1717,7 @@ function renderFiche(){
       <div class="fc-boxes">
         <div><b>${nbm||'–'}</b><span>match${nbm>1?'s':''}</span></div>
         <div><b>${mins||'–'}</b><span>minutes</span></div>
-        <div><b>${v(p,'pts')}</b><span>points</span></div>
+        ${v(p,'pts')||!isFwd({name:n})?`<div><b>${v(p,'pts')}</b><span>points</span></div>`:`<div><b>${t80==null?'–':String(t80).replace('.',',')}</b><span>tâches / 80 min</span></div>`}
       </div>
     </header>
     ${!p.actions?`<p class="fc-empty">Aucune action codée pour ${h(n)} sur ce périmètre.</p>`:''}
@@ -1656,25 +1727,32 @@ function renderFiche(){
         ${fcSec('Activité',fcRow('Tâches off',FC_TOFF(p))+fcRow('Tâches déf',FC_TDEF(p))+fcRow('Actions de combat',FC_COMBAT(p))+fcRow('Tâches / 80 min',t80),'',SPK.act)}
         ${fcSec('Attaque',fcPair('Contacts',p,'duel_pos','duel_neg')+fcRow('Mètres gagnés',v(p,'m_tot'))+fcRow('Mètres après contact',v(p,'m_ap'))+'<li class="sp"></li>'+fcPair('Passes',p,'passe_pos','passe_neg')+fcPair('Offloads',p,'off_pos','off_neg')+fcRow('Passes décisives',v(p,'passe_dec'),'pos'),ring('att','contacts gagnés'),SPK.att)
           .replace('</div></section>',`</div><div class="fc-mini"><div><b>${v(p,'pdb')}</b><span>Pertes de balle</span></div><div><b>${v(p,'franch')}</b><span>Breaks</span></div><div><b>${v(p,'defbattu')}</b><span>Déf. battus</span></div></div></section>`)}
-        ${fcSec('Ruck offensif',fcRow('Bonnes attitudes',v(p,'ro_pos'),'pos')+fcRow('Attitudes mauvaises',v(p,'ro_neg'),'neg')+'<li class="hd"><span>Arrivée</span></li>'+fcRow('1er',v(p,'ro_1er'),'ind')+fcRow('2e',v(p,'ro_r2'),'ind')+fcRow('3e et +',v(p,'ro_r3')+v(p,'ro_r4'),'ind')+fcRow('Rang d’arrivée moyen',arrAvg==null?0:fcF1(arrAvg),'ind')+'<li class="sp"></li>'+fcRow('Rucks porteur',v(p,'rk'))+fcRow('Ballons rapides quand porteur (0-3 s)',v(p,'rk')?`${v(p,'rk_03')} · ${pct(v(p,'rk_03'),v(p,'rk'))} %`:0)+(v(p,'rk')?fcRow('Ballons lents (+6 s) ou perdus',`${v(p,'rk_6p')} · ${v(p,'rk_perdu')}`,'ind'):''),ring('ro','efficacité'),SPK.ro)}
+        ${fcSec('Ruck offensif',fcRow('Bonnes attitudes',v(p,'ro_pos'),'pos')+fcRow('Attitudes mauvaises',v(p,'ro_neg'),'neg')+'<li class="hd"><span>Arrivée</span></li>'+fcRow('1er',v(p,'ro_1er'),'ind')+fcRow('2e',v(p,'ro_r2'),'ind')+fcRow('3e et +',v(p,'ro_r3')+v(p,'ro_r4'),'ind')+fcRow('Rang moyen',arrAvg==null?0:fcF1(arrAvg),'ind')+'<li class="sp"></li>'+fcRow('Rucks porteur',v(p,'rk'))+fcRow('Ballons rapides 0-3 s',v(p,'rk')?`${v(p,'rk_03')} · ${pct(v(p,'rk_03'),v(p,'rk'))} %`:0)+(v(p,'rk')?fcRow('Lents +6 s · perdus',`${v(p,'rk_6p')} · ${v(p,'rk_perdu')}`,'ind'):''),ring('ro','efficacité'),SPK.ro)}
         ${fcSec('Discipline',disc,'',SPK.dis).replace('</div></section>',perHtml+'</div></section>')}
       </div>
       <div class="fc-col">
-        ${fcSec('Défense',fcRow('Plaquages +',v(p,'plaq_dom'),'pos')+fcRow('Plaquages =',plNeutre)+fcRow('Plaquages −',v(p,'plaq_subi'),'neg')+fcRow('Plaquages manqués',v(p,'plaq_rate'),'neg')+fcRow('Assistants +',v(p,'ast_pos'),'pos')+fcRow('Assistants −',v(p,'ast_neg'),'neg')+fcRow('Ballons récupérés',v(p,'recup'),'pos')+fcRow('Plaquages aux jambes',v(p,'plaq_haut')+v(p,'plaq_jambe')?`${v(p,'plaq_jambe')} · ${pct(v(p,'plaq_jambe'),v(p,'plaq_haut')+v(p,'plaq_jambe'))} %`:0),ring('def','plaquages réussis'),SPK.def).replace('</div></section>',plStack?`</div><div class="fc-cap">Qualité du plaquage</div>${plStack}</section>`:'</div></section>')}
+        ${fcSec('Défense',fcRow('Plaquages +',v(p,'plaq_dom'),'pos')+fcRow('Plaquages =',plNeutre)+fcRow('Plaquages −',v(p,'plaq_subi'),'neg')+fcRow('Plaquages manqués',v(p,'plaq_rate'),'neg')+fcRow('Assistants +',v(p,'ast_pos'),'pos')+fcRow('Assistants −',v(p,'ast_neg'),'neg')+fcRow('Ballons récupérés',v(p,'recup'),'pos')+fcRow('Aux jambes',v(p,'plaq_haut')+v(p,'plaq_jambe')?`${v(p,'plaq_jambe')} · ${pct(v(p,'plaq_jambe'),v(p,'plaq_haut')+v(p,'plaq_jambe'))} %`:0),ring('def','plaquages réussis'),SPK.def).replace('</div></section>',plStack?`</div><div class="fc-cap">Qualité du plaquage</div>${plStack}</section>`:'</div></section>')}
         ${fcSec('Ruck défensif',fcRow('Contests',fcRate(v(p,'gratt_pos'),v(p,'gratt')))+fcRow('Contres-ruck',fcRate(v(p,'contre_pos'),v(p,'contre')))+fcRow('Ratés',v(p,'rd_neg'),'neg'),ring('rd','réussite'),SPK.rd)}
-        ${conq?fcSec('Conquête',fcPair('Lancers',p,'tl_g','tl_bad')+fcPair('Sauts',p,'ts_g','ts_bad')+fcRow('Contres en touche',v(p,'tc_n')?`${v(p,'tc_vol')} volé${v(p,'tc_vol')>1?'s':''} / ${v(p,'tc_n')}`:0)+fcRow('Mêlées jouées',v(p,'mf_n')+v(p,'md_n')),v(p,'tl_n')+v(p,'ts_n')?ring('ct','touche (lancer + saut)'):'',SPK.ct):''}
+        ${conq?fcSec('Conquête',(v(p,'tl_n')?fcPair('Lancers',p,'tl_g','tl_bad'):'')+(v(p,'ts_n')?fcPair('Sauts',p,'ts_g','ts_bad'):'')+(v(p,'tc_n')?fcRow('Contres en touche',`${v(p,'tc_vol')} volé${v(p,'tc_vol')>1?'s':''} / ${v(p,'tc_n')}`):'')+(v(p,'mf_n')+v(p,'md_n')?fcRow('Mêlées jouées',v(p,'mf_n')+v(p,'md_n'))+(v(p,'mf_n')-v(p,'mf_rj')>0?fcRow('Mêlées gagnées (notre intro)',`${v(p,'mf_g')}/${v(p,'mf_n')-v(p,'mf_rj')}`,'ind'):''):''),v(p,'tl_n')+v(p,'ts_n')?ring('ct','touche (lancer + saut)'):'',SPK.ct):''}
         ${kick?fcSec('Jeu au pied',kickBody,japN?ring('jap','jeu au pied réussi'):'',SPK.jap):''}
       </div>
     </div>
     ${band}
-    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Profil : axes propres à chaque poste, par 80 min ou en % ; chaque axe va de 0 (ou du plus faible pour un %) au meilleur des joueurs du même groupe ayant assez joué (au meilleur de l’équipe si le groupe compte moins de 3 joueurs) ; pour la discipline, plus c’est loin du centre, moins il concède de pénalités · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
+    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Distance moyenne JAP = distance en ligne droite entre le départ et l’arrivée du ballon, sur les coups de pied du jeu courant (3 minimum) · Profil : axes propres à chaque poste, par 80 min ou en % ; chaque axe va de 0 (ou du plus faible pour un %) au meilleur des joueurs du même groupe ayant assez joué (au meilleur de l’équipe si le groupe compte moins de 3 joueurs) ; pour la discipline, plus c’est loin du centre, moins il concède de pénalités · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
   </article>
   ${season?ficheAnalyse():''}
   </main>`;
   bindTables(el); SEASON=false;
+  // tableau « Match par match » : on retire les colonnes toujours vides pour ce joueur
+  el.querySelectorAll('#fiche-evo table').forEach(t=>{ const hs=[...t.tHead?.rows[0]?.cells||[]]; if(!hs.length) return; const rows=[...t.tBodies[0]?.rows||[]];
+    const full=rows.filter(r=>r.cells.length===hs.length); if(!full.length) return;
+    const empty=hs.map((_,i)=>i>2&&full.every(r=>/^(–|-|0|)$/.test(r.cells[i].textContent.trim())));
+    for(let i=hs.length-1;i>=0;i--) if(empty[i]){ hs[i].remove(); full.forEach(r=>r.cells[i].remove()); }
+    const nRm=empty.filter(Boolean).length; rows.filter(r=>r.cells.length!==hs.length+0&&!full.includes(r)).forEach(r=>{ const c=[...r.cells].find(x=>x.colSpan>1); if(c) c.colSpan=Math.max(1,c.colSpan-nRm); }); });
   const save=()=>{try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(e){} renderFiche();};
   $('fWho').addEventListener('change',e=>{ FICHE.who=e.target.value; save(); window.scrollTo(0,0); });
   $('fcS').addEventListener('change',e=>{ FICHE.scope=e.target.value; save(); });
+  $('fPdf').addEventListener('change',e=>{ FICHE.pdf=e.target.value; try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(err){} });
   const msg=(t,ok=true)=>{ const x=$('fMsg'); if(x){ x.className='msg '+(ok?'ok':'err'); x.textContent=t; } };
   const upd=async(patch,txt)=>{ try{ await saveRoster(n,patch); renderFiche(); msg(txt); }catch(e){ msg('Enregistrement impossible, réessaie.',false); } };
   if(ed){
@@ -1714,9 +1792,10 @@ function ficheAnalyse(){
   const ret=retenir([...strong.map(r=>['good','Point fort',`${r.lab} : ${f1(r.mv)} / 80 min (moyenne ${f1(r.avg)}) · ${r.rank}e sur ${r.n}.`]),...weak.map(r=>['bad','À travailler',`${r.lab} : ${f1(r.mv)} / 80 min (moyenne ${f1(r.avg)}) · ${r.rank}e sur ${r.n}.`])]).replace('<h3>À retenir</h3>','<h3>Points forts et axes de travail</h3>');
   const rateC=rates.length?breakdown('Taux de réussite','Saison, sur toutes ses actions (3 tentatives minimum).',rates.map(r=>({n:r.lab,e:`${r.n} tentatives`,v:r.x||0,t:r.x+' %',c:r.x>=r.g?C.b1:r.x>=r.w?C.b2:C.red}))):'';
   const t80=`<div class="card"><h3>Par 80 minutes</h3><p class="sub">Comparé aux ${refLab} ayant joué au moins 120 minutes (${grp.length} joueur${grp.length>1?'s':''}). Rang : 1 = meilleur${mins<120?' · temps de jeu encore faible, à interpréter avec prudence':''}.</p><div class="tw"><table><thead><tr><th>Stat</th><th>Total</th><th>Joueur / 80</th><th>Moyenne / 80</th><th>Écart</th><th>Rang</th></tr></thead><tbody>${rows80.map(r=>{ const d=r.mv!=null&&r.avg!=null?r.mv-r.avg:null; const good=d==null?'':(r.hi?d>0:d<0)?'g':(r.hi?d<0:d>0)?'r':''; return `<tr><td>${h(r.lab)}${r.hi?'':' <span class="d">(moins = mieux)</span>'}</td><td>${r.raw}</td><td class="pct">${f1(r.mv)}</td><td class="d">${f1(r.avg)}</td><td class="pct ${good}">${d==null?'–':(d>0?'+':'')+f1(d)}</td><td>${r.rank?r.rank+' / '+r.n:'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
-  const evo=stacked('Actions par match','Défense, attaque, ruck et conquête · minutes jouées à droite.',[['Défense',C.b1],['Attaque','var(--nissa)'],['Ruck',C.b2],['Conquête & pied',C.b3]],pm.map(({m,p,mn})=>{ p=p||{}; const d=v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'recup'), a=v(p,'duel_pos')+v(p,'duel_neg')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'defbattu')+v(p,'pdb'), r=v(p,'ro')+v(p,'rd'), c=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'jap_pos')+v(p,'jap_neg')+v(p,'aerien_pos')+v(p,'aerien_neg');
-    return {name:`${m.journee||''} ${m.adversaire||''}${mRes(m)?' · '+resTxt(mRes(m)):''}`.trim(),tot:d+a+r+c,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
-  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Score</th><th>Min.</th><th>Tâches</th><th>Tâches/80</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn})=>{ if(!p&&!mn) return `<tr><td>${h(label(m))}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td colspan="14" class="d">n’a pas joué</td></tr>`; p=p||{};
+  const evo=stacked('Actions par match, par 80 minutes','Défense, attaque, ruck et conquête ramenés à 80 minutes de jeu · minutes jouées à droite.',[['Défense',C.b1],['Attaque','var(--nissa)'],['Ruck',C.b2],['Conquête & pied',C.b3]],pm.map(({m,p,mn})=>{ p=p||{}; let d=v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'recup'), a=v(p,'duel_pos')+v(p,'duel_neg')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'defbattu')+v(p,'pdb'), r=v(p,'ro')+v(p,'rd'), c=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'jap_pos')+v(p,'jap_neg')+v(p,'aerien_pos')+v(p,'aerien_neg');
+    const k80=mn>0?80/mn:0, R1=x=>Math.round(x*k80*10)/10; [d,a,r,c]=[d,a,r,c].map(R1);
+    return {name:`${m.journee||''} ${m.adversaire||''}`.trim(),tot:Math.round((d+a+r+c)*10)/10,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
+  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Score</th><th>Min.</th><th>Tâches</th><th>Tâches/80</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn})=>{ if(!p&&!mn) return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td colspan="14" class="d">n’a pas joué</td></tr>`; p=p||{};
     return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td>${mn??'–'}</td><td>${v(p,'taches')}</td><td class="pct">${mn?f1(v(p,'taches')*80/mn):'–'}</td><td>${fr(v(p,'plaq_ok'),v(p,'plaq_ok')+v(p,'plaq_rate'))}</td><td class="${v(p,'plaq_rate')>=2?'r':''}">${v(p,'plaq_rate')||'–'}</td><td>${fr(v(p,'duel_pos'),v(p,'duel_pos')+v(p,'duel_neg'))}</td><td>${v(p,'m_tot')||'–'}</td><td>${v(p,'ro')?fr(v(p,'ro_pos'),v(p,'ro')):'–'}</td><td class="${v(p,'pdb')>=2?'r':''}">${v(p,'pdb')||'–'}</td><td class="${v(p,'faute')>=2||v(p,'cj')||v(p,'cr')?'r':''}">${v(p,'faute')||'–'}${v(p,'cr')?' CR':v(p,'cj')?' CJ':''}</td>${fwd?`<td>${v(p,'tl_n')?'L '+fr(v(p,'tl_g'),v(p,'tl_n')):''}${v(p,'ts_n')?' S '+fr(v(p,'ts_g'),v(p,'ts_n')):''}${!v(p,'tl_n')&&!v(p,'ts_n')?'–':''}</td><td>${v(p,'mf_n')+v(p,'md_n')||'–'}</td>`:`<td>${v(p,'jap_pos')+v(p,'jap_neg')?fr(v(p,'jap_pos'),v(p,'jap_pos')+v(p,'jap_neg')):'–'}</td><td>${v(p,'aerien_pos')+v(p,'aerien_neg')?fr(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')):'–'}</td>`}<td>${v(p,'pts')||'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
   // victoires / défaites
   const grpVD=w=>{ const o={__m:0,__n:0}; pm.forEach(({m,p,mn})=>{ const rr=mRes(m); if(!rr||rr.r!==w||!p||!(+mn>0)) return; o.__m+=+mn; o.__n++; for(const k in p) if(typeof p[k]==='number') o[k]=(o[k]||0)+p[k]; }); return o; };
@@ -1725,10 +1804,12 @@ function ficheAnalyse(){
   const f2=(x,u)=>x==null?'–':u?Math.round(x)+u:f1(x);
   const vdC=VW.__n&&VL.__n?`<div class="card"><h3>Victoires et défaites</h3><p class="sub">Ses stats dans les ${VW.__n} victoire${VW.__n>1?'s':''} et les ${VL.__n} défaite${VL.__n>1?'s':''} où il a joué (score calculé à partir des essais et coups de pied codés).</p><div class="tw"><table><thead><tr><th>Stat</th><th>Victoires</th><th>Défaites</th></tr></thead><tbody>${VDS.map(([l,f,hi,u])=>{ const a=f(VW), b=f(VL); const d=a!=null&&b!=null?a-b:0, th=u?3:.3; const ca=Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r', cb=Math.abs(d)<th?'':(hi?d<0:d>0)?'g':'r'; return `<tr><td>${l}</td><td class="${ca}">${f2(a,u)}</td><td class="${cb}">${f2(b,u)}</td></tr>`; }).join('')}</tbody></table></div></div>`:'';
   const zp=ZP.filter(z=>z[4]===me.name);
-  const zc=zp.length?`<div class="card"><div class="card-head"><h3>Carte de ses actions</h3><span>saison · ${zp.length} actions situées</span></div><div class="legend">${Object.entries(ZTYPES).filter(([t])=>zp.some(z=>z[2]===t)).map(([t,[n,c]])=>`<span><i style="background:${c}"></i>${n} (${zp.filter(z=>z[2]===t).length})</span>`).join('')}</div>${pitch(zp)}</div>`:'';
+  const zD=zp.filter(z=>['P','T','F'].includes(z[2])), zA=zp.filter(z=>['C','B'].includes(z[2]));
+  const lgd=arr=>`<div class="legend">${Object.entries(ZTYPES).filter(([t])=>arr.some(z=>z[2]===t)).map(([t,[n,c]])=>`<span><i style="background:${c}"></i>${n} (${arr.filter(z=>z[2]===t).length})</span>`).join('')}</div>`;
+  const zc=zp.length?`<div class="card"><div class="card-head"><h3>Carte de ses actions</h3><span>saison · ${zp.length} actions situées</span></div><div class="maps2"><div><h4>Défense</h4>${lgd(zD)}${pitch(zD)}${pitch(zD,1)}</div><div><h4>Attaque</h4>${lgd(zA)}${pitch(zA)}${pitch(zA,1)}</div></div></div>`:'';
   const opt=GORDER.map(g=>`<optgroup label="${GROUPES[g]}">${names.filter(n=>grpOf(n)===g).map(n=>`<option value="${h(n)}"${n===me.name?' selected':''}>${h(n)}</option>`).join('')}</optgroup>`).join('')+(names.some(n=>!grpOf(n))?`<optgroup label="Sans poste">${names.filter(n=>!grpOf(n)).map(n=>`<option value="${h(n)}"${n===me.name?' selected':''}>${h(n)}</option>`).join('')}</optgroup>`:'');
   const conq=(v(me,'tl_n')||v(me,'ts_n')||v(me,'tc_n')||v(me,'mf_n')+v(me,'md_n'))?`<div class="kpis">${v(me,'tl_n')?kpi('Lancers',pct(v(me,'tl_g'),v(me,'tl_n'))+' %',`${v(me,'tl_g')} / ${v(me,'tl_n')} réussis${v(me,'tl_vol')?` · ${v(me,'tl_vol')} volés`:''}`,status(pct(v(me,'tl_g'),v(me,'tl_n')),85,75)):''}${v(me,'ts_n')?kpi('Sauts en touche',pct(v(me,'ts_g'),v(me,'ts_n'))+' %',`${v(me,'ts_g')} / ${v(me,'ts_n')} ballons gagnés`,status(pct(v(me,'ts_g'),v(me,'ts_n')),85,75)):''}${v(me,'tc_n')?kpi('Contres en touche',v(me,'tc_vol'),`ballons volés sur ${v(me,'tc_n')} contres`,null):''}${v(me,'mf_n')+v(me,'md_n')?kpi('Mêlées jouées',v(me,'mf_n')+v(me,'md_n'),`${v(me,'mf_g')} gagnées sur notre intro (${v(me,'mf_n')})`,null):''}</div>`:'';
-  return `  ${sec('fiche-bilan','Analyse','Saison 2026-2027 · par 80 minutes et comparaison au groupe',`<div class="grid2">${t80}<div class="side">${rateC}${vdC}</div></div>`)}
+  return `  ${sec('fiche-bilan','Analyse','Saison 2026-2027 · taux de réussite et résultats',`<div class="grid2 g-ana">${rateC}${vdC||''}</div>`)}
   ${sec('fiche-evo','Évolution','Match après match',`<div class="grid2">${evo}<div class="side">${zc}</div></div>`+tbm)}
 `;
 }
@@ -1924,6 +2005,28 @@ function fixSvgColors(root){
     for(const at of ['fill','stroke']){ const a=n.getAttribute(at); if((a&&a.includes('var('))||(n.tagName==='text'&&at==='fill')) n.setAttribute(at, cs[at]); }
   });
 }
+// fiche en paysage : 4 colonnes de blocs, puis une 2e « page » avec groupe, profil et repères côte à côte
+function ficheLand(){
+  const a=document.querySelector('#report main>article.fiche'); if(!a) return;
+  const cols=a.querySelector('.fc-cols'), cs=cols?[...cols.querySelectorAll(':scope>.fc-col')]:[];
+  if(cs.length===2){ const s1=[...cs[0].children], s2=[...cs[1].children]; const mk=arr=>{ const d=document.createElement('div'); d.className='fc-col'; arr.forEach(x=>d.appendChild(x)); return d; };
+    cols.innerHTML=''; [s1.slice(0,2),s1.slice(2),s2.slice(0,2),s2.slice(2)].filter(x=>x.length).forEach(x=>cols.appendChild(mk(x))); cols.classList.add('c4');
+    // ordre fixe (le même pour tous les joueurs, lu colonne par colonne) ; on choisit où couper les colonnes pour qu'elles aient une hauteur proche
+    const all=[...s1,...s2], ORD=['Activité','Attaque','Ruck offensif','Ruck défensif','Défense','Discipline','Conquête','Jeu au pied'];
+    const seq=[...ORD.map(t=>all.find(x=>x.dataset.t===t)).filter(Boolean),...all.filter(x=>!ORD.includes(x.dataset.t))];
+    const hs=seq.map(x=>x.getBoundingClientRect().height+12), n=seq.length, K=Math.min(4,n); let best=null;
+    const rec=(start,k,cuts)=>{ if(k===1){ const cs=[...cuts,n]; let mx=0, a=start>0?0:0; let prev=0; for(const c of cs){ mx=Math.max(mx,hs.slice(prev,c).reduce((p,q)=>p+q,0)); prev=c; } if(!best||mx<best.mx) best={mx,cs}; return; }
+      for(let c=start+1;c<=n-k+1;c++) rec(c,k-1,[...cuts,c]); };
+    rec(0,K,[]);
+    cols.innerHTML=''; let prev=0; best.cs.forEach(c=>{ cols.appendChild(mk(seq.slice(prev,c))); prev=c; }); }
+  const band=a.querySelector('.fc-band'), foot=a.querySelector('.fc-foot');
+  if(band){ const side=band.querySelector('.fc-side'); if(side){ [...side.children].forEach(x=>band.appendChild(x)); side.remove(); } band.classList.add('c3');
+    const b=document.createElement('article'); b.className='fiche'; b.appendChild(band); if(foot) b.appendChild(foot); a.after(b); }
+  const ev=document.getElementById('fiche-evo');
+  if(ev){ const g=ev.querySelector('.grid2'), tb=g&&g.nextElementSibling;
+    if(g){ g.classList.add('evo-l'); if(tb&&g.firstElementChild){ const w=document.createElement('div'); w.className='evo-main'; const c1=g.firstElementChild; g.insertBefore(w,c1); w.appendChild(c1); w.appendChild(tb); } } }
+  const bi=document.getElementById('fiche-bilan'); if(bi){ const g=bi.querySelector('.grid2'); if(g) g.classList.add('bil-l'); }
+}
 async function exportPDF(){
   const btn=$('btnExport'), msg=$('exportMsg');
   const ov=document.createElement('div'); ov.className='export-ov'; ov.innerHTML='<div><b>Préparation du PDF…</b><span>Quelques secondes</span></div>'; document.body.appendChild(ov);
@@ -1931,7 +2034,8 @@ async function exportPDF(){
   btn.disabled=true; msg.textContent='';
   try{
     await libs();
-    root.setAttribute('data-theme','light'); root.classList.add('exporting');
+    const LAND=!!(document.querySelector('#report main>article.fiche')&&FICHE.pdf==='paysage');
+    root.setAttribute('data-theme','light'); root.classList.add('exporting'); if(LAND){ root.classList.add('land'); ficheLand(); }
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
     window.scrollTo(0,0);
     const rep=$('report'); fixSvgColors(rep);
@@ -1941,26 +2045,53 @@ async function exportPDF(){
     if(main) [...main.children].forEach((sec,si)=>units.push({el:sec,kids:[...sec.children],newPage:si>0}));
     else [...rep.children].filter(c=>c!==mast&&c!==foot&&!c.classList.contains('no-print')&&c.tagName!=='NAV').forEach(c=>units.push({el:c,kids:[c]}));
     if(foot) units.push({el:foot,kids:[foot]});
-    const { jsPDF }=window.jspdf; const pdf=new jsPDF({unit:'mm',format:'a4',orientation:'portrait',compress:true});
-    const M=10, PW=210-2*M, PH=297-2*M, W=1100, k=PW/W, GAP=12*k, SC=2;
+    const { jsPDF }=window.jspdf; const pdf=new jsPDF({unit:'mm',format:'a4',orientation:LAND?'landscape':'portrait',compress:true});
+    const M=10, PW=(LAND?297:210)-2*M, PH=(LAND?210:297)-2*M, W=LAND?1500:1100, k=PW/W, GAP=12*k, SC=2;
     let bgRGB=[243,243,241]; try{ bgRGB=bg.match(/\d+/g).slice(0,3).map(Number); }catch(e){}
-    const paintBg=()=>{ pdf.setFillColor(bgRGB[0],bgRGB[1],bgRGB[2]); pdf.rect(0,0,210,297,'F'); };
+    const paintBg=()=>{ pdf.setFillColor(bgRGB[0],bgRGB[1],bgRGB[2]); pdf.rect(0,0,297,297,'F'); };
     let y=M, first=true; paintBg();
     const fiche=main&&main.querySelector(':scope>article.fiche');
     if(fiche){
-      // fiche joueur : page 1 = la fiche entière ; pages suivantes = analyse + évolution regroupées, réduites pour tenir sur le moins de pages possible
-      const grabs=[];
-      for(const el of [...main.children]){
-        const cv=await html2canvas(el,{scale:SC,backgroundColor:bg,logging:false,windowWidth:W+40,windowHeight:Math.max(2000,document.documentElement.scrollHeight),scrollX:0,scrollY:-window.scrollY});
-        grabs.push({cv,w:cv.width/SC*k,h:cv.height/SC*k});
+      // fiche joueur : chaque page est remplie au maximum — la largeur de mise en page est ajustée pour que le contenu ait les proportions de la page
+      const kids=[...main.children];
+      const wrap=rep.closest('.wrap')||rep.parentElement, T=PH/PW, GP=12;
+      const setW=w=>{ wrap.style.width=w+'px'; wrap.style.maxWidth='none'; rep.style.width=w+'px'; };
+      const Hof=els=>els.reduce((a,e)=>a+e.getBoundingClientRect().height,0)+GP*(els.length-1);
+      // une largeur convient si le contenu tient dans la page et qu'aucun tableau ne déborde sur le côté
+      const noOver=els=>els.every(e=>[...e.querySelectorAll('.tw')].every(t=>t.scrollWidth<=t.clientWidth+2));
+      const okW=(els,w)=>{ setW(w); return Hof(els)/w<=T&&noOver(els); };
+      const fitW=els=>{ let lo=null; for(let w=700; w<=2800; w+=100){ if(okW(els,w)){ lo=w; break; } } if(lo==null) return 2800;
+        let best=lo; for(let w=lo-90; w<lo; w+=10){ if(w<700) continue; if(okW(els,w)){ best=w; break; } } return best; };
+      // regroupement : on ajoute un bloc à la page tant que la mise en page reste assez grande pour être lisible
+      // 3 pages en paysage, 2 en portrait : on répartit les blocs restants de la façon la plus lisible (la page la plus serrée le moins possible)
+      const rest=kids.slice(1), NP=Math.min(rest.length,(LAND?3:2)-1); let groups=[[kids[0]]];
+      if(NP>0){ let best=null;
+        const splits=(n,k)=>{ if(k===1) return [[n]]; const out=[]; for(let i=1;i<=n-k+1;i++) splits(n-i,k-1).forEach(r=>out.push([i,...r])); return out; };
+        for(const sz of splits(rest.length,NP)){ let o=0; const gs=sz.map(n=>{ const g=rest.slice(o,o+n); o+=n; return g; }); const worst=Math.max(...gs.map(fitW)); if(!best||worst<best.w) best={w:worst,gs}; }
+        groups=groups.concat(best.gs); }
+      let firstPage=true;
+      for(const els of groups.filter(g=>g.length)){
+        const w=fitW(els); setW(w);
+        // paysage : l'Analyse et l'Évolution s'allongent jusqu'en bas de la page
+        const last=els[els.length-1];
+        if(LAND&&last&&last.matches('article.fiche')&&last.querySelector('.fc-cols')){
+          // page 1 : on aère les lignes de façon égale jusqu'à remplir la hauteur de la page
+          last.classList.add('fill'); let lp=1; for(let x=1.5;x<=16;x+=0.5){ last.style.setProperty('--lp',x+'px'); if(Hof(els)>w*T){ break; } lp=x; } last.style.setProperty('--lp',lp+'px');
+          const others=Hof(els)-last.getBoundingClientRect().height; last.style.minHeight=Math.floor(w*T-others-2)+'px';
+          // chaque colonne aère ses lignes pour descendre jusqu'en bas, sans trous dans les encadrés
+          last.querySelectorAll('.fc-cols.c4>.fc-col').forEach(col=>{ const ss=[...col.children]; ss.forEach(x=>x.style.flex='none');
+            const colH=col.getBoundingClientRect().height, cont=()=>ss.reduce((a,x)=>a+x.getBoundingClientRect().height,0)+12*(ss.length-1);
+            let ok=lp; for(let x=lp;x<=26;x+=0.5){ col.style.setProperty('--lp',x+'px'); if(cont()>colH) break; ok=x; } col.style.setProperty('--lp',ok+'px'); ss.forEach(x=>x.style.flex=''); });
+        } else if(LAND&&last&&(last.id==='fiche-bilan'||last.id==='fiche-evo')){ last.classList.add('fill'); const others=Hof(els)-last.getBoundingClientRect().height; last.style.minHeight=Math.floor(w*T-others-2)+'px'; } await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+        const kk=PW/w; if(!firstPage){ pdf.addPage(); paintBg(); } firstPage=false;
+        const tot=Hof(els), sc=Math.min(1,PH/(tot*kk)); let yy=M;
+        for(const el of els){
+          const cv=await html2canvas(el,{scale:SC,backgroundColor:bg,logging:false,windowWidth:w+40,windowHeight:Math.max(2000,document.documentElement.scrollHeight),scrollX:0,scrollY:-window.scrollY});
+          const ww=cv.width/SC*kk*sc, hh=cv.height/SC*kk*sc;
+          pdf.addImage(cv.toDataURL('image/jpeg',0.9),'JPEG',M+(PW-ww)/2,yy,ww,hh,undefined,'FAST'); yy+=hh+GP*kk*sc;
+        }
       }
-      const MINS=0.6, pages=[[grabs[0]]]; let cur=[];
-      const need=pg=>pg.reduce((a,g)=>a+g.h,0)+GAP*(pg.length-1);
-      for(const g of grabs.slice(1)){ if(cur.length&&PH/need([...cur,g])<MINS){ pages.push(cur); cur=[]; } cur.push(g); }
-      if(cur.length) pages.push(cur);
-      pages.forEach((pg,pi)=>{ if(pi){ pdf.addPage(); paintBg(); }
-        const sc=Math.min(1,PH/need(pg)); let yy=M;
-        pg.forEach(g=>{ const w=g.w*sc, hh=g.h*sc; pdf.addImage(g.cv.toDataURL('image/jpeg',0.9),'JPEG',M+(PW-w)/2,yy,w,hh,undefined,'FAST'); yy+=hh+GAP*sc; }); });
+      wrap.style.width=''; wrap.style.maxWidth=''; rep.style.width='';
       units.length=0;
     }
     for(const [ui,u] of units.entries()){
@@ -1989,7 +2120,7 @@ async function exportPDF(){
   }catch(e){
     msg.textContent = e&&e.code==='declined'?'Export annulé.':e&&e.code==='rate_limited'?'Un enregistrement est déjà en cours, réessaie dans un instant.':'Export impossible : '+(e&&e.message||'erreur inconnue')+'.';
   }finally{
-    root.classList.remove('exporting'); if(prevTheme==null) root.removeAttribute('data-theme'); else root.setAttribute('data-theme',prevTheme);
+    root.classList.remove('exporting','land'); { const rp=$('report'); if(rp){ rp.style.width=''; const wp=rp.closest('.wrap'); if(wp){ wp.style.width=''; wp.style.maxWidth=''; } } } if(prevTheme==null) root.removeAttribute('data-theme'); else root.setAttribute('data-theme',prevTheme);
     ov.remove(); btn.disabled=false;
     show(current); try{ window.scrollTo(sx,sy0); }catch(e){} // redessine la vue proprement
   }

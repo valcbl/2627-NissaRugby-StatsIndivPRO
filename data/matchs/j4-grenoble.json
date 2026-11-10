@@ -59,7 +59,9 @@
     "pts": 10,
     "jt_out_b": 2,
     "jt_court_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 5,
+    "jd_tot": 179
    },
    {
     "name": "Enzo Labadie",
@@ -409,7 +411,9 @@
     "pdb_jeu": 1,
     "min": 84,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 2,
+    "jd_tot": 65
    },
    {
     "name": "Bautista Ezcurra",
@@ -469,7 +473,9 @@
     "pts": 0,
     "jt_in_g": 1,
     "jt_out_g": 1,
-    "jt_court_g": 1
+    "jt_court_g": 1,
+    "jd_n": 4,
+    "jd_tot": 145
    },
    {
     "name": "Guillaume Rouet",
@@ -521,7 +527,9 @@
     "pts": 0,
     "jt_out_b": 1,
     "jt_court_b": 1,
-    "jt_deg_b": 1
+    "jt_deg_b": 1,
+    "jd_n": 5,
+    "jd_tot": 124
    },
    {
     "name": "Tyler Morgan",
@@ -563,7 +571,9 @@
     "plaq_jambe": 1,
     "min": 84,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 37
    },
    {
     "name": "Hayden Thompson-Stringer",
@@ -796,7 +806,9 @@
     "plaq_subi": 2,
     "min": 64,
     "pts": 5,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 1,
+    "jd_tot": 24
    },
    {
     "name": "Bastien Berenguel",
@@ -1051,7 +1063,9 @@
     "zP0": 1,
     "min": 30,
     "pts": 0,
-    "jt_deg_b": 2
+    "jt_deg_b": 2,
+    "jd_n": 3,
+    "jd_tot": 95
    },
    {
     "name": "Evan Olmstead",
@@ -1111,7 +1125,9 @@
     "min": 20,
     "pts": 3,
     "jt_deg_b": 1,
-    "jt_in_g": 2
+    "jt_in_g": 2,
+    "jd_n": 3,
+    "jd_tot": 129
    }
   ],
   "events": [

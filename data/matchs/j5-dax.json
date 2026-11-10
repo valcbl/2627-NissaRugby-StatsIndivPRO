@@ -274,7 +274,9 @@
     "jt_in_g": 3,
     "jt_deg_b": 2,
     "jt_out_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 9,
+    "jd_tot": 315
    },
    {
     "name": "Farai Mudariki",
@@ -473,7 +475,9 @@
     "ast_pos": 1,
     "min": 61,
     "pts": 0,
-    "jt_in_g": 2
+    "jt_in_g": 2,
+    "jd_n": 3,
+    "jd_tot": 132
    },
    {
     "name": "Enzo Labadie",
@@ -580,7 +584,9 @@
     "jt_out_b": 2,
     "jt_passe_g": 1,
     "jt_court_g": 1,
-    "jt_deg_b": 1
+    "jt_deg_b": 1,
+    "jd_n": 7,
+    "jd_tot": 173
    },
    {
     "name": "Clement Egiziano",
@@ -642,7 +648,9 @@
     "mf_pos6": 7,
     "min": 80,
     "pts": 5,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 2,
+    "jd_tot": 60
    },
    {
     "name": "Bautista Ezcurra",
@@ -683,7 +691,9 @@
     "rk_6p": 1,
     "min": 80,
     "pts": 0,
-    "jt_out_g": 1
+    "jt_out_g": 1,
+    "jd_n": 2,
+    "jd_tot": 74
    },
    {
     "name": "Tyler Morgan",
@@ -769,7 +779,9 @@
     "min": 80,
     "pts": 0,
     "jt_deg_b": 1,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 3,
+    "jd_tot": 90
    },
    {
     "name": "Bastien Berenguel",
@@ -987,7 +999,9 @@
     "jap_pos": 1,
     "min": 19,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 2,
+    "jd_tot": 56
    },
    {
     "name": "Jules Gimbert",
@@ -1020,7 +1034,9 @@
     "contre": 1,
     "min": 16,
     "pts": 0,
-    "jt_deg_b": 1
+    "jt_deg_b": 1,
+    "jd_n": 2,
+    "jd_tot": 49
    },
    {
     "name": "Pat Leafa",

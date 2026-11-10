@@ -367,7 +367,9 @@
     "jt_in_g": 4,
     "jt_press_g": 3,
     "jt_deg_b": 1,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 12,
+    "jd_tot": 372
    },
    {
     "name": "Clément Martinez",
@@ -474,7 +476,9 @@
     "min": 61,
     "pts": 7,
     "jt_in_b": 1,
-    "jt_press_g": 2
+    "jt_press_g": 2,
+    "jd_n": 4,
+    "jd_tot": 152
    },
    {
     "name": "Bautista Ezcurra",
@@ -525,7 +529,9 @@
     "ast_neg": 1,
     "min": 80,
     "pts": 5,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 2,
+    "jd_tot": 38
    },
    {
     "name": "Evan Olmstead",
@@ -692,7 +698,9 @@
     "jt_out_g": 1,
     "jt_in_g": 1,
     "jt_press_g": 1,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 8,
+    "jd_tot": 289
    },
    {
     "name": "Inoke Nalaga Kurukuruvakatini",
@@ -795,7 +803,9 @@
     "zP0": 1,
     "min": 80,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 2,
+    "jd_tot": 38
    },
    {
     "name": "Beau Farrance",
@@ -978,7 +988,9 @@
     "zP1": 2,
     "min": 21,
     "pts": 0,
-    "jt_press_g": 2
+    "jt_press_g": 2,
+    "jd_n": 3,
+    "jd_tot": 45
    },
    {
     "name": "Massimo Ortolan",

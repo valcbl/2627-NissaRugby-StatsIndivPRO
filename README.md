@@ -11,7 +11,7 @@ Il lit les exports XML officiels des matchs (format *Individual_v2*, « …_xml_
 
 Les postes sont regroupés en 7 groupes : piliers, talonneurs, 2e ligne, 3e ligne, charnière (9-10), centres, back 3 (11-14-15).
 
-Données incluses : J1 à J10 (Biarritz, Béziers, Brive, Grenoble, Dax, Nevers, Provence Rugby, Agen, Aurillac, Narbonne), effectif de 42 joueurs, minutes jouées.
+Données incluses : J1 à J10 (Biarritz, Béziers, Brive, Grenoble, Dax, Nevers, Provence Rugby, Agen, Aurillac, Narbonne), effectif de 43 joueurs, minutes jouées.
 
 ---
 

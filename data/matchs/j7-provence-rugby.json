@@ -50,7 +50,9 @@
     "min": 31,
     "pts": 0,
     "jt_press_g": 1,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 5,
+    "jd_tot": 119
    },
    {
     "name": "Christiaan Van Der Merwe",
@@ -296,7 +298,9 @@
     "min": 61,
     "pts": 0,
     "jt_deg_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 6,
+    "jd_tot": 144
    },
    {
     "name": "Evan Olmstead",
@@ -535,7 +539,9 @@
     "jt_in": 1,
     "min": 69,
     "pts": 0,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 4,
+    "jd_tot": 105
    },
    {
     "name": "Hanru Sirgel",
@@ -786,7 +792,9 @@
     "ret_debout": 1,
     "min": 80,
     "pts": 5,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 1,
+    "jd_tot": 40
    },
    {
     "name": "Flavio Asquini",
@@ -840,7 +848,9 @@
     "pts": 4,
     "jt_deg_g": 1,
     "jt_press_g": 1,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 5,
+    "jd_tot": 138
    },
    {
     "name": "Zinedine Aouad",
@@ -937,7 +947,9 @@
     "jt_press": 1,
     "min": 19,
     "pts": 0,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 3,
+    "jd_tot": 103
    },
    {
     "name": "Joel Kpoku",

@@ -120,7 +120,9 @@
     "jt_in_g": 1,
     "jt_deg_g": 1,
     "jt_out_b": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 5,
+    "jd_tot": 149
    },
    {
     "name": "Jean-Pascal Barraque",
@@ -184,7 +186,9 @@
     "jt_out_g": 2,
     "jt_press_g": 2,
     "jt_deg_g": 1,
-    "jt_passe_g": 1
+    "jt_passe_g": 1,
+    "jd_n": 12,
+    "jd_tot": 454
    },
    {
     "name": "Francis Saili",
@@ -242,7 +246,9 @@
     "min": 81,
     "pts": 0,
     "jt_in_g": 1,
-    "jt_out_g": 1
+    "jt_out_g": 1,
+    "jd_n": 2,
+    "jd_tot": 85
    },
    {
     "name": "Bautista Ezcurra",
@@ -307,7 +313,9 @@
     "plaq_dom": 1,
     "min": 65,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 39
    },
    {
     "name": "Enzo Labadie",
@@ -602,7 +610,9 @@
     "ast_pos": 1,
     "min": 81,
     "pts": 0,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 1,
+    "jd_tot": 40
    },
    {
     "name": "Hayden Thompson-Stringer",
@@ -732,7 +742,9 @@
     "mf_g": 3,
     "md_n": 1,
     "min": 49,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 23
    },
    {
     "name": "Julien Farnoux",
@@ -789,7 +801,9 @@
     "plaq_jambe": 1,
     "min": 81,
     "pts": 5,
-    "jt_in_g": 4
+    "jt_in_g": 4,
+    "jd_n": 5,
+    "jd_tot": 205
    },
    {
     "name": "Clement Egiziano",
@@ -839,7 +853,9 @@
     "gratt": 1,
     "ast_pos": 1,
     "min": 81,
-    "pts": 10
+    "pts": 10,
+    "jd_n": 1,
+    "jd_tot": 6
    },
    {
     "name": "Joel Kpoku",
@@ -1035,7 +1051,9 @@
     "transfo_neg": 1,
     "min": 16,
     "pts": 0,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 1,
+    "jd_tot": 20
    },
    {
     "name": "Jules Martinez",

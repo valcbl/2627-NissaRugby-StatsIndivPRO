@@ -55,7 +55,9 @@
     "pts": 0,
     "jt_press_g": 1,
     "jt_in_g": 6,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 10,
+    "jd_tot": 402
    },
    {
     "name": "Inoke Nalaga Kurukuruvakatini",
@@ -386,7 +388,9 @@
     "jt_press_g": 3,
     "jt_deg_b": 1,
     "jt_in_g": 1,
-    "jt_court_g": 1
+    "jt_court_g": 1,
+    "jd_n": 7,
+    "jd_tot": 200
    },
    {
     "name": "Leo Chauvin",
@@ -517,7 +521,9 @@
     "tl_vol": 1,
     "min": 80,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 54
    },
    {
     "name": "Farai Mudariki",
@@ -682,7 +688,9 @@
     "mf_pos8": 1,
     "mf_g": 6,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 18
    },
    {
     "name": "Clement Egiziano",
@@ -729,7 +737,9 @@
     "zC1": 1,
     "min": 80,
     "pts": 0,
-    "jt_deg_g": 1
+    "jt_deg_g": 1,
+    "jd_n": 1,
+    "jd_tot": 47
    },
    {
     "name": "Julien Farnoux",
@@ -775,7 +785,9 @@
     "ro_r3": 1,
     "min": 80,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 36
    },
    {
     "name": "Tyler Morgan",
@@ -821,7 +833,9 @@
     "passe_pos": 1,
     "min": 80,
     "pts": 0,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 2,
+    "jd_tot": 56
    },
    {
     "name": "Clément Martinez",
@@ -1056,7 +1070,9 @@
     "ast_pos": 1,
     "min": 23,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 45
    },
    {
     "name": "Jules Gimbert",
@@ -1091,7 +1107,9 @@
     "min": 18,
     "pts": 0,
     "jt_deg_b": 2,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 4,
+    "jd_tot": 85
    },
    {
     "name": "Joel Kpoku",

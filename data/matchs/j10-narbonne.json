@@ -247,7 +247,9 @@
     "pts": 6,
     "jt_in_g": 1,
     "jt_deg_g": 3,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 7,
+    "jd_tot": 218
    },
    {
     "name": "Joel Kpoku",
@@ -449,7 +451,9 @@
     "min": 40,
     "pts": 0,
     "jt_press_g": 1,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 4,
+    "jd_tot": 126
    },
    {
     "name": "Baptiste Lafond",
@@ -486,7 +490,9 @@
     "rk_03": 3,
     "duel_neg": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 11
    },
    {
     "name": "Hanru Sirgel",
@@ -582,7 +588,9 @@
     "rd_pos": 1,
     "contre_pos": 1,
     "min": 80,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 21
    },
    {
     "name": "Clement Egiziano",
@@ -769,7 +777,9 @@
     "min": 40,
     "pts": 13,
     "jt_in_g": 4,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 6,
+    "jd_tot": 254
    },
    {
     "name": "Clément Martinez",
@@ -850,7 +860,9 @@
     "ret_debout": 1,
     "min": 31,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 42
    },
    {
     "name": "Fabio Gonzalez",

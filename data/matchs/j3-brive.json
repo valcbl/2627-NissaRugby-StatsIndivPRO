@@ -60,7 +60,9 @@
     "pts": 5,
     "jt_in_g": 4,
     "jt_court_g": 1,
-    "jt_press_g": 1
+    "jt_press_g": 1,
+    "jd_n": 7,
+    "jd_tot": 276
    },
    {
     "name": "Evan Olmstead",
@@ -133,7 +135,9 @@
     "tc_n": 1,
     "min": 81,
     "pts": 0,
-    "jt_in_g": 1
+    "jt_in_g": 1,
+    "jd_n": 1,
+    "jd_tot": 49
    },
    {
     "name": "Theo Idjellidaine",
@@ -169,7 +173,9 @@
     "pts": 0,
     "jt_passe_b": 1,
     "jt_deg_g": 1,
-    "jt_in_g": 5
+    "jt_in_g": 5,
+    "jd_n": 11,
+    "jd_tot": 365
    },
    {
     "name": "Atila Septar",
@@ -680,7 +686,9 @@
     "min": 81,
     "pts": 5,
     "jt_deg_g": 1,
-    "jt_in_g": 3
+    "jt_in_g": 3,
+    "jd_n": 4,
+    "jd_tot": 236
    },
    {
     "name": "Pablo Patilla",
@@ -750,7 +758,9 @@
     "defbattu": 1,
     "ro_1er": 1,
     "min": 71,
-    "pts": 0
+    "pts": 0,
+    "jd_n": 1,
+    "jd_tot": 10
    },
    {
     "name": "Bautista Ezcurra",
@@ -814,7 +824,9 @@
     "min": 70,
     "pts": 0,
     "jt_press_g": 1,
-    "jt_out_g": 1
+    "jt_out_g": 1,
+    "jd_n": 2,
+    "jd_tot": 72
    },
    {
     "name": "Massimo Ortolan",
@@ -868,7 +880,9 @@
     "min": 49,
     "pts": 2,
     "jt_out_b": 1,
-    "jt_passe_g": 1
+    "jt_passe_g": 1,
+    "jd_n": 7,
+    "jd_tot": 235
    },
    {
     "name": "Zinedine Aouad",
@@ -1071,7 +1085,9 @@
     "pts": 0,
     "jt_press_g": 1,
     "jt_court_g": 1,
-    "jt_passe_b": 1
+    "jt_passe_b": 1,
+    "jd_n": 4,
+    "jd_tot": 86
    },
    {
     "name": "Pat Leafa",
