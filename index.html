@@ -1161,7 +1161,7 @@ function renderReport(m){
   const d=m.data; P=mapPlayers(d.players); EV=d.events.map(e=>[e[0],e[1],e[2],e[3],canon(e[4]),e[5]]); ZP=(d.pts||[]).map(z=>[z[0],z[1],z[2],z[3],canon(z[4])]); TM=d.team||{}; CLOCK=!!d.clock; HT=d.ht; TMAX=d.tmax;
   SPLIT=HT?(HT[0]+HT[1])/2:TMAX/2; Q4=Math.round((SPLIT+(TMAX-SPLIT)*0.6)/5)*5;
   const title=m.adversaire?`Match contre ${h(m.adversaire)}`:'Rapport de match';
-  const meta=[m.date, `${P.length} joueurs`, `${d.nbRows} séquences codées`, `${sum('pts')} points marqués`].filter(Boolean).join(' · ');
+  const rs=mRes(m), meta=[rs?`${({V:'Victoire',D:'Défaite',N:'Nul'})[rs.r]} ${rs.us}-${rs.them}`:'', m.date, `${P.length} joueurs`, `${d.nbRows} séquences codées`, `${sum('pts')} points marqués`].filter(Boolean).join(' · ');
   const club=clubOf(m.adversaire); const oppLogo=club&&LOGOS[club.key];
   const initials=(club?club.nom:'?').split(/[\s-]+/).filter(w=>w.length>2||/^[A-Z]{2,}$/.test(w)).map(w=>w[0]).join('').slice(0,3).toUpperCase();
   const canUp=DB&&canWrite&&club;
