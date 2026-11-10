@@ -1702,7 +1702,6 @@ function renderFiche(){
     <label for="fNum">N° de poste<input type="number" id="fNum" min="1" max="15" value="${r&&r.poste||''}"${ed?'':' disabled'}></label>
     <label for="fAn">Né en<input type="number" id="fAn" min="1980" max="2012" value="${r&&r.annee||''}"${ed?'':' disabled'}></label>
     ${ed?`<label class="fc-up">Photo du joueur<span><button type="button" id="fcPhotoBtn" class="ghost">${photo?'Changer la photo':'Ajouter une photo'}</button>${photo?'<button type="button" id="fcPhotoDel" class="ghost">Retirer</button>':''}<input type="file" id="fcPhoto" accept="image/*" hidden></span></label>`:''}
-    <label for="fPdf">Format du PDF<select id="fPdf"><option value="portrait"${FICHE.pdf!=='paysage'?' selected':''}>Portrait</option><option value="paysage"${FICHE.pdf==='paysage'?' selected':''}>Paysage</option></select></label>
     <span class="msg" id="fMsg" aria-live="polite"></span>
   </div>
   <main style="display:flex;flex-direction:column;gap:28px">
@@ -1753,7 +1752,6 @@ function renderFiche(){
   const save=()=>{try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(e){} renderFiche();};
   $('fWho').addEventListener('change',e=>{ FICHE.who=e.target.value; save(); window.scrollTo(0,0); });
   $('fcS').addEventListener('change',e=>{ FICHE.scope=e.target.value; save(); });
-  $('fPdf').addEventListener('change',e=>{ FICHE.pdf=e.target.value; try{localStorage.setItem('fiche',JSON.stringify(FICHE));}catch(err){} });
   const msg=(t,ok=true)=>{ const x=$('fMsg'); if(x){ x.className='msg '+(ok?'ok':'err'); x.textContent=t; } };
   const upd=async(patch,txt)=>{ try{ await saveRoster(n,patch); renderFiche(); msg(txt); }catch(e){ msg('Enregistrement impossible, réessaie.',false); } };
   if(ed){
@@ -2038,7 +2036,7 @@ async function exportPDF(){
   btn.disabled=true; msg.textContent='';
   try{
     await libs();
-    const LAND=!!(document.querySelector('#report main>article.fiche')&&FICHE.pdf==='paysage');
+    const LAND=!!document.querySelector('#report main>article.fiche'); // la fiche joueur s'exporte toujours en paysage
     root.setAttribute('data-theme','light'); root.classList.add('exporting'); if(LAND){ root.classList.add('land'); ficheLand(); }
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
     window.scrollTo(0,0);
