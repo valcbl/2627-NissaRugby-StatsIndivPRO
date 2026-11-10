@@ -332,8 +332,19 @@ footer{border-top:1px solid var(--line);padding-top:10px}
 .fc-form td.g{color:var(--good);font-weight:700} .fc-form td.r{color:var(--bad);font-weight:700}
 .fc-note{margin:0;font-size:11px;color:var(--muted)}
 @media (max-width:760px){ .fc-band{grid-template-columns:minmax(0,1fr)} .fc-rk{grid-template-columns:minmax(0,1fr)} }
+.exporting .fiche{gap:12px;padding:16px 20px 12px}
+.exporting .fc-col{gap:12px}
+.exporting .fc-body li{padding:1px 0}
+.exporting .fc-sec h3{margin-bottom:5px;font-size:17px}
+.exporting .fc-rk li{padding:2px 0}
 .exporting .fc-band{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)!important}
 .exporting .fc-rk{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.fc-radar{display:flex;flex-direction:column;align-items:center;gap:6px}
+.fc-radar svg{width:100%;max-width:470px;height:auto;display:block}
+.fc-radar text{font-family:var(--font);font-size:10.5px;fill:var(--ink)}
+.fc-radar text.v{font-size:9.5px;fill:var(--muted)}
+.fc-radar .fc-lg{justify-content:center}
+.fc-side{display:flex;flex-direction:column;gap:18px;min-width:0}
 .fc-foot{margin:0;font-size:10.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5}
 .fc-up span{display:flex;gap:8px;flex-wrap:wrap}
 .fc-up em{font-style:normal;text-transform:none;letter-spacing:0}
@@ -1397,6 +1408,65 @@ const nameParts=n=>{ const r=rosterOf(n); if(r&&r.nf) return [r.nf.toUpperCase()
 async function saveRoster(n,patch){ const list=ROSTER.map(({display,...x})=>x); const r=rosterOf(n);
   if(r){ const i=ROSTER.indexOf(r); list[i]={...list[i],...patch}; } else list.push({nom:n.toUpperCase(),prenom:'',annee:null,poste:null,...patch});
   if(DB) await DB.doc('effectif/saison').set({joueurs:list}); setRoster(list); }
+/* --- radar : profil du joueur vs équipe et groupe de poste --- */
+const RA={
+  tac:['Tâches',p=>v(p,'taches'),null,1],
+  pl:['Plaquages',p=>v(p,'plaq_ok'),null,1],
+  plp:['Réussite plaquage',p=>v(p,'plaq_ok'),p=>v(p,'plaq_ok')+v(p,'plaq_rate'),1],
+  pld:['Plaquages dominants',p=>v(p,'plaq_dom'),null,1],
+  ct:['Contacts gagnés',p=>v(p,'duel_pos'),null,1],
+  m:['Mètres',p=>v(p,'m_tot'),null,1],
+  map:['Mètres après contact',p=>v(p,'m_ap'),null,1],
+  pa:['Passes réussies',p=>v(p,'passe_pos'),null,1],
+  pap:['Réussite passe',p=>v(p,'passe_pos'),p=>v(p,'passe_pos')+v(p,'passe_neg'),1],
+  ro:['Rucks off.',p=>v(p,'ro'),null,1],
+  rop:['Efficacité ruck',p=>v(p,'ro_pos'),p=>v(p,'ro'),1],
+  rec:['Récupérations',p=>v(p,'recup')+v(p,'rd_pos'),null,1],
+  me:['Mêlées jouées',p=>v(p,'mf_n')+v(p,'md_n'),null,1],
+  mep:['Mêlées gagnées',p=>v(p,'mf_g'),p=>v(p,'mf_n')-v(p,'mf_rj'),1],
+  tl:['Réussite lancer',p=>v(p,'tl_g'),p=>v(p,'tl_n'),1],
+  ts:['Ballons gagnés au saut',p=>v(p,'ts_g'),null,1],
+  tc:['Contres en touche',p=>v(p,'tc_n'),null,1],
+  jap:['Jeu au pied',p=>v(p,'jap_pos')+v(p,'jap_neg'),null,1],
+  japp:['Réussite JAP',p=>v(p,'jap_pos'),p=>v(p,'jap_pos')+v(p,'jap_neg'),1],
+  db:['Défenseurs battus',p=>v(p,'defbattu'),null,1],
+  off:['Offloads',p=>v(p,'off_pos'),null,1],
+  fr:['Franchissements',p=>v(p,'franch'),null,1],
+  aep:['Réussite aérienne',p=>v(p,'aerien_pos'),p=>v(p,'aerien_pos')+v(p,'aerien_neg'),1],
+  pdb:['Pertes de balle',p=>v(p,'pdb'),null,0],
+  dis:['Discipline',p=>v(p,'faute'),null,0]};
+const FC_RADAR_G={
+  PI:['me','mep','pl','plp','ro','rop','ct','dis'],
+  TA:['tl','me','pl','plp','ro','ct','rec','dis'],
+  '2L':['ts','tc','pl','plp','ro','rop','ct','dis'],
+  '3L':['pl','pld','rec','ro','ct','map','ts','dis'],
+  CH:['pa','pap','jap','japp','m','pl','plp','pdb'],
+  CE:['ct','m','db','off','pl','plp','pld','pdb'],
+  B3:['m','db','fr','aep','jap','plp','rec','pdb']};
+const FC_RADAR=['tac','pl','plp','ct','m','pa','ro','rop','rec','dis'];
+function fcRadar(me,team,grp,minP,gLab,g){
+  const val=(q,fn,fd)=>{ const m=minP(q); if(fd){ const d=fd(q); return d>=3?100*fn(q)/d:null; } return m?fn(q)*80/m:null; };
+  const avg=(arr,fn,fd)=>{ const xs=arr.map(q=>val(q,fn,fd)).filter(x=>x!=null); return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null; };
+  // échelle : le meilleur du groupe de poste (lui compris) quand le groupe compte au moins 3 joueurs, sinon le meilleur de l'équipe
+  const ref=grp.length>=2?[me,...grp]:team;
+  const ax=(FC_RADAR_G[g]||FC_RADAR).map(k=>RA[k]).map(([lab,fn,fd,hi])=>{
+    const xs=ref.map(q=>val(q,fn,fd)).filter(x=>x!=null); const mx=Math.max(0,...xs), mn=xs.length?Math.min(...xs):0;
+    // échelle : 0 → meilleur de l'équipe pour les volumes ; pire → meilleur pour les taux ; inversée pour la discipline
+    const lo=Math.min(mn,mx-10); const sc=x=>{ if(x==null) return null; let t; if(fd) t=mx>lo?(x-lo)/(mx-lo):1; else t=mx?x/mx:0; if(!hi) t=mx?1-x/mx:1; return Math.max(0,Math.min(1,t)); };
+    const a=val(me,fn,fd), b=avg(team,fn,fd), c=grp.length?avg(grp,fn,fd):null;
+    return {lab,fd,hi,a,b,c,sa:sc(a),sb:sc(b),sc:sc(c)}; });
+  const N=ax.length, R=108, cx=170, cy=150, ang=i=>-Math.PI/2+2*Math.PI*i/N, P=(i,r)=>[cx+r*Math.cos(ang(i)),cy+r*Math.sin(ang(i))];
+  const poly=(k,stroke,fill,dash)=>{ if(ax.every(o=>o[k]==null)) return ''; const pts=ax.map((o,i)=>P(i,R*(o[k]??0)).map(z=>z.toFixed(1)).join(',')).join(' ');
+    return `<polygon points="${pts}" fill="${fill}" stroke="${stroke}" stroke-width="2"${dash?' stroke-dasharray="4 3"':''} stroke-linejoin="round"/>`; };
+  const grid=[.25,.5,.75,1].map(f=>`<polygon points="${ax.map((o,i)=>P(i,R*f).map(z=>z.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`).join('')+ax.map((o,i)=>{ const [x,y]=P(i,R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; }).join('');
+  const fmt=o=>o.a==null?'–':o.fd?Math.round(o.a)+' %':fcF1(o.a);
+  const labels=ax.map((o,i)=>{ const [x,y]=P(i,R+16), c=Math.cos(ang(i)), anc=Math.abs(c)<.2?'middle':c>0?'start':'end', dy=Math.sin(ang(i))>.5?10:Math.sin(ang(i))<-.5?-4:3;
+    return `<text x="${x.toFixed(1)}" y="${(y+dy).toFixed(1)}" text-anchor="${anc}">${h(o.lab)}</text><text class="v" x="${x.toFixed(1)}" y="${(y+dy+11).toFixed(1)}" text-anchor="${anc}">${fmt(o)}</text>`; }).join('');
+  const dots=ax.map((o,i)=>o.sa==null?'':`<circle cx="${P(i,R*o.sa)[0].toFixed(1)}" cy="${P(i,R*o.sa)[1].toFixed(1)}" r="3" fill="var(--nissa)"/>`).join('');
+  const desc=ax.map(o=>`${o.lab} : ${fmt(o)} (équipe ${o.b==null?'–':o.fd?Math.round(o.b)+' %':fcF1(o.b)}${o.c!=null?`, ${gLab} ${o.fd?Math.round(o.c)+' %':fcF1(o.c)}`:''})`).join(' · ');
+  return `<div class="fc-radar"><svg viewBox="-85 0 510 300" role="img" aria-label="${h('Profil : '+desc)}"><title>${h(desc)}</title>${grid}${poly('sb','#1d1d1b','none',1)}${grp.length?poly('sc','#2f6fd0','rgba(47,111,208,.08)',0):''}${poly('sa','var(--nissa)','rgba(227,6,19,.18)',0)}${dots}${labels}</svg>
+    <div class="fc-lg"><span><i style="background:var(--nissa)"></i>Joueur</span><span><i style="background:#1d1d1b"></i>Moyenne équipe</span>${grp.length?`<span><i style="background:#2f6fd0"></i>Moyenne ${h(gLab)}</span>`:''}</div></div>`;
+}
 /* --- repères de la fiche : résultat, rang dans le groupe, forme, sparklines --- */
 const mRes=m=>{ const s=m&&m.data&&m.data.score; if(!s) return null; return {us:s.us,them:s.them,r:s.us>s.them?'V':s.us<s.them?'D':'N'}; };
 const resTxt=x=>x?`${x.r} ${x.us}-${x.them}`:'';
@@ -1542,12 +1612,17 @@ function renderFiche(){
       return `<tr><td>${l}</td><td class="${cls}">${f2(a)}</td><td>${f2(b)}</td><td class="${cls}">${d==null||Math.abs(d)<th?'=':(d>0?'↗':'↘')}</td></tr>`; }).join('');
     form=`<div><h4 style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Forme récente</h4><table class="fc-form"><thead><tr><th></th><th>${h(last.map(x=>x.mm.journee).join(', '))}</th><th>Saison</th><th></th></tr></thead><tbody>${rowsF}</tbody></table></div>`;
   }
+  const teamQ=pool.filter(q=>minP(q)>=minRef), grpQ=peers.filter(q=>minP(q)>=minRef);
+  const radar=mins&&teamQ.length>=3?fcRadar(p,teamQ,grpQ,minP,myG?{PI:'piliers',TA:'talonneurs','2L':'2e ligne','3L':'3e ligne',CH:'charnière',CE:'centres',B3:'back 3'}[myG]:'',myG):'';
   const band=myG?`<div class="fc-band">
       ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par 80 minutes ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk">${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
+      <div class="fc-side">
+      ${radar?`<section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Profil</h3>${radar}</section>`:''}
       <section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Repères</h3><div class="fc-tw">
         ${RK.length?`<div class="good"><h4>Top 3</h4>${top.length?`<ol>${top.map(twItem).join('')}</ol>`:'<p class="fc-note">Aucune stat dans la première moitié du groupe.</p>'}</div><div class="bad"><h4>À travailler</h4>${low.length?`<ol>${low.map(twItem).join('')}</ol>`:'<p class="fc-note">Aucune stat dans la seconde moitié du groupe.</p>'}</div>`:''}
         ${form}
       </div></section>
+      </div>
     </div>`:'';
   el.innerHTML=`<div class="card fc-ctl no-print">
     <label for="fWho">Joueur<select id="fWho">${opt}</select></label>
@@ -1592,7 +1667,7 @@ function renderFiche(){
       </div>
     </div>
     ${band}
-    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
+    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Profil : axes propres à chaque poste, par 80 min ou en % ; chaque axe va de 0 (ou du plus faible pour un %) au meilleur des joueurs du même groupe ayant assez joué (au meilleur de l’équipe si le groupe compte moins de 3 joueurs) ; pour la discipline, plus c’est loin du centre, moins il concède de pénalités · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
   </article>
   ${season?ficheAnalyse():''}
   </main>`;
@@ -1871,6 +1946,23 @@ async function exportPDF(){
     let bgRGB=[243,243,241]; try{ bgRGB=bg.match(/\d+/g).slice(0,3).map(Number); }catch(e){}
     const paintBg=()=>{ pdf.setFillColor(bgRGB[0],bgRGB[1],bgRGB[2]); pdf.rect(0,0,210,297,'F'); };
     let y=M, first=true; paintBg();
+    const fiche=main&&main.querySelector(':scope>article.fiche');
+    if(fiche){
+      // fiche joueur : page 1 = la fiche entière ; pages suivantes = analyse + évolution regroupées, réduites pour tenir sur le moins de pages possible
+      const grabs=[];
+      for(const el of [...main.children]){
+        const cv=await html2canvas(el,{scale:SC,backgroundColor:bg,logging:false,windowWidth:W+40,windowHeight:Math.max(2000,document.documentElement.scrollHeight),scrollX:0,scrollY:-window.scrollY});
+        grabs.push({cv,w:cv.width/SC*k,h:cv.height/SC*k});
+      }
+      const MINS=0.6, pages=[[grabs[0]]]; let cur=[];
+      const need=pg=>pg.reduce((a,g)=>a+g.h,0)+GAP*(pg.length-1);
+      for(const g of grabs.slice(1)){ if(cur.length&&PH/need([...cur,g])<MINS){ pages.push(cur); cur=[]; } cur.push(g); }
+      if(cur.length) pages.push(cur);
+      pages.forEach((pg,pi)=>{ if(pi){ pdf.addPage(); paintBg(); }
+        const sc=Math.min(1,PH/need(pg)); let yy=M;
+        pg.forEach(g=>{ const w=g.w*sc, hh=g.h*sc; pdf.addImage(g.cv.toDataURL('image/jpeg',0.9),'JPEG',M+(PW-w)/2,yy,w,hh,undefined,'FAST'); yy+=hh+GAP*sc; }); });
+      units.length=0;
+    }
     for(const [ui,u] of units.entries()){
       u.el.setAttribute('data-expu',ui); u.kids.forEach((ch,ci)=>ch.setAttribute('data-expk',ci));
       let geo=[];
