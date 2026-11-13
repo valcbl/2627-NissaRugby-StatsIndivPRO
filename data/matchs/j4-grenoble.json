@@ -9176,6 +9176,32 @@
   "score": {
    "us": 33,
    "them": 37
+  },
+  "bip": 37.1,
+  "bipm": {
+   "Lucas Bachelier": 14.7,
+   "Arthur Vignolles": 21.5,
+   "Nicolas Ciancio": 21.5,
+   "Leo Chauvin": 21.5,
+   "Hayden Thompson-Stringer": 21.5,
+   "Guillaume Rouet": 24.6,
+   "Christiaan Van Der Merwe": 25.7,
+   "Julien Farnoux": 27.4,
+   "Flavio Asquini": 37.1,
+   "Enzo Labadie": 37.1,
+   "Vincent Rattez": 37.1,
+   "Bautista Ezcurra": 37.1,
+   "Tyler Morgan": 37.1,
+   "Adrian Motoc": 37.1,
+   "Clement Egiziano": 37.1,
+   "Bastien Berenguel": 19.2,
+   "Iakopo Petelo-Mapu": 15.6,
+   "Zinedine Aouad": 15.6,
+   "Clément Martinez": 15.6,
+   "Etienne Falgoux": 15.6,
+   "Theo Idjellidaine": 12.5,
+   "Evan Olmstead": 11.4,
+   "Jean-Pascal Barraque": 9.7
   }
  }
 }

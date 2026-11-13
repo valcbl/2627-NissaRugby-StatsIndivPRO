@@ -8919,6 +8919,31 @@
   "score": {
    "us": 32,
    "them": 22
+  },
+  "bip": 40.8,
+  "bipm": {
+   "Adrian Motoc": 19.4,
+   "Nicolas Ciancio": 24.9,
+   "Clément Martinez": 31.9,
+   "Enzo Labadie": 37.4,
+   "Hayden Thompson-Stringer": 31.4,
+   "Theo Idjellidaine": 32.6,
+   "Bautista Ezcurra": 32.6,
+   "Bastien Berenguel": 34.8,
+   "Leo Chauvin": 9,
+   "Zinedine Aouad": 15.1,
+   "Jean-Pascal Barraque": 40.8,
+   "Francis Saili": 40.8,
+   "Arthur Vignolles": 40.8,
+   "Christiaan Van Der Merwe": 40.8,
+   "Boris Goutard": 40.8,
+   "Julien Farnoux": 40.8,
+   "Clement Egiziano": 40.8,
+   "Joel Kpoku": 21.4,
+   "Hanru Sirgel": 9.4,
+   "Jules Martinez": 9.4,
+   "Jules Gimbert": 8.2,
+   "Atila Septar": 8.2
   }
  }
 }

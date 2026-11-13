@@ -9250,6 +9250,32 @@
   "score": {
    "us": 24,
    "them": 39
+  },
+  "bip": 39.8,
+  "bipm": {
+   "Jean-Pascal Barraque": 17.3,
+   "Nicolas Ciancio": 26.4,
+   "Julien Farnoux": 35.2,
+   "Atila Septar": 28.1,
+   "Theo Idjellidaine": 30.8,
+   "Christiaan Van Der Merwe": 30.8,
+   "Leo Chauvin": 32.5,
+   "Hayden Thompson-Stringer": 33.1,
+   "Arthur Vignolles": 33.1,
+   "Evan Olmstead": 39.8,
+   "Inoke Nalaga Kurukuruvakatini": 39.8,
+   "Enzo Labadie": 39.8,
+   "Hanru Sirgel": 39.8,
+   "Francis Saili": 39.8,
+   "Clement Egiziano": 39.8,
+   "Flavio Asquini": 22.5,
+   "Zinedine Aouad": 13.4,
+   "Bautista Ezcurra": 11.7,
+   "Jules Gimbert": 9,
+   "Joel Kpoku": 9,
+   "Baptiste Moreno": 7.4,
+   "Jules Martinez": 6.7,
+   "Andy Bosseray": 6.7
   }
  }
 }

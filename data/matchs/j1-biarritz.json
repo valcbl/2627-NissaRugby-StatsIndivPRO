@@ -8410,6 +8410,32 @@
   "score": {
    "us": 5,
    "them": 37
+  },
+  "bip": 39.2,
+  "bipm": {
+   "Hanru Sirgel": 34.3,
+   "Hayden Thompson-Stringer": 25,
+   "Leo Chauvin": 25,
+   "Farai Mudariki": 25.6,
+   "Inoke Nalaga Kurukuruvakatini": 27.3,
+   "Jean-Pascal Barraque": 27.3,
+   "Lucas Bachelier": 27.3,
+   "Christiaan Van Der Merwe": 29.8,
+   "Theo Idjellidaine": 29.8,
+   "Adrian Motoc": 39,
+   "Francis Saili": 39,
+   "Hugo Sarrasin": 39,
+   "Clement Egiziano": 39,
+   "Julien Farnoux": 39,
+   "Tyler Morgan": 39,
+   "Etienne Falgoux": 14.1,
+   "Clément Martinez": 14.1,
+   "Nicolas Ciancio": 13.4,
+   "Vincent Rattez": 11.7,
+   "Flavio Asquini": 11.7,
+   "Arthur Vignolles": 11.7,
+   "Joel Kpoku": 9.3,
+   "Jules Gimbert": 9.3
   }
  }
 }

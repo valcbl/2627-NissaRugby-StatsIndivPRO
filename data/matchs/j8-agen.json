@@ -7646,6 +7646,31 @@
   "score": {
    "us": 24,
    "them": 28
+  },
+  "bip": 38.8,
+  "bipm": {
+   "Lucas Bachelier": 33.7,
+   "Farai Mudariki": 16.1,
+   "Joel Kpoku": 23.2,
+   "Etienne Falgoux": 26.1,
+   "Theo Idjellidaine": 28.5,
+   "Flavio Asquini": 29.1,
+   "Hanru Sirgel": 35.4,
+   "Clément Martinez": 35.4,
+   "Fabio Gonzalez": 12.2,
+   "Inoke Nalaga Kurukuruvakatini": 35.7,
+   "Bastien Berenguel": 38.7,
+   "Bautista Ezcurra": 38.7,
+   "Evan Olmstead": 38.7,
+   "Tyler Morgan": 38.7,
+   "Boris Goutard": 38.7,
+   "Vincent Rattez": 38.7,
+   "Beau Farrance": 22.6,
+   "Christiaan Van Der Merwe": 15.5,
+   "Jules Gimbert": 10.1,
+   "Massimo Ortolan": 9.6,
+   "Kylian Laurans": 3.3,
+   "Pat Leafa": 3.3
   }
  }
 }

@@ -963,12 +963,14 @@ function playMinutes(rows,M){
     if(cd.col==='JAUNE'&&!subs.some(s=>s.type==='JAUNE'&&K(s.out)===n&&Math.abs(s.c-c)<=5)){ subs.push({c,type:'JAUNE',out:cd.n}); subs.push({c:Math.min(end,c+10),type:'JAUNE',inn:cd.n}); } }
   subs.sort((a,b)=>a.c-b.c||(a.out?-1:1));
   const first={}; subs.forEach(s=>{ [[s.out,'out'],[s.inn,'in']].forEach(([n,w])=>{ n=K(n); if(n&&!(n in first)) first[n]={w,type:s.type}; }); });
-  const on={}, mins={};
+  const on={}, mins={}, iv={}, seg=(n,a,b)=>{ (iv[n]=iv[n]||[]).push([a,b]); };
   for(const n of M.keys()){ const f=first[n]; if(!f||f.w==='out'||(f.w==='in'&&f.type!=='REMPLACEMENT')) on[n]=0; }
   for(const s of subs){ const o=K(s.out), i=K(s.inn);
-    if(o&&o in on){ mins[o]=(mins[o]||0)+s.c-on[o]; delete on[o]; }
+    if(o&&o in on){ mins[o]=(mins[o]||0)+s.c-on[o]; seg(o,on[o],s.c); delete on[o]; }
     if(i&&!(i in on)) on[i]=s.c; }
-  for(const n in on) mins[n]=(mins[n]||0)+end-on[n];
+  for(const n in on){ mins[n]=(mins[n]||0)+end-on[n]; seg(n,on[n],end); }
+  // temps de jeu effectif de chaque joueur : ballon en jeu pendant qu'il est sur le terrain
+  if(rows.bip){ const B={}; for(const n in iv){ let t=0; for(const [a,b] of iv[n]) for(const [c,d] of rows.bip) t+=Math.max(0,Math.min(b,d)-Math.max(a,c)); B[n]=Math.round(t*10)/10; } rows.bipm=B; }
   const out={}; for(const n in mins){ const v=Math.max(0,Math.round(mins[n])); if(M.has(n)){ M.get(n).min=v; out[n]=v; } }
   return out;
 }
@@ -979,7 +981,7 @@ function parseXML(text){
   if(!inst.length) throw new Error('Aucune balise <instance> trouvée dans le XML.');
   const kid=(el,tag)=>{const c=[...el.children].find(x=>x.tagName.toLowerCase()===tag);return c?c.textContent.trim():'';};
   const all=inst.map(el=>{
-    const o={player:kid(el,'code'), t:parseFloat(kid(el,'start'))||0, g:{}}, raw={};
+    const o={player:kid(el,'code'), t:parseFloat(kid(el,'start'))||0, e:parseFloat(kid(el,'end'))||0, g:{}}, raw={};
     [...el.children].filter(x=>x.tagName.toLowerCase()==='label').forEach(lb=>{
       const gr=kid(lb,'group'), k=groupKey(gr); const tx=kid(lb,'text');
       if(k&&tx) o.g[k]=(o.g[k]?o.g[k]+', ':'')+tx;
@@ -1013,6 +1015,9 @@ function parseXML(text){
     rows.forEach(o=>{ o.t=Math.round(toMin(o.t)*60); });
     rows.clock=true; rows.end=Math.max(80,...anc.filter(a=>a.fin4).map(a=>a.c));
     rows.cards=all.filter(o=>!o.x&&ours(o.player.split(' - ')[0])&&/ - CARTON$/.test(norm(o.player))&&o.raw.JOUEUR).map(o=>({c:toMin(o.t),n:o.raw.JOUEUR[0],col:norm((o.raw['COULEUR DU CARTON']||[''])[0])}));
+    // temps de jeu effectif : séquences de jeu (ballon en jeu), converties en minutes du chrono officiel
+    rows.bip=all.filter(o=>!o.x&&norm(o.player)==='SEQUENCE DE JEU'&&o.e>o.t).map(o=>{ const a=toMin(o.t); return [a,a+(o.e-o.t)/60]; }); // début placé sur le chrono, durée réelle de la séquence
+    if(!rows.bip.length) delete rows.bip;
     rows.subs=all.filter(o=>!o.x&&ours(o.player.split(' - ')[0])&&/ - REMPLACEMENT$/.test(norm(o.player))).map(o=>({c:+((o.raw.CHRONO||[])[0]||toMin(o.t)),type:norm((o.raw['TYPE DE REMPLACEMENT']||[''])[0]),out:(o.raw['JOUEUR SORTANT']||[])[0],inn:(o.raw['JOUEUR ENTRANT']||[])[0]}));
   }
   // score du match : essais et coups de pied réussis codés au niveau des équipes
@@ -1083,7 +1088,7 @@ function compute(rows){
   const ts=rows.map(r=>r.t/60).sort((a,b)=>a-b); const tmax=Math.max(10,Math.ceil((ts[ts.length-1]||80)/10)*10);
   let ht=null, best=4;
   if(rows.clock) ht=[40,40]; else for(let i=1;i<ts.length;i++){ const gap=ts[i]-ts[i-1], mid=(ts[i]+ts[i-1])/2; if(gap>best && mid>tmax*.25 && mid<tmax*.75){best=gap;ht=[Math.round(ts[i-1]*10)/10,Math.round(ts[i]*10)/10];} }
-  return {players, events:ev, pts:PTS, team, minutes, clock:rows.clock||undefined, ht, tmax:rows.clock?Math.max(80,Math.ceil((rows.end||80)/10)*10):tmax, nbRows:rows.length, score:rows.score};
+  return {players, events:ev, pts:PTS, team, minutes, clock:rows.clock||undefined, ht, tmax:rows.clock?Math.max(80,Math.ceil((rows.end||80)/10)*10):tmax, nbRows:rows.length, score:rows.score, bip:rows.bip?Math.round(rows.bip.reduce((t,[a,b])=>t+b-a,0)*10)/10:undefined, bipm:rows.bipm&&Object.fromEntries(Object.entries(rows.bipm).filter(([n])=>M.has(n)))};
 }
 
 
@@ -1515,7 +1520,7 @@ const FC_RADAR_G={
   B3:['m','db','fr','aep','jap','plp','rec','pdb']};
 const FC_RADAR=['tac','pl','plp','ct','m','pa','ro','rop','rec','dis'];
 function fcRadar(me,team,grp,minP,gLab,g){
-  let U=''; const val=(q,fn,fd)=>{ const m=minP(q); if(fd){ const d=fd(q); return d>=3?(U?fn(q)/d:100*fn(q)/d):null; } return m?fn(q)*80/m:null; };
+  let U=''; const val=(q,fn,fd)=>{ const m=minP(q); if(fd){ const d=fd(q); return d>=3?(U?fn(q)/d:100*fn(q)/d):null; } return m?fn(q)*PER/m:null; };
   const avg=(arr,fn,fd)=>{ const xs=arr.map(q=>val(q,fn,fd)).filter(x=>x!=null); return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null; };
   // échelle : le meilleur du groupe de poste (lui compris) quand le groupe compte au moins 3 joueurs, sinon le meilleur de l'équipe
   const ref=grp.length>=2?[me,...grp]:team;
@@ -1529,7 +1534,7 @@ function fcRadar(me,team,grp,minP,gLab,g){
   const poly=(k,stroke,fill,dash)=>{ if(ax.every(o=>o[k]==null)) return ''; const pts=ax.map((o,i)=>P(i,R*(o[k]??0)).map(z=>z.toFixed(1)).join(',')).join(' ');
     return `<polygon points="${pts}" fill="${fill}" stroke="${stroke}" stroke-width="2"${dash?' stroke-dasharray="4 3"':''} stroke-linejoin="round"/>`; };
   const grid=[.25,.5,.75,1].map(f=>`<polygon points="${ax.map((o,i)=>P(i,R*f).map(z=>z.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`).join('')+ax.map((o,i)=>{ const [x,y]=P(i,R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; }).join('');
-  const fq=(o,x)=>x==null?'–':o.u?Math.round(x)+' '+o.u:o.fd?Math.round(x)+' %':fcF1(x); const fmt=o=>fq(o,o.a);
+  const fq=(o,x)=>x==null?'–':o.u?Math.round(x)+' '+o.u:o.fd?Math.round(x)+' %':fcFv(x); const fmt=o=>fq(o,o.a);
   const labels=ax.map((o,i)=>{ const [x,y]=P(i,R+16), c=Math.cos(ang(i)), anc=Math.abs(c)<.2?'middle':c>0?'start':'end', dy=Math.sin(ang(i))>.5?10:Math.sin(ang(i))<-.5?-4:3;
     return `<text x="${x.toFixed(1)}" y="${(y+dy).toFixed(1)}" text-anchor="${anc}">${h(o.lab)}</text><text class="v" x="${x.toFixed(1)}" y="${(y+dy+11).toFixed(1)}" text-anchor="${anc}">${fmt(o)}</text>`; }).join('');
   const dots=ax.map((o,i)=>o.sa==null?'':`<circle cx="${P(i,R*o.sa)[0].toFixed(1)}" cy="${P(i,R*o.sa)[1].toFixed(1)}" r="3" fill="var(--nissa)"/>`).join('');
@@ -1543,6 +1548,12 @@ const resTxt=x=>x?`${x.r} ${x.us}-${x.them}`:'';
 const DISC_LAB=['Faute','Carton jaune','Carton rouge','Carton blanc'];
 const fcF1=x=>x==null||!isFinite(x)?'–':(Math.round(x*10)/10).toString().replace('.',',');
 // stats classées dans le groupe de poste : [libellé, numérateur, dénominateur (taux) ou null (par 80 min), plus = mieux]
+// temps de jeu effectif (ballon en jeu pendant que le joueur est sur le terrain) : les volumes de la fiche sont ramenés à 1 minute de jeu effectif
+const PER=1, PERL='min eff.';
+const fcFv=x=>x==null||!isFinite(x)?'–':(Math.round(x*100)/100).toFixed(2).replace('.',',');
+const bipOf=(mm,nm)=>{ const b=mm&&mm.data&&mm.data.bipm; if(b){ if(b[nm]!=null) return +b[nm]; const e=Object.entries(b).find(([k])=>canon(k)===nm); if(e) return +e[1]; }
+  const mn=+(((mm&&mm.data&&mm.data.minutes)||{})[nm]||0); return mn*((mm&&mm.data&&mm.data.bip)||36.8)/80; };
+const bipSeason=nm=>MATCHES.reduce((s,mm)=>s+bipOf(mm,nm),0);
 const FC_RANK=[
   ['Tâches',p=>v(p,'taches'),null,1],
   ['Plaquages réussis',p=>v(p,'plaq_ok'),null,1],
@@ -1562,13 +1573,13 @@ const FC_RANK=[
   ['Aérien gagné',p=>v(p,'aerien_pos'),null,1],
   ['Pertes de balle',p=>v(p,'pdb'),null,0],
   ['Pénalités',p=>v(p,'faute'),null,0]];
-function fcRanks(me,peers,minOfP,minRef){
+function fcRanks(me,peers,minOfP,minRef,expOf=minOfP){
   // peers : joueurs du groupe (sans « me ») avec assez de minutes ; renvoie une ligne par stat utile
   const cand=[me,...peers.filter(q=>minOfP(q)>=minRef)];
   if(cand.length<2) return [];
   const out=[];
   for(const [lab,fn,fd,hi] of FC_RANK){
-    const val=q=>{ const m=minOfP(q); if(fd){ const d=fd(q); return d>=3?100*fn(q)/d:null; } return m?fn(q)*80/m:null; };
+    const val=q=>{ const m=expOf(q); if(fd){ const d=fd(q); return d>=3?100*fn(q)/d:null; } return m?fn(q)*PER/m:null; };
     const vals=cand.map(q=>({q,x:val(q)})).filter(o=>o.x!=null);
     const mine=vals.find(o=>o.q===me); if(!mine||vals.length<2) continue;
     if(!cand.some(q=>fn(q)>0)) continue;
@@ -1589,7 +1600,7 @@ function fcSpark(vals,lab,lowGood){
   const first=roll[Math.min(2,roll.length-1)].x, last=roll[roll.length-1].x, up=last>first*1.05+0.01, dn=last<first*0.95-0.01;
   const trend=up?(lowGood?'bad':'good'):dn?(lowGood?'good':'bad'):'';
   const col=trend==='good'?'var(--good)':trend==='bad'?'var(--bad)':'var(--ink)';
-  const tip=lab+' — '+pts.map(o=>o.t+' : '+fcF1(o.x)).join(' · ');
+  const tip=lab+' — '+pts.map(o=>o.t+' : '+(Math.abs(o.x)<10?fcFv(o.x):fcF1(o.x))).join(' · ');
   return `<span class="fc-spk" title="${h(tip)}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${h(tip)}">${pts.map(o=>`<circle cx="${xs(o.i).toFixed(1)}" cy="${ys(o.x).toFixed(1)}" r="1.8" fill="var(--muted)" opacity=".55"/>`).join('')}<polyline fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="${roll.map(o=>xs(o.i).toFixed(1)+','+ys(o.x).toFixed(1)).join(' ')}"/></svg>${up?'↗':dn?'↘':'→'}</span>`;
 }
 const fcStack=segs=>{ const t=segs.reduce((a,s)=>a+s[1],0); if(!t) return '';
@@ -1610,13 +1621,14 @@ function renderFiche(){
   const perMatch=list.map(mm=>({mm,mn:minOf(mm,n),pl:mapPlayers(mm.data.players).find(x=>x.name===n)}));
   const mins=season?perMatch.reduce((s,x)=>s+(+x.mn||0),0):(minOf(m,n)||0);
   const nbm=season?perMatch.filter(x=>(+x.mn||0)>0||x.pl).length:((mins||p.actions)?1:0);
+  const bipm=season?perMatch.reduce((s,x)=>s+((+x.mn||0)>0||x.pl?bipOf(x.mm,n):0),0):bipOf(m,n);
   const [nom,pre]=nameParts(n), photo=PHOTOS[photoId(n)], myG=grpOf(n);
   const gpool=myG?pool.filter(q=>grpOf(q.name)===myG):[];
   const ring=(key,lab)=>{ const [fn,fd]=FC_RATE[key], num=fn(p), den=fd(p), x=den?Math.round(100*num/den):null;
     return fcRing(num,den,lab,fcRef('Équipe',pool,key,x)+(myG?fcRef(GROUPES[myG].replace(/ \(.*\)/,''),gpool,key,x):'')); };
   const cards=[v(p,'cb')?`<i class="cdot w"></i>${v(p,'cb')} blanc${v(p,'cb')>1?'s':''}`:'',v(p,'cj')?`<i class="cdot y"></i>${v(p,'cj')} jaune${v(p,'cj')>1?'s':''}`:'',v(p,'cr')?`<i class="cdot r"></i>${v(p,'cr')} rouge${v(p,'cr')>1?'s':''}`:''].filter(Boolean).join(' ');
   const plNeutre=Math.max(0,v(p,'plaq_ok')-v(p,'plaq_dom')-v(p,'plaq_subi'));
-  const t80=mins?(Math.round((FC_TOFF(p)+FC_TDEF(p))*80/mins*10)/10):null;
+  const t80=bipm?(FC_TOFF(p)+FC_TDEF(p))*PER/bipm:null;
   const scopeTxt=season?`Saison 2026-2027 · ${nbm} match${nbm>1?'s':''} joué${nbm>1?'s':''}`:label(m)+(mRes(m)?` · ${({V:'Victoire',D:'Défaite',N:'Nul'})[mRes(m).r]} ${mRes(m).us}-${mRes(m).them}`:'');
   const opt=GORDER.map(g=>`<optgroup label="${GROUPES[g]}">${names.filter(x=>grpOf(x)===g).map(x=>`<option value="${h(x)}"${x===n?' selected':''}>${h(x)}</option>`).join('')}</optgroup>`).join('')+(names.some(x=>!grpOf(x))?`<optgroup label="Sans poste">${names.filter(x=>!grpOf(x)).map(x=>`<option value="${h(x)}"${x===n?' selected':''}>${h(x)}</option>`).join('')}</optgroup>`:'');
   const scopeOpts=`<option value="saison"${season?' selected':''}>Saison (${list.length} matchs)</option>`+[...list].reverse().map(x=>`<option value="${h(x.id)}"${x.id===FICHE.scope?' selected':''}>${h(label(x))}</option>`).join('');
@@ -1629,17 +1641,17 @@ function renderFiche(){
   const strip=season?`<div class="fc-strip" style="--c:${Math.ceil(nM/rowsD)};--cm:${Math.ceil(nM/rowsM)}" aria-label="Matchs de la saison">${perMatch.map(({mm,mn,pl})=>{ const rr=mRes(mm), np=!((+mn||0)>0||pl);
     return `<div class="mt ${rr?rr.r:''}${np?' np':''}" title="${h(label(mm))}${rr?' · '+resTxt(rr):''}${np?' · n’a pas joué':mn!=null?' · '+mn+' min':''}"><b>${h(mm.journee||'')}</b><span>${h((mm.adversaire||'').replace(' Rugby','').slice(0,11))}</span>${rr?`<em>${rr.r} ${rr.us}-${rr.them}</em>`:''}<i>${np?'—':mn!=null?mn+'′':''}</i></div>`; }).join('')}</div>`:'';
   // ---- évolution par bloc (saison) ----
-  const ser=f=>perMatch.map(({mm,mn,pl})=>({t:`${mm.journee||''} ${mm.adversaire||''}`.trim(),x:pl&&(+mn||0)>0?f(pl,+mn):null}));
+  const ser=f=>perMatch.map(({mm,mn,pl})=>({t:`${mm.journee||''} ${mm.adversaire||''}`.trim(),x:pl&&(+mn||0)>0?f(pl,bipOf(mm,n)):null}));
   const r3=(a,b)=>(q,mn)=>{ const d=b(q); return d>=2?100*a(q)/d:null; };
   const SPK=season&&played.length>=3?{
-    act:fcSpark(ser((q,mn)=>(FC_TOFF(q)+FC_TDEF(q))*80/mn),'Tâches / 80 min'),
+    act:fcSpark(ser((q,mn)=>(FC_TOFF(q)+FC_TDEF(q))*PER/mn),'Tâches / '+PERL),
     att:fcSpark(ser(r3(q=>v(q,'duel_pos'),q=>v(q,'duel_pos')+v(q,'duel_neg'))),'Contacts gagnés (%)'),
     ro:fcSpark(ser(r3(q=>v(q,'ro_pos'),q=>v(q,'ro'))),'Efficacité au ruck (%)'),
     def:fcSpark(ser(r3(q=>v(q,'plaq_ok'),q=>v(q,'plaq_ok')+v(q,'plaq_rate'))),'Plaquages réussis (%)'),
-    rd:fcSpark(ser((q,mn)=>v(q,'rd')*80/mn),'Rucks défensifs / 80 min'),
+    rd:fcSpark(ser((q,mn)=>v(q,'rd')*PER/mn),'Rucks défensifs / '+PERL),
     ct:fcSpark(ser(r3(q=>v(q,'tl_g')+v(q,'ts_g'),q=>v(q,'tl_n')+v(q,'ts_n'))),'Touche, lancer + saut (%)'),
     jap:fcSpark(ser(r3(q=>v(q,'jap_pos'),q=>v(q,'jap_pos')+v(q,'jap_neg'))),'Jeu au pied réussi (%)'),
-    dis:fcSpark(ser((q,mn)=>v(q,'faute')*80/mn),'Pénalités / 80 min',1)}:{};
+    dis:fcSpark(ser((q,mn)=>v(q,'faute')*PER/mn),'Pénalités / '+PERL,1)}:{};
   // ---- détail discipline : type, origine, période ----
   const evs=(season?list:[m]).flatMap(mm=>(mm.data.events||[]).filter(e=>e[4]===n&&DISC_LAB.includes(e[2])&&!e[5]));
   const per=[0,0,0,0]; evs.forEach(e=>{ per[Math.min(3,Math.floor((+e[0]||0)/20))]++; });
@@ -1661,32 +1673,33 @@ function renderFiche(){
   const arr=[v(p,'ro_1er'),v(p,'ro_r2'),v(p,'ro_r3'),v(p,'ro_r4')], arrN=arr.reduce((a,b)=>a+b,0), arrAvg=arrN?(arr[0]+2*arr[1]+3*arr[2]+4*arr[3])/arrN:null;
   // ---- rang dans le groupe ----
   const minP=season?(q=>pmin(q)||0):(q=>+minOf(m,q.name)||0);
+  const bipP=season?(q=>bipSeason(q.name)):(q=>bipOf(m,q.name));
   const minRef=season?120:20;
   const peers=gpool.filter(q=>q.name!==n);
-  const RK=myG&&mins?fcRanks(p,peers,minP,minRef):[];
+  const RK=myG&&mins?fcRanks(p,peers,minP,minRef,bipP):[];
   const nGrp=RK.length?Math.max(...RK.map(r=>r.N)):0;
   const ord=x=>x===1?'1er':x+'e';
-  const rkList=RK.map(r=>{ const cls=r.pc==null?'':r.pc>=.67?'g':r.pc<=.33?'r':''; return `<li class="${cls}" title="${h(r.lab)} : ${fcF1(r.x)}${r.rate?' %':' / 80 min'} · moyenne du groupe ${fcF1(r.avg)}${r.rate?' %':''}"><span>${h(r.lab)}${r.hi?'':' <small>(moins = mieux)</small>'}</span><b>${r.rate?Math.round(r.x)+'%':fcF1(r.x)}</b><i class="avg">${r.rate?Math.round(r.avg)+'%':fcF1(r.avg)}</i><span class="dots" aria-hidden="true">${Array.from({length:r.N},(_,i)=>`<i class="${i===r.N-r.rank?'me':''}"></i>`).join('')}</span><em>${ord(r.rank)}/${r.N}</em></li>`; }).join('');
+  const rkList=RK.map(r=>{ const cls=r.pc==null?'':r.pc>=.67?'g':r.pc<=.33?'r':''; return `<li class="${cls}" title="${h(r.lab)} : ${r.rate?fcF1(r.x):fcFv(r.x)}${r.rate?' %':' / '+PERL} · moyenne du groupe ${r.rate?fcF1(r.avg):fcFv(r.avg)}${r.rate?' %':''}"><span>${h(r.lab)}${r.hi?'':' <small>(moins = mieux)</small>'}</span><b>${r.rate?Math.round(r.x)+'%':fcFv(r.x)}</b><i class="avg">${r.rate?Math.round(r.avg)+'%':fcFv(r.avg)}</i><span class="dots" aria-hidden="true">${Array.from({length:r.N},(_,i)=>`<i class="${i===r.N-r.rank?'me':''}"></i>`).join('')}</span><em>${ord(r.rank)}/${r.N}</em></li>`; }).join('');
   const minVol=season?5:2; const sig=RK.filter(r=>!r.hi||r.raw>=minVol);
   const top=[...sig].filter(r=>r.pc>=.5&&r.rank<=Math.ceil(r.N/2)).sort((a,b)=>b.pc-a.pc||a.rank-b.rank).slice(0,3);
   const low=[...RK].filter(r=>r.pc<.5&&!top.includes(r)&&(r.raw>0||!r.hi||r.avg>=.5)).sort((a,b)=>a.pc-b.pc||b.rank-a.rank).slice(0,3);
-  const twItem=r=>`<li><b>${h(r.lab)}</b> · ${r.rate?Math.round(r.x)+' %':fcF1(r.x)+' / 80'} <small>(groupe ${r.rate?Math.round(r.avg)+' %':fcF1(r.avg)}) · ${ord(r.rank)} sur ${r.N}</small></li>`;
+  const twItem=r=>`<li><b>${h(r.lab)}</b> · ${r.rate?Math.round(r.x)+' %':fcFv(r.x)+' / '+PERL} <small>(groupe ${r.rate?Math.round(r.avg)+' %':fcFv(r.avg)}) · ${ord(r.rank)} sur ${r.N}</small></li>`;
   // ---- forme récente : 3 derniers matchs joués vs saison ----
   let form='';
   if(season&&played.length>=4){
-    const last=played.slice(-3), agg=arr2=>{ const o={}; arr2.forEach(x=>{ if(x.pl) for(const k in x.pl) if(typeof x.pl[k]==='number') o[k]=(o[k]||0)+x.pl[k]; }); o.__m=arr2.reduce((a,x)=>a+(+x.mn||0),0); return o; };
+    const last=played.slice(-3), agg=arr2=>{ const o={}; arr2.forEach(x=>{ if(x.pl) for(const k in x.pl) if(typeof x.pl[k]==='number') o[k]=(o[k]||0)+x.pl[k]; }); o.__m=arr2.reduce((a,x)=>a+(+x.mn||0),0); o.__b=arr2.reduce((a,x)=>a+bipOf(x.mm,n),0); return o; };
     const L=agg(last), S=agg(played);
-    const FM=[['Tâches / 80',q=>q.__m?(FC_TOFF(q)+FC_TDEF(q))*80/q.__m:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / 80',q=>q.__m?v(q,'m_tot')*80/q.__m:null,1,''],['Pénalités / 80',q=>q.__m?v(q,'faute')*80/q.__m:null,0,'']];
-    const rowsF=FM.map(([l,f,hi,u])=>{ const a=f(L), b=f(S); if(a==null&&b==null) return ''; const d=a!=null&&b!=null?a-b:null, th=u?3:Math.max(.3,Math.abs(b||0)*.1);
+    const FM=[['Tâches / '+PERL,q=>q.__b?(FC_TOFF(q)+FC_TDEF(q))*PER/q.__b:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / '+PERL,q=>q.__b?v(q,'m_tot')*PER/q.__b:null,1,''],['Pénalités / '+PERL,q=>q.__b?v(q,'faute')*PER/q.__b:null,0,'']];
+    const rowsF=FM.map(([l,f,hi,u])=>{ const a=f(L), b=f(S); if(a==null&&b==null) return ''; const d=a!=null&&b!=null?a-b:null, th=u?3:Math.max(.02,Math.abs(b||0)*.1);
       const cls=d==null||Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r';
-      const f2=x=>x==null?'–':u?Math.round(x)+u:fcF1(x);
+      const f2=x=>x==null?'–':u?Math.round(x)+u:fcFv(x);
       return `<tr><td>${l}</td><td class="${cls}">${f2(a)}</td><td>${f2(b)}</td><td class="${cls}">${d==null||Math.abs(d)<th?'=':(d>0?'↗':'↘')}</td></tr>`; }).join('');
     form=`<div><h4 style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Forme récente</h4><table class="fc-form"><thead><tr><th></th><th>${h(last.map(x=>x.mm.journee).join(', '))}</th><th>Saison</th><th></th></tr></thead><tbody>${rowsF}</tbody></table></div>`;
   }
   const teamQ=pool.filter(q=>minP(q)>=minRef), grpQ=peers.filter(q=>minP(q)>=minRef);
-  const radar=mins&&teamQ.length>=3?fcRadar(p,teamQ,grpQ,minP,myG?{PI:'piliers',TA:'talonneurs','2L':'2e ligne','3L':'3e ligne',CH:'charnière',CE:'centres',B3:'back 3'}[myG]:'',myG):'';
+  const radar=mins&&teamQ.length>=3?fcRadar(p,teamQ,grpQ,bipP,myG?{PI:'piliers',TA:'talonneurs','2L':'2e ligne','3L':'3e ligne',CH:'charnière',CE:'centres',B3:'back 3'}[myG]:'',myG):'';
   const band=myG?`<div class="fc-band">
-      ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par 80 minutes ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk"><li class="hdr"><span>Par 80 min ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li><li class="hdr"><span>Par 80 min ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li>${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
+      ${fcSec('Dans son groupe',RK.length?`</ul><p class="fc-note" style="margin-bottom:6px">Classement parmi les ${h(GROUPES[myG].toLowerCase())} ${season?'ayant joué au moins 120 min sur la saison':'ayant joué au moins 20 min sur ce match'} (${nGrp} joueurs), par minute de jeu effectif ou en % (3 tentatives minimum). La barre montre sa place, du dernier à gauche au 1er à droite.</p><ul class="fc-rk"><li class="hdr"><span>Par min eff. ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li><li class="hdr"><span>Par min eff. ou %</span><b>Lui</b><i>Groupe</i><span></span><em>Rang</em></li>${rkList}`:`</ul><p class="fc-note">${mins?'Pas assez de joueurs du groupe sur ce périmètre pour établir un classement.':'Pas de minutes de jeu sur ce périmètre.'}</p><ul>`)}
       <div class="fc-side">
       ${radar?`<section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Profil</h3>${radar}</section>`:''}
       <section class="fc-sec"><h3><svg class="hex" viewBox="0 0 16 18" aria-hidden="true"><polygon points="8,0 16,3.2 14.7,14 8,18 1.3,14 0,3.2" fill="var(--nissa)"/></svg>Repères</h3><div class="fc-tw">
@@ -1717,14 +1730,14 @@ function renderFiche(){
       <div class="fc-boxes">
         <div><b>${nbm||'–'}</b><span>match${nbm>1?'s':''}</span></div>
         <div><b>${mins||'–'}</b><span>minutes</span></div>
-        ${v(p,'pts')||!isFwd({name:n})?`<div><b>${v(p,'pts')}</b><span>points</span></div>`:`<div><b>${t80==null?'–':String(t80).replace('.',',')}</b><span>tâches / 80 min</span></div>`}
+        ${v(p,'pts')||!isFwd({name:n})?`<div><b>${v(p,'pts')}</b><span>points</span></div>`:`<div><b>${t80==null?'–':fcFv(t80)}</b><span>tâches / min eff.</span></div>`}
       </div>
     </header>
     ${!p.actions?`<p class="fc-empty">Aucune action codée pour ${h(n)} sur ce périmètre.</p>`:''}
     ${strip}
     <div class="fc-cols">
       <div class="fc-col">
-        ${fcSec('Activité',fcRow('Tâches off',FC_TOFF(p))+fcRow('Tâches déf',FC_TDEF(p))+fcRow('Actions de combat',FC_COMBAT(p))+fcRow('Tâches / 80 min',t80),'',SPK.act)}
+        ${fcSec('Activité',fcRow('Tâches off',FC_TOFF(p))+fcRow('Tâches déf',FC_TDEF(p))+fcRow('Actions de combat',FC_COMBAT(p))+fcRow('Jeu effectif',bipm?Math.round(bipm)+' min':0)+fcRow('Tâches / min eff.',t80==null?null:fcFv(t80)),'',SPK.act)}
         ${fcSec('Attaque',fcPair('Contacts',p,'duel_pos','duel_neg')+fcRow('Mètres gagnés',v(p,'m_tot'))+fcRow('Mètres après contact',v(p,'m_ap'))+'<li class="sp"></li>'+fcPair('Passes',p,'passe_pos','passe_neg')+fcPair('Offloads',p,'off_pos','off_neg')+fcRow('Passes décisives',v(p,'passe_dec'),'pos'),ring('att','contacts gagnés'),SPK.att)
           .replace('</div></section>',`</div><div class="fc-mini"><div><b>${v(p,'pdb')}</b><span>Pertes de balle</span></div><div><b>${v(p,'franch')}</b><span>Breaks</span></div><div><b>${v(p,'defbattu')}</b><span>Déf. battus</span></div></div></section>`)}
         ${fcSec('Ruck offensif',fcRow('Bonnes attitudes',v(p,'ro_pos'),'pos')+fcRow('Attitudes mauvaises',v(p,'ro_neg'),'neg')+'<li class="hd"><span>Arrivée</span></li>'+fcRow('1er',v(p,'ro_1er'),'ind')+fcRow('2e',v(p,'ro_r2'),'ind')+fcRow('3e et +',v(p,'ro_r3')+v(p,'ro_r4'),'ind')+fcRow('Rang moyen',arrAvg==null?0:fcF1(arrAvg),'ind')+'<li class="sp"></li>'+fcRow('Rucks porteur',v(p,'rk'))+fcRow('Ballons rapides 0-3 s',v(p,'rk')?`${v(p,'rk_03')} · ${pct(v(p,'rk_03'),v(p,'rk'))} %`:0)+(v(p,'rk')?fcRow('Lents +6 s · perdus',`${v(p,'rk_6p')} · ${v(p,'rk_perdu')}`,'ind'):''),ring('ro','efficacité'),SPK.ro)}
@@ -1738,7 +1751,7 @@ function renderFiche(){
       </div>
     </div>
     ${band}
-    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Distance moyenne JAP = distance en ligne droite entre le départ et l’arrivée du ballon, sur les coups de pied du jeu courant (3 minimum) · Profil : axes propres à chaque poste, par 80 min ou en % ; chaque axe va de 0 (ou du plus faible pour un %) au meilleur des joueurs du même groupe ayant assez joué (au meilleur de l’équipe si le groupe compte moins de 3 joueurs) ; pour la discipline, plus c’est loin du centre, moins il concède de pénalités · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
+    <p class="fc-foot">Tâches off = rucks offensifs, passes, offloads, contacts, pertes de balle, franchissements et défenseurs battus · Tâches déf = plaquages (réussis et manqués), assistants, rucks défensifs et ballons récupérés · Actions de combat = plaquages, assistants, rucks offensifs et défensifs, contacts · Plaquages + dominants, = neutres, − subis · Rucks porteur = rucks formés quand le joueur va au sol · Rang d’arrivée moyen : 1 = toujours premier au ruck · Courbes : chaque point est un match, la ligne la moyenne glissante sur 3 matchs (vert = progrès, rouge = baisse) · Pénalités par période : minute du chrono officiel · Jeu effectif = temps où le ballon est en jeu pendant que le joueur est sur le terrain (séquences de jeu de l’export officiel) ; les volumes « / min eff. » sont donnés par minute de jeu effectif · Distance moyenne JAP = distance en ligne droite entre le départ et l’arrivée du ballon, sur les coups de pied du jeu courant (3 minimum) · Profil : axes propres à chaque poste, par 80 min ou en % ; chaque axe va de 0 (ou du plus faible pour un %) au meilleur des joueurs du même groupe ayant assez joué (au meilleur de l’équipe si le groupe compte moins de 3 joueurs) ; pour la discipline, plus c’est loin du centre, moins il concède de pénalités · Sous chaque cercle : % de toute l’équipe puis des joueurs du même groupe${myG?` (${h(GROUPES[myG])})`:''} sur le même périmètre, toutes leurs actions cumulées ; à droite, l’écart du joueur en points : vert = au moins 3 points au-dessus, rouge = au moins 3 points en dessous.</p>
   </article>
   ${season?ficheAnalyse():''}
   </main>`;
@@ -1785,23 +1798,23 @@ function ficheAnalyse(){
   const weak=[...signif].filter(r=>r.hi?r.mv<(r.avg||0):r.mv>(r.avg||0)).sort((a,b)=>a.pc-b.pc).slice(0,3);
   const rates=FRATES.map(([lab,f,n,g,w])=>({lab,x:f(me),n:n(me),g,w})).filter(r=>r.n>=3);
   // match par match
-  const pm=list.map(m=>{ const p=mapPlayers(m.data.players).find(x=>x.name===me.name); const mn=(MIN[me.name]||{})[colOf(m)]??(Object.entries(m.data.minutes||{}).find(([n])=>canon(n)===me.name)||[])[1]; return {m,p,mn}; });
+  const pm=list.map(m=>{ const p=mapPlayers(m.data.players).find(x=>x.name===me.name); const mn=(MIN[me.name]||{})[colOf(m)]??(Object.entries(m.data.minutes||{}).find(([n])=>canon(n)===me.name)||[])[1]; return {m,p,mn,b:bipOf(m,me.name)}; });
   const played=pm.filter(x=>x.p||x.mn);
   const k=`<div class="kpis">${kpi('Matchs joués',played.length,`sur ${list.length} matchs importés`,null)}${kpi('Minutes',mins||'–',mins&&played.length?`${Math.round(mins/played.length)} min par match`:'',null)}${kpi('Tâches / 80 min',f1(per(v(me,'taches'))),`${v(me,'taches')} tâches au total`,null)}${kpi('Plaquage',pct(v(me,'plaq_ok'),v(me,'plaq_ok')+v(me,'plaq_rate'))+' %',`${v(me,'plaq_ok')} / ${v(me,'plaq_ok')+v(me,'plaq_rate')} réussis`,status(pct(v(me,'plaq_ok'),v(me,'plaq_ok')+v(me,'plaq_rate')),90,80))}${kpi('Duels au contact',pct(v(me,'duel_pos'),v(me,'duel_pos')+v(me,'duel_neg'))+' %',`${v(me,'duel_pos')} gagnés sur ${v(me,'duel_pos')+v(me,'duel_neg')}`,status(pct(v(me,'duel_pos'),v(me,'duel_pos')+v(me,'duel_neg')),75,65))}${kpi('Mètres / 80 min',f1(per(v(me,'m_tot'))),`${v(me,'m_tot')} m au total`,null)}${kpi('Fautes',v(me,'faute'),[v(me,'cj')?v(me,'cj')+' CJ':'',v(me,'cr')?v(me,'cr')+' CR':''].filter(Boolean).join(' · ')||'aucun carton',v(me,'cr')||v(me,'cj')?['bad','Carton']:null)}${v(me,'pts')?kpi('Points',v(me,'pts'),`${v(me,'essai')} essai${v(me,'essai')>1?'s':''}`,null):''}</div>`;
   const ret=retenir([...strong.map(r=>['good','Point fort',`${r.lab} : ${f1(r.mv)} / 80 min (moyenne ${f1(r.avg)}) · ${r.rank}e sur ${r.n}.`]),...weak.map(r=>['bad','À travailler',`${r.lab} : ${f1(r.mv)} / 80 min (moyenne ${f1(r.avg)}) · ${r.rank}e sur ${r.n}.`])]).replace('<h3>À retenir</h3>','<h3>Points forts et axes de travail</h3>');
   const rateC=rates.length?breakdown('Taux de réussite','Saison, sur toutes ses actions (3 tentatives minimum).',rates.map(r=>({n:r.lab,e:`${r.n} tentatives`,v:r.x||0,t:r.x+' %',c:r.x>=r.g?C.b1:r.x>=r.w?C.b2:C.red}))):'';
   const t80=`<div class="card"><h3>Par 80 minutes</h3><p class="sub">Comparé aux ${refLab} ayant joué au moins 120 minutes (${grp.length} joueur${grp.length>1?'s':''}). Rang : 1 = meilleur${mins<120?' · temps de jeu encore faible, à interpréter avec prudence':''}.</p><div class="tw"><table><thead><tr><th>Stat</th><th>Total</th><th>Joueur / 80</th><th>Moyenne / 80</th><th>Écart</th><th>Rang</th></tr></thead><tbody>${rows80.map(r=>{ const d=r.mv!=null&&r.avg!=null?r.mv-r.avg:null; const good=d==null?'':(r.hi?d>0:d<0)?'g':(r.hi?d<0:d>0)?'r':''; return `<tr><td>${h(r.lab)}${r.hi?'':' <span class="d">(moins = mieux)</span>'}</td><td>${r.raw}</td><td class="pct">${f1(r.mv)}</td><td class="d">${f1(r.avg)}</td><td class="pct ${good}">${d==null?'–':(d>0?'+':'')+f1(d)}</td><td>${r.rank?r.rank+' / '+r.n:'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
-  const evo=stacked('Actions par match, par 80 minutes','Défense, attaque, ruck et conquête ramenés à 80 minutes de jeu · minutes jouées à droite.',[['Défense',C.b1],['Attaque','var(--nissa)'],['Ruck',C.b2],['Conquête & pied',C.b3]],pm.map(({m,p,mn})=>{ p=p||{}; let d=v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'recup'), a=v(p,'duel_pos')+v(p,'duel_neg')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'defbattu')+v(p,'pdb'), r=v(p,'ro')+v(p,'rd'), c=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'jap_pos')+v(p,'jap_neg')+v(p,'aerien_pos')+v(p,'aerien_neg');
-    const k80=mn>0?80/mn:0, R1=x=>Math.round(x*k80*10)/10; [d,a,r,c]=[d,a,r,c].map(R1);
-    return {name:`${m.journee||''} ${m.adversaire||''}`.trim(),tot:Math.round((d+a+r+c)*10)/10,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
-  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Score</th><th>Min.</th><th>Tâches</th><th>Tâches/80</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn})=>{ if(!p&&!mn) return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td colspan="14" class="d">n’a pas joué</td></tr>`; p=p||{};
-    return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td>${mn??'–'}</td><td>${v(p,'taches')}</td><td class="pct">${mn?f1(v(p,'taches')*80/mn):'–'}</td><td>${fr(v(p,'plaq_ok'),v(p,'plaq_ok')+v(p,'plaq_rate'))}</td><td class="${v(p,'plaq_rate')>=2?'r':''}">${v(p,'plaq_rate')||'–'}</td><td>${fr(v(p,'duel_pos'),v(p,'duel_pos')+v(p,'duel_neg'))}</td><td>${v(p,'m_tot')||'–'}</td><td>${v(p,'ro')?fr(v(p,'ro_pos'),v(p,'ro')):'–'}</td><td class="${v(p,'pdb')>=2?'r':''}">${v(p,'pdb')||'–'}</td><td class="${v(p,'faute')>=2||v(p,'cj')||v(p,'cr')?'r':''}">${v(p,'faute')||'–'}${v(p,'cr')?' CR':v(p,'cj')?' CJ':''}</td>${fwd?`<td>${v(p,'tl_n')?'L '+fr(v(p,'tl_g'),v(p,'tl_n')):''}${v(p,'ts_n')?' S '+fr(v(p,'ts_g'),v(p,'ts_n')):''}${!v(p,'tl_n')&&!v(p,'ts_n')?'–':''}</td><td>${v(p,'mf_n')+v(p,'md_n')||'–'}</td>`:`<td>${v(p,'jap_pos')+v(p,'jap_neg')?fr(v(p,'jap_pos'),v(p,'jap_pos')+v(p,'jap_neg')):'–'}</td><td>${v(p,'aerien_pos')+v(p,'aerien_neg')?fr(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')):'–'}</td>`}<td>${v(p,'pts')||'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
+  const evo=stacked('Actions par minute de jeu effectif','Défense, attaque, ruck et conquête par minute de jeu effectif · minutes jouées à droite.',[['Défense',C.b1],['Attaque','var(--nissa)'],['Ruck',C.b2],['Conquête & pied',C.b3]],pm.map(({m,p,mn,b})=>{ p=p||{}; let d=v(p,'plaq_ok')+v(p,'plaq_rate')+v(p,'ast_pos')+v(p,'ast_neg')+v(p,'recup'), a=v(p,'duel_pos')+v(p,'duel_neg')+v(p,'passe_pos')+v(p,'passe_neg')+v(p,'off_pos')+v(p,'off_neg')+v(p,'defbattu')+v(p,'pdb'), r=v(p,'ro')+v(p,'rd'), c=v(p,'tl_n')+v(p,'ts_n')+v(p,'tc_n')+v(p,'jap_pos')+v(p,'jap_neg')+v(p,'aerien_pos')+v(p,'aerien_neg');
+    const k80=b>0&&mn>0?PER/b:0, R1=x=>Math.round(x*k80*100)/100; [d,a,r,c]=[d,a,r,c].map(R1);
+    return {name:`${m.journee||''} ${m.adversaire||''}`.trim(),tot:Math.round((d+a+r+c)*100)/100,pc:0,pcTxt:mn!=null?mn+'\'':'',cls:'',segs:[{n:'Défense',v:d,c:C.b1},{n:'Attaque',v:a,c:'var(--nissa)'},{n:'Ruck',v:r,c:C.b2},{n:'Conquête & pied',v:c,c:C.b3}]}; }),{keep:1}).replace(/<span class="pbadge empty"><\/span>/g,'');
+  const tbm=`<div class="card"><h3>Match par match</h3><div class="tw"><table><thead><tr><th>Match</th><th>Score</th><th>Min.</th><th>Tâches</th><th>Tâches/min eff.</th><th>Plaquages</th><th>Manqués</th><th>Contacts +</th><th>Mètres</th><th>Ruck</th><th>PDB</th><th>Fautes</th>${fwd?'<th>Touche</th><th>Mêlées</th>':'<th>JAP</th><th>Aérien</th>'}<th>Pts</th></tr></thead><tbody>${pm.map(({m,p,mn,b})=>{ if(!p&&!mn) return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td colspan="14" class="d">n’a pas joué</td></tr>`; p=p||{};
+    return `<tr><td>${h(m.journee||'')} ${h(m.adversaire||'')}</td><td class="${(mRes(m)||{}).r==='V'?'g':(mRes(m)||{}).r==='D'?'r':''}">${resTxt(mRes(m))||'–'}</td><td>${mn??'–'}</td><td>${v(p,'taches')}</td><td class="pct">${mn&&b?fcFv(v(p,'taches')*PER/b):'–'}</td><td>${fr(v(p,'plaq_ok'),v(p,'plaq_ok')+v(p,'plaq_rate'))}</td><td class="${v(p,'plaq_rate')>=2?'r':''}">${v(p,'plaq_rate')||'–'}</td><td>${fr(v(p,'duel_pos'),v(p,'duel_pos')+v(p,'duel_neg'))}</td><td>${v(p,'m_tot')||'–'}</td><td>${v(p,'ro')?fr(v(p,'ro_pos'),v(p,'ro')):'–'}</td><td class="${v(p,'pdb')>=2?'r':''}">${v(p,'pdb')||'–'}</td><td class="${v(p,'faute')>=2||v(p,'cj')||v(p,'cr')?'r':''}">${v(p,'faute')||'–'}${v(p,'cr')?' CR':v(p,'cj')?' CJ':''}</td>${fwd?`<td>${v(p,'tl_n')?'L '+fr(v(p,'tl_g'),v(p,'tl_n')):''}${v(p,'ts_n')?' S '+fr(v(p,'ts_g'),v(p,'ts_n')):''}${!v(p,'tl_n')&&!v(p,'ts_n')?'–':''}</td><td>${v(p,'mf_n')+v(p,'md_n')||'–'}</td>`:`<td>${v(p,'jap_pos')+v(p,'jap_neg')?fr(v(p,'jap_pos'),v(p,'jap_pos')+v(p,'jap_neg')):'–'}</td><td>${v(p,'aerien_pos')+v(p,'aerien_neg')?fr(v(p,'aerien_pos'),v(p,'aerien_pos')+v(p,'aerien_neg')):'–'}</td>`}<td>${v(p,'pts')||'–'}</td></tr>`; }).join('')}</tbody></table></div></div>`;
   // victoires / défaites
-  const grpVD=w=>{ const o={__m:0,__n:0}; pm.forEach(({m,p,mn})=>{ const rr=mRes(m); if(!rr||rr.r!==w||!p||!(+mn>0)) return; o.__m+=+mn; o.__n++; for(const k in p) if(typeof p[k]==='number') o[k]=(o[k]||0)+p[k]; }); return o; };
+  const grpVD=w=>{ const o={__m:0,__b:0,__n:0}; pm.forEach(({m,p,mn,b})=>{ const rr=mRes(m); if(!rr||rr.r!==w||!p||!(+mn>0)) return; o.__m+=+mn; o.__b+=b||0; o.__n++; for(const k in p) if(typeof p[k]==='number') o[k]=(o[k]||0)+p[k]; }); return o; };
   const VW=grpVD('V'), VL=grpVD('D');
-  const VDS=[['Tâches / 80',q=>q.__m?v(q,'taches')*80/q.__m:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / 80',q=>q.__m?v(q,'m_tot')*80/q.__m:null,1,''],['Pertes de balle / 80',q=>q.__m?v(q,'pdb')*80/q.__m:null,0,''],['Pénalités / 80',q=>q.__m?v(q,'faute')*80/q.__m:null,0,'']];
-  const f2=(x,u)=>x==null?'–':u?Math.round(x)+u:f1(x);
-  const vdC=VW.__n&&VL.__n?`<div class="card"><h3>Victoires et défaites</h3><p class="sub">Ses stats dans les ${VW.__n} victoire${VW.__n>1?'s':''} et les ${VL.__n} défaite${VL.__n>1?'s':''} où il a joué (score calculé à partir des essais et coups de pied codés).</p><div class="tw"><table><thead><tr><th>Stat</th><th>Victoires</th><th>Défaites</th></tr></thead><tbody>${VDS.map(([l,f,hi,u])=>{ const a=f(VW), b=f(VL); const d=a!=null&&b!=null?a-b:0, th=u?3:.3; const ca=Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r', cb=Math.abs(d)<th?'':(hi?d<0:d>0)?'g':'r'; return `<tr><td>${l}</td><td class="${ca}">${f2(a,u)}</td><td class="${cb}">${f2(b,u)}</td></tr>`; }).join('')}</tbody></table></div></div>`:'';
+  const VDS=[['Tâches / '+PERL,q=>q.__b?v(q,'taches')*PER/q.__b:null,1,''],['Plaquages réussis',q=>{const d=v(q,'plaq_ok')+v(q,'plaq_rate'); return d?100*v(q,'plaq_ok')/d:null;},1,' %'],['Contacts gagnés',q=>{const d=v(q,'duel_pos')+v(q,'duel_neg'); return d?100*v(q,'duel_pos')/d:null;},1,' %'],['Efficacité ruck',q=>v(q,'ro')?100*v(q,'ro_pos')/v(q,'ro'):null,1,' %'],['Mètres / '+PERL,q=>q.__b?v(q,'m_tot')*PER/q.__b:null,1,''],['Pertes de balle / '+PERL,q=>q.__b?v(q,'pdb')*PER/q.__b:null,0,''],['Pénalités / '+PERL,q=>q.__b?v(q,'faute')*PER/q.__b:null,0,'']];
+  const f2=(x,u)=>x==null?'–':u?Math.round(x)+u:fcFv(x);
+  const vdC=VW.__n&&VL.__n?`<div class="card"><h3>Victoires et défaites</h3><p class="sub">Ses stats dans les ${VW.__n} victoire${VW.__n>1?'s':''} et les ${VL.__n} défaite${VL.__n>1?'s':''} où il a joué (score calculé à partir des essais et coups de pied codés).</p><div class="tw"><table><thead><tr><th>Stat</th><th>Victoires</th><th>Défaites</th></tr></thead><tbody>${VDS.map(([l,f,hi,u])=>{ const a=f(VW), b=f(VL); const d=a!=null&&b!=null?a-b:0, th=u?3:.02; const ca=Math.abs(d)<th?'':(hi?d>0:d<0)?'g':'r', cb=Math.abs(d)<th?'':(hi?d<0:d>0)?'g':'r'; return `<tr><td>${l}</td><td class="${ca}">${f2(a,u)}</td><td class="${cb}">${f2(b,u)}</td></tr>`; }).join('')}</tbody></table></div></div>`:'';
   const zp=ZP.filter(z=>z[4]===me.name);
   const zD=zp.filter(z=>['P','T','F'].includes(z[2])), zA=zp.filter(z=>['C','B'].includes(z[2]));
   const lgd=arr=>`<div class="legend">${Object.entries(ZTYPES).filter(([t])=>arr.some(z=>z[2]===t)).map(([t,[n,c]])=>`<span><i style="background:${c}"></i>${n} (${arr.filter(z=>z[2]===t).length})</span>`).join('')}</div>`;

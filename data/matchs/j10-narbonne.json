@@ -7239,6 +7239,31 @@
   "score": {
    "us": 29,
    "them": 26
+  },
+  "bip": 32.8,
+  "bipm": {
+   "Flavio Asquini": 16.6,
+   "Lucas Bachelier": 27.5,
+   "Nicolas Ciancio": 20.1,
+   "Leo Chauvin": 20.1,
+   "Jules Martinez": 20.1,
+   "Theo Idjellidaine": 20.8,
+   "Joel Kpoku": 26.4,
+   "Evan Olmstead": 30.8,
+   "Pablo Patilla": 32.8,
+   "Baptiste Lafond": 32.8,
+   "Hanru Sirgel": 32.8,
+   "Julien Farnoux": 32.8,
+   "Clement Egiziano": 32.8,
+   "Arthur Vignolles": 32.8,
+   "Bautista Ezcurra": 32.8,
+   "Jules Gimbert": 16.2,
+   "Zinedine Aouad": 12.8,
+   "Clément Martinez": 12.8,
+   "Fabio Gonzalez": 12.8,
+   "Guillaume Rouet": 12.1,
+   "Christiaan Van Der Merwe": 8.5,
+   "Bastien Berenguel": 7.4
   }
  }
 }

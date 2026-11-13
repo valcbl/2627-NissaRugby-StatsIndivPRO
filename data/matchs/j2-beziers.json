@@ -7943,6 +7943,32 @@
   "score": {
    "us": 43,
    "them": 6
+  },
+  "bip": 33.3,
+  "bipm": {
+   "Nicolas Ciancio": 16.1,
+   "Jean-Pascal Barraque": 19.1,
+   "Lucas Bachelier": 20.3,
+   "Leo Chauvin": 20.3,
+   "Etienne Falgoux": 20.3,
+   "Christiaan Van Der Merwe": 25.1,
+   "Arthur Vignolles": 25.1,
+   "Guillaume Rouet": 25.1,
+   "Vincent Rattez": 33.3,
+   "Francis Saili": 33.3,
+   "Julien Farnoux": 33.3,
+   "Adrian Motoc": 33.3,
+   "Tyler Morgan": 33.3,
+   "Hugo Sarrasin": 33.3,
+   "Clement Egiziano": 33.3,
+   "Farai Mudariki": 17.2,
+   "Flavio Asquini": 14.2,
+   "Bastien Berenguel": 13,
+   "Clément Martinez": 13,
+   "Hayden Thompson-Stringer": 13,
+   "Joel Kpoku": 8.2,
+   "Iakopo Petelo-Mapu": 8.2,
+   "Theo Idjellidaine": 8.2
   }
  }
 }
